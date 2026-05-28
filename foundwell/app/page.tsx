@@ -106,7 +106,7 @@ export default function Home() {
               <BrandMark />
 
               <nav className="hidden items-center gap-7 text-[13px] font-medium tracking-[0.08em] text-white/90 lg:flex xl:gap-9">
-                <a href="#services" className="transition hover:text-white">Browse Floors</a>
+                <a href="/shop-floors" className="transition hover:text-white">Browse Floors</a>
                 <a href="#learn" className="transition hover:text-white">Learn Resources</a>
                 <a href="#about" className="transition hover:text-white">About Us</a>
               </nav>
@@ -121,7 +121,7 @@ export default function Home() {
 
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
-                  href="#services"
+                  href="/shop-floors"
                   className="inline-flex min-w-[210px] items-center justify-center rounded-full bg-white px-8 py-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-slate-950 transition hover:bg-white/90"
                 >
                   {slides[activeSlide].primaryCta}
