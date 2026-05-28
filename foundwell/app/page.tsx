@@ -11,11 +11,11 @@ const slides = [
       "linear-gradient(rgba(15,23,42,0.32), rgba(15,23,42,0.46)), url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80')",
   },
   {
-    title: "Beautiful surfaces. Lasting comfort.",
+    title: "Engineered Hardwood",
     primaryCta: "Shop Collections",
     secondaryCta: "See Room Ideas",
     background:
-      "linear-gradient(rgba(15,23,42,0.32), rgba(15,23,42,0.48)), url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1800&q=80')",
+      "linear-gradient(rgba(0,0,0,0.06), rgba(0,0,0,0.14)), url('/engineered-hardwood-slide2.png')",
   },
   {
     title: "Designed to elevate every room.",
