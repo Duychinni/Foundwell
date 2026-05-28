@@ -8,21 +8,21 @@ const slides = [
     primaryCta: "Browse Floors",
     secondaryCta: "Book a Consultation",
     background:
-      "linear-gradient(rgba(15,23,42,0.35), rgba(15,23,42,0.45)), url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80')",
+      "linear-gradient(rgba(15,23,42,0.32), rgba(15,23,42,0.46)), url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80')",
   },
   {
     title: "Beautiful surfaces. Lasting comfort.",
     primaryCta: "Shop Collections",
     secondaryCta: "See Room Ideas",
     background:
-      "linear-gradient(rgba(15,23,42,0.38), rgba(15,23,42,0.48)), url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1800&q=80')",
+      "linear-gradient(rgba(15,23,42,0.32), rgba(15,23,42,0.48)), url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1800&q=80')",
   },
   {
     title: "Designed to elevate every room.",
     primaryCta: "Explore Styles",
     secondaryCta: "Talk to FoundWell",
     background:
-      "linear-gradient(rgba(15,23,42,0.35), rgba(15,23,42,0.46)), url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=80')",
+      "linear-gradient(rgba(15,23,42,0.34), rgba(15,23,42,0.48)), url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=80')",
   },
 ];
 
@@ -36,13 +36,13 @@ const services = [
 function BrandMark() {
   return (
     <div className="flex items-center gap-3">
-      <span className="text-xl font-semibold tracking-[0.22em] text-white sm:text-2xl">
+      <span className="text-lg font-semibold tracking-[0.22em] text-white sm:text-xl">
         FOUNDWELL
       </span>
-      <span className="relative block h-9 w-18 sm:h-10 sm:w-20" aria-hidden="true">
-        <span className="absolute left-0 top-0 h-3 w-9 rounded-sm bg-white" />
-        <span className="absolute left-6 top-3.5 h-3 w-10 rounded-sm bg-[#9a6844]" />
-        <span className="absolute left-2.5 top-7 h-3 w-11 rounded-sm bg-[#d4b28d]" />
+      <span className="relative block h-8 w-16 sm:h-9 sm:w-18" aria-hidden="true">
+        <span className="absolute left-0 top-0 h-2.5 w-8 rounded-sm bg-white" />
+        <span className="absolute left-5 top-3 h-2.5 w-9 rounded-sm bg-[#9a6844]" />
+        <span className="absolute left-2 top-6 h-2.5 w-10 rounded-sm bg-[#d4b28d]" />
       </span>
     </div>
   );
@@ -68,20 +68,20 @@ export default function Home() {
             className={`absolute inset-0 bg-cover bg-center transition-all duration-700 ${
               index === activeSlide
                 ? "pointer-events-auto opacity-100 scale-100"
-                : "pointer-events-none opacity-0 scale-[1.02]"
+                : "pointer-events-none opacity-0 scale-[1.015]"
             }`}
             style={{ backgroundImage: slide.background }}
           />
         ))}
 
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.18)_0%,rgba(15,23,42,0.3)_45%,rgba(15,23,42,0.45)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.12)_0%,rgba(15,23,42,0.24)_28%,rgba(15,23,42,0.42)_100%)]" />
 
         <div className="relative z-10 flex min-h-screen flex-col">
-          <header className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-6 sm:px-8 lg:px-12">
-            <div className="flex items-center gap-10">
+          <header className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-6 py-7 sm:px-8 lg:px-12">
+            <div className="flex items-center gap-8 xl:gap-12">
               <BrandMark />
 
-              <nav className="hidden items-center gap-8 text-sm font-medium text-white/88 lg:flex">
+              <nav className="hidden items-center gap-7 text-[13px] font-medium tracking-[0.08em] text-white/90 lg:flex xl:gap-9">
                 <a href="#services" className="transition hover:text-white">Browse Floors</a>
                 <a href="#learn" className="transition hover:text-white">Learn Resources</a>
                 <a href="#about" className="transition hover:text-white">About Us</a>
@@ -89,22 +89,22 @@ export default function Home() {
             </div>
           </header>
 
-          <div className="mx-auto flex w-full max-w-7xl flex-1 items-center justify-center px-6 pb-24 pt-10 text-center sm:px-8 lg:px-12">
-            <div className="max-w-4xl text-white">
-              <h1 className="text-4xl font-semibold leading-tight sm:text-5xl lg:text-7xl">
+          <div className="mx-auto flex w-full max-w-[1400px] flex-1 items-center justify-center px-6 pb-28 pt-10 text-center sm:px-8 lg:px-12">
+            <div className="max-w-5xl text-white">
+              <h1 className="mx-auto max-w-4xl text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-7xl xl:text-[5.5rem]">
                 {slides[activeSlide].title}
               </h1>
 
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
                   href="#services"
-                  className="inline-flex min-w-44 items-center justify-center rounded-full bg-white px-8 py-4 text-sm font-semibold text-slate-950 transition hover:bg-white/90"
+                  className="inline-flex min-w-[210px] items-center justify-center rounded-full bg-white px-8 py-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-slate-950 transition hover:bg-white/90"
                 >
                   {slides[activeSlide].primaryCta}
                 </a>
                 <a
                   href="#about"
-                  className="inline-flex min-w-44 items-center justify-center rounded-full border border-white/30 bg-white/10 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/18"
+                  className="inline-flex min-w-[210px] items-center justify-center rounded-full border border-white/35 bg-white/8 px-8 py-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition hover:bg-white/16"
                 >
                   {slides[activeSlide].secondaryCta}
                 </a>
@@ -112,7 +112,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center justify-center px-6 pb-8 sm:px-8 lg:px-12">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1400px] items-center justify-center px-6 pb-10 sm:px-8 lg:px-12">
             <div className="flex items-center gap-3">
               {slides.map((slide, index) => (
                 <button
@@ -120,7 +120,7 @@ export default function Home() {
                   aria-label={`Go to slide ${index + 1}`}
                   onClick={() => setActiveSlide(index)}
                   className={`h-1.5 rounded-full transition-all ${
-                    index === activeSlide ? "w-12 bg-white" : "w-6 bg-white/35"
+                    index === activeSlide ? "w-14 bg-white" : "w-7 bg-white/35"
                   }`}
                 />
               ))}
@@ -157,7 +157,7 @@ export default function Home() {
       <section id="about" className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
         <div className="rounded-[2rem] bg-slate-900 px-8 py-10 text-white sm:px-12">
           <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#d8b189]">About Us</p>
-          <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">Now the hero is stripped down the way you asked — centered slogan, two buttons, less copy.</h2>
+          <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">The top section is now much tighter: nav beside logo, shorter slogan, centered buttons, cleaner proportions.</h2>
         </div>
       </section>
     </main>
