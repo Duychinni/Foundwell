@@ -26,12 +26,7 @@ const slides = [
   },
 ];
 
-const services = [
-  "Hardwood",
-  "Luxury Vinyl",
-  "Laminate",
-  "Tile",
-];
+const services = ["Hardwood", "Luxury Vinyl", "Laminate", "Tile"];
 
 function BrandMark() {
   return (
@@ -48,13 +43,42 @@ function BrandMark() {
   );
 }
 
+function Arrow({ direction }: { direction: "left" | "right" }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-4 w-4"
+      aria-hidden="true"
+    >
+      {direction === "left" ? (
+        <path d="m15 18-6-6 6-6" />
+      ) : (
+        <path d="m9 18 6-6-6-6" />
+      )}
+    </svg>
+  );
+}
+
 export default function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
 
+  const goToPrev = () => {
+    setActiveSlide((current) => (current - 1 + slides.length) % slides.length);
+  };
+
+  const goToNext = () => {
+    setActiveSlide((current) => (current + 1) % slides.length);
+  };
+
   useEffect(() => {
     const timer = window.setInterval(() => {
-      setActiveSlide((current) => (current + 1) % slides.length);
-    }, 5000);
+      goToNext();
+    }, 7000);
 
     return () => window.clearInterval(timer);
   }, []);
@@ -112,7 +136,25 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative z-10 mx-auto flex w-full max-w-[1400px] items-center justify-center px-6 pb-10 sm:px-8 lg:px-12">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1400px] flex-col items-center gap-4 px-6 pb-10 sm:px-8 lg:px-12">
+            <div className="flex items-center gap-4">
+              <button
+                onClick={goToPrev}
+                aria-label="Previous slide"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-sm transition hover:bg-white/18"
+              >
+                <Arrow direction="left" />
+              </button>
+
+              <button
+                onClick={goToNext}
+                aria-label="Next slide"
+                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-sm transition hover:bg-white/18"
+              >
+                <Arrow direction="right" />
+              </button>
+            </div>
+
             <div className="flex items-center gap-3">
               {slides.map((slide, index) => (
                 <button
