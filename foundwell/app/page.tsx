@@ -8,21 +8,21 @@ const slides = [
     primaryCta: "Browse Floors",
     secondaryCta: "Request Samples",
     background:
-      "linear-gradient(rgba(81,57,47,0.38), rgba(81,57,47,0.52)), url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80')",
+      "linear-gradient(rgba(81,57,47,0.10), rgba(81,57,47,0.18)), url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80')",
   },
   {
     title: "Engineered Hardwood",
     primaryCta: "Shop Collections",
     secondaryCta: "Request Specs",
     background:
-      "linear-gradient(rgba(81,57,47,0.08), rgba(81,57,47,0.18)), url('/engineered-hardwood-slide2.png')",
+      "linear-gradient(rgba(81,57,47,0.03), rgba(81,57,47,0.08)), url('/engineered-hardwood-slide2.png')",
   },
   {
     title: "Material-led flooring selections for builders, designers, and commercial buyers.",
     primaryCta: "Explore Styles",
     secondaryCta: "Talk to FoundWell",
     background:
-      "linear-gradient(rgba(81,57,47,0.42), rgba(81,57,47,0.56)), url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=80')",
+      "linear-gradient(rgba(81,57,47,0.12), rgba(81,57,47,0.20)), url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=80')",
   },
 ];
 
@@ -115,7 +115,7 @@ export default function Home() {
           />
         ))}
 
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(81,57,47,0.14)_0%,rgba(81,57,47,0.28)_30%,rgba(81,57,47,0.5)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(81,57,47,0.04)_0%,rgba(81,57,47,0.08)_32%,rgba(81,57,47,0.16)_100%)]" />
 
         <div className="relative z-10 flex min-h-screen flex-col">
           <header className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-6 py-7 sm:px-8 lg:px-12">
