@@ -132,7 +132,13 @@ export default function Home() {
 
           <div className="mx-auto flex w-full max-w-[1400px] flex-1 items-center justify-center px-6 pb-28 pt-10 text-center sm:px-8 lg:px-12">
             <div className="max-w-5xl text-white">
-              <h1 className="mx-auto max-w-5xl text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-7xl xl:text-[5.2rem]">
+              <h1
+                className={`mx-auto max-w-5xl text-4xl leading-[1.05] sm:text-5xl lg:text-7xl xl:text-[5.2rem] ${
+                  activeSlide === 1
+                    ? "font-serif font-normal tracking-[0.01em]"
+                    : "font-semibold"
+                }`}
+              >
                 {slides[activeSlide].title}
               </h1>
 
