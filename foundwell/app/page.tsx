@@ -4,29 +4,46 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    title: "Floors that feel built for home.",
+    title: "Direct flooring supply for projects that need clarity, quality, and price control.",
     primaryCta: "Browse Floors",
-    secondaryCta: "Book a Consultation",
+    secondaryCta: "Request Samples",
     background:
-      "linear-gradient(rgba(15,23,42,0.32), rgba(15,23,42,0.46)), url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80')",
+      "linear-gradient(rgba(81,57,47,0.38), rgba(81,57,47,0.52)), url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80')",
   },
   {
     title: "Engineered Hardwood",
     primaryCta: "Shop Collections",
-    secondaryCta: "See Room Ideas",
+    secondaryCta: "Request Specs",
     background:
-      "linear-gradient(rgba(0,0,0,0.06), rgba(0,0,0,0.14)), url('/engineered-hardwood-slide2.png')",
+      "linear-gradient(rgba(81,57,47,0.08), rgba(81,57,47,0.18)), url('/engineered-hardwood-slide2.png')",
   },
   {
-    title: "Designed to elevate every room.",
+    title: "Material-led flooring selections for builders, designers, and commercial buyers.",
     primaryCta: "Explore Styles",
     secondaryCta: "Talk to FoundWell",
     background:
-      "linear-gradient(rgba(15,23,42,0.34), rgba(15,23,42,0.48)), url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=80')",
+      "linear-gradient(rgba(81,57,47,0.42), rgba(81,57,47,0.56)), url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=80')",
   },
 ];
 
-const services = ["Hardwood", "Luxury Vinyl", "Laminate", "Tile"];
+const services = [
+  {
+    title: "Engineered Hardwood",
+    description: "Commercial-ready wood flooring with finish consistency, grade clarity, and dependable lead-time visibility.",
+  },
+  {
+    title: "SPC & LVT",
+    description: "Durable, specification-friendly resilient flooring options suited to multi-unit, hospitality, and light commercial use.",
+  },
+  {
+    title: "Laminate",
+    description: "Cost-conscious flooring selections designed to balance appearance, wear performance, and practical install requirements.",
+  },
+  {
+    title: "Tile & Surface Programs",
+    description: "Supplementary surface categories for projects that need coordinated material decisions across spaces.",
+  },
+];
 
 function BrandMark() {
   return (
@@ -36,8 +53,8 @@ function BrandMark() {
       </span>
       <span className="relative block h-8 w-16 sm:h-9 sm:w-18" aria-hidden="true">
         <span className="absolute left-0 top-0 h-2.5 w-8 rounded-sm bg-white" />
-        <span className="absolute left-5 top-3 h-2.5 w-9 rounded-sm bg-[#9a6844]" />
-        <span className="absolute left-2 top-6 h-2.5 w-10 rounded-sm bg-[#d4b28d]" />
+        <span className="absolute left-5 top-3 h-2.5 w-9 rounded-sm bg-[#8A2F24]" />
+        <span className="absolute left-2 top-6 h-2.5 w-10 rounded-sm bg-[#AD7042]" />
       </span>
     </div>
   );
@@ -84,8 +101,8 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="bg-[#f7f1e8] text-slate-900">
-      <section className="relative min-h-screen overflow-hidden bg-slate-950">
+    <main className="bg-white text-[#51392F]">
+      <section className="relative min-h-screen overflow-hidden bg-[#51392F]">
         {slides.map((slide, index) => (
           <div
             key={slide.title}
@@ -98,7 +115,7 @@ export default function Home() {
           />
         ))}
 
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.12)_0%,rgba(15,23,42,0.24)_28%,rgba(15,23,42,0.42)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(81,57,47,0.14)_0%,rgba(81,57,47,0.28)_30%,rgba(81,57,47,0.5)_100%)]" />
 
         <div className="relative z-10 flex min-h-screen flex-col">
           <header className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-6 py-7 sm:px-8 lg:px-12">
@@ -115,20 +132,23 @@ export default function Home() {
 
           <div className="mx-auto flex w-full max-w-[1400px] flex-1 items-center justify-center px-6 pb-28 pt-10 text-center sm:px-8 lg:px-12">
             <div className="max-w-5xl text-white">
-              <h1 className="mx-auto max-w-4xl text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-7xl xl:text-[5.5rem]">
+              <p className="mx-auto mb-5 max-w-2xl text-xs font-medium uppercase tracking-[0.24em] text-[#F4EFE6] sm:text-sm">
+                Better flooring, sourced closer to the source.
+              </p>
+              <h1 className="mx-auto max-w-5xl text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-7xl xl:text-[5.2rem]">
                 {slides[activeSlide].title}
               </h1>
 
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
                   href="/shop-floors"
-                  className="inline-flex min-w-[210px] items-center justify-center rounded-full bg-white px-8 py-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-slate-950 transition hover:bg-white/90"
+                  className="inline-flex min-w-[210px] items-center justify-center rounded-full bg-[#8A2F24] px-8 py-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-[#76261d]"
                 >
                   {slides[activeSlide].primaryCta}
                 </a>
                 <a
                   href="#about"
-                  className="inline-flex min-w-[210px] items-center justify-center rounded-full border border-white/35 bg-white/8 px-8 py-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition hover:bg-white/16"
+                  className="inline-flex min-w-[210px] items-center justify-center rounded-full border border-white/35 bg-white/10 px-8 py-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition hover:bg-white/16"
                 >
                   {slides[activeSlide].secondaryCta}
                 </a>
@@ -172,34 +192,45 @@ export default function Home() {
       </section>
 
       <section id="services" className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#8A2F24]">
+            Core categories
+          </p>
+          <h2 className="mt-3 text-3xl font-semibold text-[#51392F] sm:text-4xl">
+            Flooring programs built for commercial decisions, not showroom browsing.
+          </h2>
+        </div>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           {services.map((service) => (
-            <div key={service} className="rounded-[1.75rem] border border-slate-900/8 bg-white p-6 shadow-sm">
-              <div className="mb-4 h-12 w-12 rounded-2xl bg-[#efe4d3]" />
-              <h3 className="text-xl font-semibold text-slate-950">{service}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-600">
-                Placeholder collection content ready to swap for your real flooring categories.
+            <div key={service.title} className="rounded-[1.75rem] border border-[#51392F]/8 bg-[#F4EFE6] p-6 shadow-sm">
+              <div className="mb-4 h-12 w-12 rounded-2xl bg-white" />
+              <h3 className="text-xl font-semibold text-[#51392F]">{service.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
+                {service.description}
               </p>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="learn" className="border-y border-slate-900/8 bg-white/70">
+      <section id="learn" className="border-y border-[#51392F]/8 bg-[#F4EFE6]">
         <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
-          <div className="rounded-[1.75rem] bg-[#efe4d3] p-8 text-slate-800">
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#7b3f2a]">Learn Resources</p>
-            <h2 className="mt-3 text-3xl font-semibold text-slate-950 sm:text-4xl">
-              This area can become your guides, care tips, and buying help section.
+          <div className="rounded-[1.75rem] bg-white p-8 text-[#51392F] shadow-sm">
+            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#8A2F24]">Learn Resources</p>
+            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+              Plainspoken guidance on material selection, performance, pricing context, and delivery planning.
             </h2>
           </div>
         </div>
       </section>
 
       <section id="about" className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
-        <div className="rounded-[2rem] bg-slate-900 px-8 py-10 text-white sm:px-12">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#d8b189]">About Us</p>
-          <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">The top section is now much tighter: nav beside logo, shorter slogan, centered buttons, cleaner proportions.</h2>
+        <div className="rounded-[2rem] bg-[#51392F] px-8 py-10 text-white sm:px-12">
+          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#F4EFE6]">About FoundWell</p>
+          <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+            High-quality flooring at better prices, managed with clarity from sample selection to door delivery.
+          </h2>
         </div>
       </section>
     </main>
