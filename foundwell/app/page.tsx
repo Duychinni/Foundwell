@@ -132,12 +132,13 @@ export default function Home() {
 
           <div className="mx-auto flex w-full max-w-[1400px] flex-1 items-center justify-center px-6 pb-28 pt-10 text-center sm:px-8 lg:px-12">
             <div className="max-w-5xl text-white">
-              <p className="mx-auto mb-5 max-w-2xl text-xs font-medium uppercase tracking-[0.24em] text-[#F4EFE6] sm:text-sm">
-                Better flooring. Clearer pricing.
-              </p>
               <h1 className="mx-auto max-w-5xl text-4xl font-semibold leading-[1.05] sm:text-5xl lg:text-7xl xl:text-[5.2rem]">
                 {slides[activeSlide].title}
               </h1>
+
+              <p className="mx-auto mt-5 max-w-2xl text-xs font-medium uppercase tracking-[0.24em] text-[#F4EFE6] sm:text-sm">
+                Better flooring. Clearer pricing.
+              </p>
 
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
