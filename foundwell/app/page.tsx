@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    title: "Direct flooring supply for projects that need clarity, quality, and price control.",
+    title: "Direct flooring. Clear pricing.",
     primaryCta: "Browse Floors",
     secondaryCta: "Request Samples",
     background:
@@ -18,7 +18,7 @@ const slides = [
       "linear-gradient(rgba(81,57,47,0.03), rgba(81,57,47,0.08)), url('/engineered-hardwood-slide2.png')",
   },
   {
-    title: "Material-led flooring selections for builders, designers, and commercial buyers.",
+    title: "Material-led flooring for serious projects.",
     primaryCta: "Explore Styles",
     secondaryCta: "Talk to FoundWell",
     background:
@@ -132,7 +132,7 @@ export default function Home() {
 
           <div className="mx-auto flex w-full max-w-[1400px] flex-1 items-center justify-center px-6 pb-28 pt-10 text-center sm:px-8 lg:px-12">
             <div className="max-w-5xl text-white">
-              <h1 className="mx-auto max-w-5xl text-4xl font-serif font-normal leading-[1.05] tracking-[0.01em] sm:text-5xl lg:text-7xl xl:text-[5.2rem]">
+              <h1 className="mx-auto max-w-5xl text-4xl font-serif font-normal leading-[1.05] tracking-[0.01em] sm:text-5xl lg:text-6xl xl:text-[4.6rem]">
                 {slides[activeSlide].title}
               </h1>
 
