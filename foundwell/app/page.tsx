@@ -6,7 +6,7 @@ const slides = [
   {
     title: "Direct Flooring Supply",
     background:
-      "url('/landing-slide-one.png')",
+      "url('/landing-slide-one-clean.png')",
   },
   {
     title: "Engineered Hardwood",
