@@ -4,70 +4,70 @@ const products = [
     name: "Natural Beige Oak",
     description: "Rich amber oak tones with warm, natural character.",
     tag: "SPC Vinyl",
-    image: "/engineered-hardwood-slide2.png",
+    background: "linear-gradient(135deg, #b78354 0%, #c89667 35%, #9f6b3f 100%)",
   },
   {
     code: "B184",
     name: "Warm Sand Oak",
     description: "Soft gray oak with warm sandy undertones.",
     tag: "SPC Vinyl",
-    image: "/wood-floor-realistic.jpg",
+    background: "linear-gradient(135deg, #b8a38f 0%, #d0c0ae 36%, #99826e 100%)",
   },
   {
     code: "B186",
     name: "Light Ash Oak",
     description: "Natural brown oak with authentic rustic grain.",
     tag: "SPC Vinyl",
-    image: "/landing-slide-one-clean.png",
+    background: "linear-gradient(135deg, #8f6547 0%, #b17f5d 34%, #6f4b31 100%)",
   },
   {
     code: "B189",
     name: "Smoked Taupe Oak",
     description: "Light taupe oak with subtle beige undertones.",
     tag: "SPC Vinyl",
-    image: "/landing-slide-three.png",
+    background: "linear-gradient(135deg, #c3b1a2 0%, #d8c9bb 34%, #ab9482 100%)",
   },
   {
     code: "B190",
     name: "Soft Honey Oak",
     description: "Soft golden hues that bring warmth and brightness.",
     tag: "SPC Vinyl",
-    image: "/landing-slide-one.png",
+    background: "linear-gradient(135deg, #c9975c 0%, #ddb07a 36%, #b27a44 100%)",
   },
   {
     code: "B191",
     name: "Midtone Wheat Oak",
     description: "Balanced midtone oak with cozy, natural depth.",
     tag: "SPC Vinyl",
-    image: "/engineered-hardwood-slide2.png",
+    background: "linear-gradient(135deg, #b88759 0%, #cb9b6c 35%, #9a6d43 100%)",
   },
   {
     code: "B193",
     name: "Raw Linen Oak",
     description: "Light neutral oak with subtle linen undertones.",
     tag: "SPC Vinyl",
-    image: "/wood-floor-realistic.jpg",
+    background: "linear-gradient(135deg, #d8c7b4 0%, #e7dacb 35%, #c1ac95 100%)",
   },
   {
     code: "B194",
     name: "Drifted Stone Oak",
     description: "Cool gray oak with a soft, weathered look.",
     tag: "SPC Vinyl",
-    image: "/landing-slide-one-clean.png",
+    background: "linear-gradient(135deg, #9f9a94 0%, #bab6af 34%, #827c75 100%)",
   },
   {
     code: "B195",
     name: "Coastal Taupe Oak",
     description: "Soft taupe oak with a relaxed, coastal feel.",
     tag: "SPC Vinyl",
-    image: "/landing-slide-three.png",
+    background: "linear-gradient(135deg, #b5a191 0%, #cdb9ab 36%, #96806e 100%)",
   },
   {
     code: "B197",
     name: "Scandinavian Blonde Oak",
     description: "Light blonde oak for a clean, airy, modern look.",
     tag: "SPC Vinyl",
-    image: "/landing-slide-one.png",
+    background: "linear-gradient(135deg, #d7bf95 0%, #ead7b4 35%, #bea173 100%)",
   },
 ];
 
@@ -152,11 +152,14 @@ export default function ShopFloorsPage() {
 
         <div className="mt-8 grid gap-x-4 gap-y-7 sm:gap-x-5 sm:gap-y-9 md:grid-cols-2 xl:grid-cols-3">
           {products.map((product) => (
-            <article key={product.name}>
+            <article key={product.code}>
               <div
-                className="relative aspect-square max-w-[300px] overflow-hidden rounded-[1rem] bg-cover bg-center sm:max-w-[320px] sm:rounded-[1.1rem]"
-                style={{ backgroundImage: `url('${product.image}')` }}
+                className="relative aspect-square max-w-[300px] overflow-hidden rounded-[1rem] sm:max-w-[320px] sm:rounded-[1.1rem]"
+                style={{ background: product.background }}
               >
+                <div className="absolute inset-0 opacity-20 bg-[linear-gradient(135deg,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0)_35%,rgba(0,0,0,0.08)_100%)]" />
+                <div className="absolute inset-0 opacity-18 bg-[repeating-linear-gradient(90deg,rgba(86,58,37,0.18)_0px,rgba(86,58,37,0.18)_2px,transparent_2px,transparent_58px)]" />
+                <div className="absolute inset-0 opacity-14 bg-[repeating-linear-gradient(4deg,rgba(255,255,255,0.18)_0px,rgba(255,255,255,0.18)_1px,transparent_1px,transparent_48px)]" />
                 <span className="absolute bottom-3 left-3 rounded-full bg-white/92 px-3 py-1 text-[11px] font-medium text-[#51392F]">
                   {product.code}
                 </span>
