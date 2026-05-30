@@ -123,9 +123,9 @@ export default function Home() {
               <BrandMark />
 
               <nav className="hidden items-center gap-7 text-[13px] font-medium tracking-[0.08em] text-white lg:flex xl:gap-9">
-                <a href="/shop-floors" className="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.18)] transition hover:text-white hover:drop-shadow-[0_0_14px_rgba(255,255,255,0.28)]">Browse Floors</a>
-                <a href="#learn" className="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.18)] transition hover:text-white hover:drop-shadow-[0_0_14px_rgba(255,255,255,0.28)]">Learn Resources</a>
-                <a href="#about" className="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.18)] transition hover:text-white hover:drop-shadow-[0_0_14px_rgba(255,255,255,0.28)]">About Us</a>
+                <a href="/shop-floors" className="text-white drop-shadow-[0_0_14px_rgba(255,255,255,0.28)] transition hover:text-white hover:drop-shadow-[0_0_22px_rgba(255,255,255,0.45)]">Browse Floors</a>
+                <a href="#learn" className="text-white drop-shadow-[0_0_14px_rgba(255,255,255,0.28)] transition hover:text-white hover:drop-shadow-[0_0_22px_rgba(255,255,255,0.45)]">Learn Resources</a>
+                <a href="#about" className="text-white drop-shadow-[0_0_14px_rgba(255,255,255,0.28)] transition hover:text-white hover:drop-shadow-[0_0_22px_rgba(255,255,255,0.45)]">About Us</a>
               </nav>
             </div>
           </header>
