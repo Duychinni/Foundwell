@@ -149,7 +149,7 @@ export default function Home() {
                   href="/shop-floors"
                   className="inline-flex h-12 w-full max-w-[280px] items-center justify-center rounded-full bg-[#8A2F24] px-6 text-[12px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-[#76261d] sm:h-14 sm:w-[220px] sm:max-w-none sm:px-8 sm:text-[13px]"
                 >
-                  {activeSlide === 1 ? "Explore Collection" : "Browse Floors"}
+                  {activeSlide === 1 ? "Explore Collection" : "Shop Floors"}
                 </a>
                 {activeSlide !== 1 ? (
                   <a
