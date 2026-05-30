@@ -122,10 +122,10 @@ export default function Home() {
             <div className="flex items-center gap-8 xl:gap-12">
               <BrandMark />
 
-              <nav className="hidden items-center gap-7 text-[13px] font-medium tracking-[0.08em] text-white/90 lg:flex xl:gap-9">
-                <a href="/shop-floors" className="transition hover:text-white">Browse Floors</a>
-                <a href="#learn" className="transition hover:text-white">Learn Resources</a>
-                <a href="#about" className="transition hover:text-white">About Us</a>
+              <nav className="hidden items-center gap-7 text-[13px] font-medium tracking-[0.08em] text-white lg:flex xl:gap-9">
+                <a href="/shop-floors" className="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.18)] transition hover:text-white hover:drop-shadow-[0_0_14px_rgba(255,255,255,0.28)]">Browse Floors</a>
+                <a href="#learn" className="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.18)] transition hover:text-white hover:drop-shadow-[0_0_14px_rgba(255,255,255,0.28)]">Learn Resources</a>
+                <a href="#about" className="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.18)] transition hover:text-white hover:drop-shadow-[0_0_14px_rgba(255,255,255,0.28)]">About Us</a>
               </nav>
             </div>
           </header>
