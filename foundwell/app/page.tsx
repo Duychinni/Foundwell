@@ -10,6 +10,8 @@ const slides = [
   },
   {
     title: "Engineered Hardwood",
+    primaryOnly: true,
+    primaryLabel: "Explore Collection",
     background:
       "linear-gradient(rgba(81,57,47,0.03), rgba(81,57,47,0.08)), url('/engineered-hardwood-slide2.png')",
   },
@@ -147,14 +149,16 @@ export default function Home() {
                   href="/shop-floors"
                   className="inline-flex h-12 w-full max-w-[280px] items-center justify-center rounded-full bg-[#8A2F24] px-6 text-[12px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-[#76261d] sm:h-14 sm:w-[220px] sm:max-w-none sm:px-8 sm:text-[13px]"
                 >
-                  Browse Floors
+                  {activeSlide === 1 ? "Explore Collection" : "Browse Floors"}
                 </a>
-                <a
-                  href="/request-quote"
-                  className="inline-flex h-12 w-full max-w-[280px] items-center justify-center rounded-full border border-white/35 bg-white/10 px-6 text-[12px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition hover:bg-white/16 sm:h-14 sm:w-[220px] sm:max-w-none sm:px-8 sm:text-[13px]"
-                >
-                  Request Quote
-                </a>
+                {activeSlide !== 1 ? (
+                  <a
+                    href="/request-quote"
+                    className="inline-flex h-12 w-full max-w-[280px] items-center justify-center rounded-full border border-white/35 bg-white/10 px-6 text-[12px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition hover:bg-white/16 sm:h-14 sm:w-[220px] sm:max-w-none sm:px-8 sm:text-[13px]"
+                  >
+                    Request Quote
+                  </a>
+                ) : null}
               </div>
             </div>
           </div>
