@@ -52,6 +52,48 @@ const products = [
     image:
       "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
   },
+  {
+    name: "Harrow Oak",
+    price: "$4.99 per Sq Ft",
+    tag: "SPC Vinyl",
+    image:
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    name: "Wexford Oak",
+    price: "$4.99 per Sq Ft",
+    tag: "SPC Vinyl",
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    name: "Ashton Beige",
+    price: "$4.99 per Sq Ft",
+    tag: "SPC Vinyl",
+    image:
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    name: "Norwich Maple",
+    price: "$4.99 per Sq Ft",
+    tag: "SPC Vinyl",
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    name: "Bromley Ash",
+    price: "$4.99 per Sq Ft",
+    tag: "SPC Vinyl",
+    image:
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    name: "Kingston Taupe",
+    price: "$4.99 per Sq Ft",
+    tag: "SPC Vinyl",
+    image:
+      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
+  },
 ];
 
 function BrandMark() {
@@ -115,18 +157,18 @@ export default function ShopFloorsPage() {
           ))}
 
           <div className="flex w-full flex-wrap items-center gap-3 pt-2 text-xs sm:ml-auto sm:w-auto sm:gap-4 sm:pt-0 sm:text-sm">
-            <span>56 of 56 items shown</span>
+            <span>12 of 12 items shown</span>
             <button className="rounded-full border border-[#51392F]/10 bg-white px-4 py-2 transition hover:border-[#51392F]/20 hover:bg-[#faf7f2]">
               Sort by
             </button>
           </div>
         </div>
 
-        <div className="mt-8 grid gap-x-5 gap-y-8 sm:gap-x-6 sm:gap-y-10 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 grid gap-x-4 gap-y-7 sm:gap-x-5 sm:gap-y-9 md:grid-cols-2 xl:grid-cols-3">
           {products.map((product) => (
             <article key={product.name}>
               <div
-                className="relative aspect-square overflow-hidden rounded-[1rem] bg-cover bg-center sm:rounded-[1.1rem]"
+                className="relative aspect-square max-w-[300px] overflow-hidden rounded-[1rem] bg-cover bg-center sm:max-w-[320px] sm:rounded-[1.1rem]"
                 style={{ backgroundImage: `url('${product.image}')` }}
               >
                 <span className="absolute bottom-3 right-3 rounded-full bg-white/92 px-3 py-1 text-[11px] font-medium text-[#51392F]">
