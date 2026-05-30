@@ -114,22 +114,14 @@ export default function ShopFloorsPage() {
       <section className="h-20 w-full bg-[linear-gradient(90deg,#F4EFE6_0%,#d9c2aa_55%,#AD7042_100%)] sm:h-24" />
 
       <section className="mx-auto max-w-[1120px] px-4 py-8 sm:px-6 sm:py-10">
-        <div className="mb-10 overflow-hidden rounded-[1.75rem] border border-[#51392F]/10 bg-[#F8F4ED]">
-          <div className="grid gap-6 p-6 sm:p-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:p-10">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">Browse Floors</p>
-              <h1 className="mt-3 text-3xl font-semibold leading-tight text-[#51392F] sm:text-4xl lg:text-5xl">
-                SPC Vinyl
-              </h1>
-              <p className="mt-4 max-w-xl text-sm leading-7 text-black/75 sm:text-base">
-                1220 × 183 mm · 5 mm + 1.5 mm IXPE · 0.3 mm wear layer
-              </p>
-            </div>
-
-            <div className="overflow-hidden rounded-[1.25rem] bg-white p-3">
-              <div className="h-[180px] rounded-[1rem] bg-[url('/engineered-hardwood-slide2.png')] bg-cover bg-center sm:h-[220px]" />
-            </div>
-          </div>
+        <div className="mb-8 max-w-3xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">Browse Floors</p>
+          <h1 className="mt-3 text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
+            One SPC construction, available across multiple finishes.
+          </h1>
+          <p className="mt-4 text-sm leading-7 text-black/75 sm:text-base">
+            Every option shown below uses the same core specification. The finish changes, but the build quality stays consistent.
+          </p>
         </div>
 
         <div className="flex justify-end pr-3 text-sm text-black sm:pr-4">
