@@ -63,7 +63,22 @@ const products = [
     image:
       "https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=1200&q=80",
   },
-
+  {
+    code: "B195",
+    name: "B195 Soft Greige Oak",
+    price: "$4.99 per Sq Ft",
+    tag: "SPC Vinyl",
+    image:
+      "https://images.unsplash.com/photo-1616594039964-3f1cb0e8d4d8?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    code: "B196",
+    name: "B196 Warm Almond Oak",
+    price: "$4.99 per Sq Ft",
+    tag: "SPC Vinyl",
+    image:
+      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+  },
 ];
 
 function BrandMark() {
@@ -142,7 +157,7 @@ export default function ShopFloorsPage() {
         </div>
 
         <div className="flex justify-end pr-3 text-sm text-black sm:pr-4">
-          <p>Showing 8 of 8</p>
+          <p>Showing 10 of 10</p>
         </div>
 
         <div className="mt-8 grid gap-x-4 gap-y-7 sm:gap-x-5 sm:gap-y-9 md:grid-cols-2 xl:grid-cols-3">
