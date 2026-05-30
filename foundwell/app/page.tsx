@@ -147,13 +147,13 @@ export default function Home() {
               <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4">
                 <a
                   href="/shop-floors"
-                  className="inline-flex min-h-12 w-full max-w-[280px] items-center justify-center rounded-full bg-[#8A2F24] px-6 py-3 text-[12px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-[#76261d] sm:min-w-[210px] sm:max-w-none sm:px-8 sm:py-4 sm:text-[13px]"
+                  className="inline-flex h-12 w-full max-w-[280px] items-center justify-center rounded-full bg-[#8A2F24] px-6 text-[12px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-[#76261d] sm:h-14 sm:w-[220px] sm:max-w-none sm:px-8 sm:text-[13px]"
                 >
                   Browse Floors
                 </a>
                 <a
                   href="#about"
-                  className="inline-flex min-h-12 w-full max-w-[280px] items-center justify-center rounded-full border border-white/35 bg-white/10 px-6 py-3 text-[12px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition hover:bg-white/16 sm:min-w-[210px] sm:max-w-none sm:px-8 sm:py-4 sm:text-[13px]"
+                  className="inline-flex h-12 w-full max-w-[280px] items-center justify-center rounded-full border border-white/35 bg-white/10 px-6 text-[12px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition hover:bg-white/16 sm:h-14 sm:w-[220px] sm:max-w-none sm:px-8 sm:text-[13px]"
                 >
                   Request Samples
                 </a>
