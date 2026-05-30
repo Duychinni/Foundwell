@@ -135,7 +135,7 @@ export default function ShopFloorsPage() {
           </h1>
         </div>
 
-        <div className="flex justify-end text-sm text-black">
+        <div className="flex justify-end pr-3 text-sm text-black sm:pr-4">
           <p>Showing 12 of 12</p>
         </div>
 
