@@ -18,7 +18,7 @@ const slides = [
   {
     title: "Material-led flooring for serious projects.",
     background:
-      "url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1800&q=80')",
+      "url('/landing-slide-three.png')",
   },
 ];
 
