@@ -135,7 +135,9 @@ export default function ShopFloorsPage() {
           </h1>
         </div>
 
-        <p className="text-sm text-[#51392F]/70">12 flooring options</p>
+        <div className="flex justify-end text-sm text-black">
+          <p>Showing 12 of 12</p>
+        </div>
 
         <div className="mt-8 grid gap-x-4 gap-y-7 sm:gap-x-5 sm:gap-y-9 md:grid-cols-2 xl:grid-cols-3">
           {products.map((product) => (
@@ -149,9 +151,9 @@ export default function ShopFloorsPage() {
                 </span>
               </div>
 
-              <div className="px-0 pb-0 pt-3">
+              <div className="px-0 pb-0 pt-3 text-black">
                 <h2 className="text-base font-semibold">{product.name}</h2>
-                <p className="mt-1 text-sm text-[#51392F]/75">{product.price}</p>
+                <p className="mt-1 text-sm text-black">{product.price}</p>
               </div>
             </article>
           ))}
