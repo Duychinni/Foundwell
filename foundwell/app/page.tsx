@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    title: "Direct flooring. Clear pricing.",
+    title: "",
     primaryCta: "Browse Floors",
     secondaryCta: "Request Samples",
     background:
