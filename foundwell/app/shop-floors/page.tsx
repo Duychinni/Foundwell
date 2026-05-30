@@ -63,38 +63,7 @@ const products = [
     image:
       "https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=1200&q=80",
   },
-  {
-    code: "B183",
-    name: "B183 Natural Beige Oak XL",
-    price: "$4.99 per Sq Ft",
-    tag: "SPC Vinyl",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    code: "B184",
-    name: "B184 Warm Sand Oak XL",
-    price: "$4.99 per Sq Ft",
-    tag: "SPC Vinyl",
-    image:
-      "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    code: "B186",
-    name: "B186 Light Ash Oak XL",
-    price: "$4.99 per Sq Ft",
-    tag: "SPC Vinyl",
-    image:
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    code: "B189",
-    name: "B189 Smoked Taupe Oak XL",
-    price: "$4.99 per Sq Ft",
-    tag: "SPC Vinyl",
-    image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
-  },
+
 ];
 
 function BrandMark() {
@@ -173,7 +142,7 @@ export default function ShopFloorsPage() {
         </div>
 
         <div className="flex justify-end pr-3 text-sm text-black sm:pr-4">
-          <p>Showing 12 of 12</p>
+          <p>Showing 8 of 8</p>
         </div>
 
         <div className="mt-8 grid gap-x-4 gap-y-7 sm:gap-x-5 sm:gap-y-9 md:grid-cols-2 xl:grid-cols-3">
