@@ -6,19 +6,19 @@ const slides = [
   {
     title: "Direct Flooring Supply",
     background:
-      "linear-gradient(rgba(81,57,47,0.08), rgba(81,57,47,0.14)), url('/landing-slide-one.png')",
+      "url('/landing-slide-one.png')",
   },
   {
     title: "Engineered Hardwood",
     primaryOnly: true,
     primaryLabel: "Explore Collection",
     background:
-      "linear-gradient(rgba(81,57,47,0.03), rgba(81,57,47,0.08)), url('/engineered-hardwood-slide2.png')",
+      "url('/engineered-hardwood-slide2.png')",
   },
   {
     title: "Material-led flooring for serious projects.",
     background:
-      "linear-gradient(rgba(81,57,47,0.08), rgba(81,57,47,0.14)), url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1800&q=80')",
+      "url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1800&q=80')",
   },
 ];
 
@@ -111,7 +111,7 @@ export default function Home() {
           />
         ))}
 
-        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(81,57,47,0.04)_0%,rgba(81,57,47,0.08)_32%,rgba(81,57,47,0.16)_100%)]" />
+
 
         <div className="relative z-10 flex min-h-screen flex-col">
           <header className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-4 py-5 sm:px-6 sm:py-7 lg:px-12">
@@ -135,7 +135,7 @@ export default function Home() {
           </div>
 
           <div className="mx-auto flex w-full max-w-[1400px] flex-1 items-center justify-center px-4 pb-20 pt-8 text-center sm:px-6 sm:pb-24 sm:pt-10 lg:px-12 lg:pb-28">
-            <div className="max-w-5xl rounded-[2rem] bg-[radial-gradient(circle_at_center,rgba(81,57,47,0.38)_0%,rgba(81,57,47,0.22)_42%,rgba(81,57,47,0.04)_78%,rgba(81,57,47,0)_100%)] px-5 py-8 text-white sm:px-8 sm:py-10 lg:px-10">
+            <div className="max-w-5xl px-5 py-8 text-white sm:px-8 sm:py-10 lg:px-10">
               <h1 className="mx-auto max-w-5xl text-3xl font-serif font-normal leading-[1.08] tracking-[0.01em] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.6rem]">
                 {slides[activeSlide].title}
               </h1>
