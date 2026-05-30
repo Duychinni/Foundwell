@@ -131,8 +131,33 @@ export default function ShopFloorsPage() {
         <div className="mb-8 max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">Browse Floors</p>
           <h1 className="mt-3 text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
-            Material-led flooring selections for commercial buyers, designers, and project teams.
+            One SPC construction, available across multiple finishes.
           </h1>
+          <p className="mt-4 text-sm leading-7 text-black/75 sm:text-base">
+            Every option shown below uses the same core specification. The finish changes, but the build quality stays consistent.
+          </p>
+        </div>
+
+        <div className="mb-8 rounded-[1.25rem] border border-[#51392F]/10 bg-[#F4EFE6] px-5 py-5 text-black sm:px-6">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8A2F24] sm:text-sm">Standard Construction</p>
+          <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <p className="text-xs uppercase tracking-[0.16em] text-black/50">Material</p>
+              <p className="mt-1 text-sm font-semibold">SPC Core</p>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-[0.16em] text-black/50">Size</p>
+              <p className="mt-1 text-sm font-semibold">1220 × 183 mm</p>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-[0.16em] text-black/50">Build</p>
+              <p className="mt-1 text-sm font-semibold">5 mm + 1.5 mm IXPE</p>
+            </div>
+            <div>
+              <p className="text-xs uppercase tracking-[0.16em] text-black/50">Wear Layer</p>
+              <p className="mt-1 text-sm font-semibold">0.3 mm</p>
+            </div>
+          </div>
         </div>
 
         <div className="flex justify-end pr-3 text-sm text-black sm:pr-4">
