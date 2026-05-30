@@ -1,83 +1,95 @@
 const products = [
   {
-    name: "Serra XL",
+    code: "B183",
+    name: "B183 Natural Beige Oak",
     price: "$4.99 per Sq Ft",
     tag: "SPC Vinyl",
     image:
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    name: "Burnaby XL",
+    code: "B184",
+    name: "B184 Warm Sand Oak",
     price: "$4.99 per Sq Ft",
     tag: "SPC Vinyl",
     image:
       "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    name: "Pendle Oak XL",
+    code: "B186",
+    name: "B186 Light Ash Oak",
     price: "$4.99 per Sq Ft",
     tag: "SPC Vinyl",
     image:
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    name: "Austen Oak XL",
+    code: "B189",
+    name: "B189 Smoked Taupe Oak",
     price: "$4.99 per Sq Ft",
     tag: "SPC Vinyl",
     image:
       "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    name: "Markham XL",
+    code: "B190",
+    name: "B190 Soft Honey Oak",
     price: "$4.99 per Sq Ft",
     tag: "SPC Vinyl",
     image:
       "https://images.unsplash.com/photo-1616594039964-3f1cb0e8d4d8?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    name: "Denton XL",
+    code: "B191",
+    name: "B191 Midtone Wheat Oak",
     price: "$4.99 per Sq Ft",
     tag: "SPC Vinyl",
     image:
       "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    name: "Harrow Oak",
+    code: "B193",
+    name: "B193 Raw Linen Oak",
     price: "$4.99 per Sq Ft",
     tag: "SPC Vinyl",
     image:
       "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    name: "Wexford Oak",
-    price: "$4.99 per Sq Ft",
-    tag: "SPC Vinyl",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
-  },
-  {
-    name: "Ashton Beige",
+    code: "B194",
+    name: "B194 Drifted Stone Oak",
     price: "$4.99 per Sq Ft",
     tag: "SPC Vinyl",
     image:
       "https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    name: "Norwich Maple",
+    code: "B183",
+    name: "B183 Natural Beige Oak XL",
     price: "$4.99 per Sq Ft",
     tag: "SPC Vinyl",
     image:
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    name: "Bromley Ash",
+    code: "B184",
+    name: "B184 Warm Sand Oak XL",
+    price: "$4.99 per Sq Ft",
+    tag: "SPC Vinyl",
+    image:
+      "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
+  },
+  {
+    code: "B186",
+    name: "B186 Light Ash Oak XL",
     price: "$4.99 per Sq Ft",
     tag: "SPC Vinyl",
     image:
       "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
   },
   {
-    name: "Kingston Taupe",
+    code: "B189",
+    name: "B189 Smoked Taupe Oak XL",
     price: "$4.99 per Sq Ft",
     tag: "SPC Vinyl",
     image:
@@ -171,8 +183,8 @@ export default function ShopFloorsPage() {
                 className="relative aspect-square max-w-[300px] overflow-hidden rounded-[1rem] bg-cover bg-center sm:max-w-[320px] sm:rounded-[1.1rem]"
                 style={{ backgroundImage: `url('${product.image}')` }}
               >
-                <span className="absolute bottom-3 right-3 rounded-full bg-white/92 px-3 py-1 text-[11px] font-medium text-[#51392F]">
-                  {product.tag}
+                <span className="absolute bottom-3 left-3 rounded-full bg-white/92 px-3 py-1 text-[11px] font-medium text-[#51392F]">
+                  {product.code}
                 </span>
               </div>
 
