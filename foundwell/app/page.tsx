@@ -152,10 +152,10 @@ export default function Home() {
                   Browse Floors
                 </a>
                 <a
-                  href="#about"
+                  href="#quote"
                   className="inline-flex h-12 w-full max-w-[280px] items-center justify-center rounded-full border border-white/35 bg-white/10 px-6 text-[12px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition hover:bg-white/16 sm:h-14 sm:w-[220px] sm:max-w-none sm:px-8 sm:text-[13px]"
                 >
-                  Request Samples
+                  Request Quote
                 </a>
               </div>
             </div>
@@ -236,6 +236,41 @@ export default function Home() {
           <h2 className="mt-3 text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
             High-quality flooring at better prices, managed with clarity from sample selection to door delivery.
           </h2>
+        </div>
+      </section>
+
+      <section id="quote" className="mx-auto max-w-7xl px-4 pb-16 sm:px-6 sm:pb-20 lg:px-12">
+        <div className="rounded-[1.75rem] border border-[#51392F]/10 bg-[#F4EFE6] px-6 py-8 sm:rounded-[2rem] sm:px-8 sm:py-10 lg:px-12">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">Request Quote</p>
+            <h2 className="mt-3 text-2xl font-semibold leading-tight text-[#51392F] sm:text-3xl lg:text-4xl">
+              Tell us about your project and we’ll follow up with pricing.
+            </h2>
+          </div>
+
+          <form className="mt-8 grid gap-4 sm:grid-cols-2">
+            <input
+              type="text"
+              placeholder="Full name"
+              className="h-12 rounded-2xl border border-[#51392F]/10 bg-white px-4 text-sm text-[#51392F] outline-none"
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              className="h-12 rounded-2xl border border-[#51392F]/10 bg-white px-4 text-sm text-[#51392F] outline-none"
+            />
+            <input
+              type="tel"
+              placeholder="Phone number"
+              className="h-12 rounded-2xl border border-[#51392F]/10 bg-white px-4 text-sm text-[#51392F] outline-none sm:col-span-2"
+            />
+            <button
+              type="submit"
+              className="inline-flex h-12 items-center justify-center rounded-full bg-[#8A2F24] px-6 text-sm font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-[#76261d] sm:col-span-2 sm:w-[220px]"
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </section>
     </main>
