@@ -122,11 +122,11 @@ export default function ShopFloorsPage() {
           </div>
         </div>
 
-        <div className="mt-8 grid gap-5 sm:gap-6 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 grid gap-x-5 gap-y-8 sm:gap-x-6 sm:gap-y-10 md:grid-cols-2 xl:grid-cols-3">
           {products.map((product) => (
-            <article key={product.name} className="rounded-[1.35rem] border border-[#51392F]/8 bg-white p-3 shadow-[0_10px_30px_rgba(81,57,47,0.06)] sm:rounded-[1.5rem]">
+            <article key={product.name}>
               <div
-                className="relative h-[220px] overflow-hidden rounded-[1.1rem] bg-cover bg-center sm:h-[260px] sm:rounded-[1.2rem]"
+                className="relative h-[220px] overflow-hidden rounded-[1rem] bg-cover bg-center sm:h-[260px] sm:rounded-[1.1rem]"
                 style={{ backgroundImage: `url('${product.image}')` }}
               >
                 <span className="absolute bottom-3 right-3 rounded-full bg-white/92 px-3 py-1 text-[11px] font-medium text-[#51392F]">
@@ -134,15 +134,9 @@ export default function ShopFloorsPage() {
                 </span>
               </div>
 
-              <div className="flex flex-col gap-3 px-2 pb-2 pt-4 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
-                <div>
-                  <h2 className="text-base font-semibold">{product.name}</h2>
-                  <p className="mt-1 text-sm text-[#51392F]/75">{product.price}</p>
-                </div>
-
-                <button className="inline-flex w-full items-center justify-center rounded-full bg-[#8A2F24] px-4 py-2 text-xs font-medium text-white transition hover:bg-[#76261d] sm:w-auto">
-                  Add sample
-                </button>
+              <div className="px-0 pb-0 pt-3">
+                <h2 className="text-base font-semibold">{product.name}</h2>
+                <p className="mt-1 text-sm text-[#51392F]/75">{product.price}</p>
               </div>
             </article>
           ))}
