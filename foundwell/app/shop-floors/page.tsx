@@ -56,7 +56,7 @@ const products = [
 
 function BrandMark() {
   return (
-    <div className="flex items-center gap-3 text-[#51392F]">
+    <a href="/" className="flex items-center gap-3 text-[#51392F]" aria-label="Go to FoundWell home">
       <span className="text-lg font-semibold tracking-[0.22em] sm:text-xl">
         FOUNDWELL
       </span>
@@ -65,7 +65,7 @@ function BrandMark() {
         <span className="absolute left-5 top-3 h-2.5 w-9 rounded-sm bg-[#8A2F24]" />
         <span className="absolute left-2 top-6 h-2.5 w-10 rounded-sm bg-[#AD7042]" />
       </span>
-    </div>
+    </a>
   );
 }
 
@@ -75,9 +75,7 @@ export default function ShopFloorsPage() {
       <header className="border-b border-[#51392F]/8 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 sm:px-8 lg:px-12">
           <div className="flex items-center gap-8 xl:gap-12">
-            <a href="/">
-              <BrandMark />
-            </a>
+            <BrandMark />
 
             <nav className="hidden items-center gap-7 text-[13px] font-medium tracking-[0.04em] text-[#51392F]/75 lg:flex xl:gap-9">
               <a href="/shop-floors" className="text-[#51392F]">Browse Floors</a>
