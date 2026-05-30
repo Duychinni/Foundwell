@@ -136,9 +136,11 @@ export default function Home() {
                 {slides[activeSlide].title}
               </h1>
 
-              <p className="mx-auto mt-5 max-w-2xl text-xs font-medium uppercase tracking-[0.24em] text-[#F4EFE6] sm:text-sm">
-                Better flooring. Clearer pricing.
-              </p>
+              {activeSlide !== 0 ? (
+                <p className="mx-auto mt-5 max-w-2xl text-xs font-medium uppercase tracking-[0.24em] text-[#F4EFE6] sm:text-sm">
+                  Better flooring. Clearer pricing.
+                </p>
+              ) : null}
 
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
                 <a
