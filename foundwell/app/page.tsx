@@ -47,14 +47,14 @@ const services = [
 
 function BrandMark() {
   return (
-    <a href="/" className="flex items-center gap-3" aria-label="Go to FoundWell home">
-      <span className="text-lg font-semibold tracking-[0.22em] text-white sm:text-xl">
+    <a href="/" className="flex items-center gap-2.5 sm:gap-3" aria-label="Go to FoundWell home">
+      <span className="text-base font-semibold tracking-[0.18em] text-white sm:text-lg md:tracking-[0.22em] lg:text-xl">
         FOUNDWELL
       </span>
-      <span className="relative block h-8 w-16 sm:h-9 sm:w-18" aria-hidden="true">
-        <span className="absolute left-0 top-0 h-2.5 w-8 rounded-sm bg-white" />
-        <span className="absolute left-5 top-3 h-2.5 w-9 rounded-sm bg-[#8A2F24]" />
-        <span className="absolute left-2 top-6 h-2.5 w-10 rounded-sm bg-[#AD7042]" />
+      <span className="relative block h-7 w-14 sm:h-8 sm:w-16 md:h-9 md:w-18" aria-hidden="true">
+        <span className="absolute left-0 top-0 h-2 w-7 rounded-sm bg-white sm:h-2.5 sm:w-8" />
+        <span className="absolute left-4 top-2.5 h-2 w-8 rounded-sm bg-[#8A2F24] sm:left-5 sm:top-3 sm:h-2.5 sm:w-9" />
+        <span className="absolute left-1.5 top-5 h-2 w-9 rounded-sm bg-[#AD7042] sm:left-2 sm:top-6 sm:h-2.5 sm:w-10" />
       </span>
     </a>
   );
@@ -105,7 +105,7 @@ export default function Home() {
       <section className="relative min-h-screen overflow-hidden bg-[#51392F]">
         {slides.map((slide, index) => (
           <div
-            key={slide.title}
+            key={`${slide.title}-${index}`}
             className={`absolute inset-0 bg-cover bg-center transition-all duration-700 ${
               index === activeSlide
                 ? "pointer-events-auto opacity-100 scale-100"
@@ -118,8 +118,8 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(81,57,47,0.04)_0%,rgba(81,57,47,0.08)_32%,rgba(81,57,47,0.16)_100%)]" />
 
         <div className="relative z-10 flex min-h-screen flex-col">
-          <header className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-6 py-7 sm:px-8 lg:px-12">
-            <div className="flex items-center gap-8 xl:gap-12">
+          <header className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-4 py-5 sm:px-6 sm:py-7 lg:px-12">
+            <div className="flex w-full items-start justify-between gap-4 lg:items-center">
               <BrandMark />
 
               <nav className="hidden items-center gap-7 text-[13px] font-medium tracking-[0.08em] text-white lg:flex xl:gap-9">
@@ -130,28 +130,36 @@ export default function Home() {
             </div>
           </header>
 
-          <div className="mx-auto flex w-full max-w-[1400px] flex-1 items-center justify-center px-6 pb-28 pt-10 text-center sm:px-8 lg:px-12">
+          <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:hidden">
+            <div className="flex flex-wrap gap-2 pb-2 text-[11px] font-medium uppercase tracking-[0.12em] text-white">
+              <a href="/shop-floors" className="rounded-full border border-white/25 bg-white/10 px-3 py-2 backdrop-blur-sm">Browse Floors</a>
+              <a href="#learn" className="rounded-full border border-white/20 bg-white/8 px-3 py-2 backdrop-blur-sm">Resources</a>
+              <a href="#about" className="rounded-full border border-white/20 bg-white/8 px-3 py-2 backdrop-blur-sm">About</a>
+            </div>
+          </div>
+
+          <div className="mx-auto flex w-full max-w-[1400px] flex-1 items-center justify-center px-4 pb-20 pt-8 text-center sm:px-6 sm:pb-24 sm:pt-10 lg:px-12 lg:pb-28">
             <div className="max-w-5xl text-white">
-              <h1 className="mx-auto max-w-5xl text-4xl font-serif font-normal leading-[1.05] tracking-[0.01em] sm:text-5xl lg:text-6xl xl:text-[4.6rem]">
+              <h1 className="mx-auto max-w-5xl text-3xl font-serif font-normal leading-[1.08] tracking-[0.01em] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.6rem]">
                 {slides[activeSlide].title}
               </h1>
 
               {activeSlide !== 0 ? (
-                <p className="mx-auto mt-5 max-w-2xl text-xs font-medium uppercase tracking-[0.24em] text-[#F4EFE6] sm:text-sm">
+                <p className="mx-auto mt-4 max-w-xl px-4 text-[11px] font-medium uppercase tracking-[0.18em] text-[#F4EFE6] sm:mt-5 sm:max-w-2xl sm:px-0 sm:text-xs lg:text-sm">
                   Better flooring. Clearer pricing.
                 </p>
               ) : null}
 
-              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+              <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4">
                 <a
                   href="/shop-floors"
-                  className="inline-flex min-w-[210px] items-center justify-center rounded-full bg-[#8A2F24] px-8 py-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-[#76261d]"
+                  className="inline-flex min-h-12 w-full max-w-[280px] items-center justify-center rounded-full bg-[#8A2F24] px-6 py-3 text-[12px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-[#76261d] sm:min-w-[210px] sm:max-w-none sm:px-8 sm:py-4 sm:text-[13px]"
                 >
                   {slides[activeSlide].primaryCta}
                 </a>
                 <a
                   href="#about"
-                  className="inline-flex min-w-[210px] items-center justify-center rounded-full border border-white/35 bg-white/10 px-8 py-4 text-[13px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition hover:bg-white/16"
+                  className="inline-flex min-h-12 w-full max-w-[280px] items-center justify-center rounded-full border border-white/35 bg-white/10 px-6 py-3 text-[12px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition hover:bg-white/16 sm:min-w-[210px] sm:max-w-none sm:px-8 sm:py-4 sm:text-[13px]"
                 >
                   {slides[activeSlide].secondaryCta}
                 </a>
@@ -159,12 +167,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative z-10 mx-auto flex w-full max-w-[1400px] flex-col items-center gap-4 px-6 pb-10 sm:px-8 lg:px-12">
-            <div className="flex items-center gap-4">
+          <div className="relative z-10 mx-auto flex w-full max-w-[1400px] flex-col items-center gap-3 px-4 pb-[max(1.25rem,env(safe-area-inset-bottom))] sm:gap-4 sm:px-6 sm:pb-10 lg:px-12">
+            <div className="flex items-center gap-3 sm:gap-4">
               <button
                 onClick={goToPrev}
                 aria-label="Previous slide"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-sm transition hover:bg-white/18"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-sm transition hover:bg-white/18"
               >
                 <Arrow direction="left" />
               </button>
@@ -172,7 +180,7 @@ export default function Home() {
               <button
                 onClick={goToNext}
                 aria-label="Next slide"
-                className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-sm transition hover:bg-white/18"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-sm transition hover:bg-white/18"
               >
                 <Arrow direction="right" />
               </button>
@@ -181,11 +189,11 @@ export default function Home() {
             <div className="flex items-center gap-3">
               {slides.map((slide, index) => (
                 <button
-                  key={slide.title}
+                  key={`${slide.title}-${index}`}
                   aria-label={`Go to slide ${index + 1}`}
                   onClick={() => setActiveSlide(index)}
-                  className={`h-1.5 rounded-full transition-all ${
-                    index === activeSlide ? "w-14 bg-white" : "w-7 bg-white/35"
+                  className={`h-2 rounded-full transition-all ${
+                    index === activeSlide ? "w-14 bg-white" : "w-8 bg-white/35"
                   }`}
                 />
               ))}
@@ -194,21 +202,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="services" className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
+      <section id="services" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-12">
         <div className="max-w-3xl">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#8A2F24]">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">
             Core categories
           </p>
-          <h2 className="mt-3 text-3xl font-semibold text-[#51392F] sm:text-4xl">
+          <h2 className="mt-3 text-2xl font-semibold text-[#51392F] sm:text-3xl lg:text-4xl">
             Flooring programs built for commercial decisions, not showroom browsing.
           </h2>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-6 md:grid-cols-2 xl:grid-cols-4">
           {services.map((service) => (
-            <div key={service.title} className="rounded-[1.75rem] border border-[#51392F]/8 bg-[#F4EFE6] p-6 shadow-sm">
-              <div className="mb-4 h-12 w-12 rounded-2xl bg-white" />
-              <h3 className="text-xl font-semibold text-[#51392F]">{service.title}</h3>
+            <div key={service.title} className="rounded-[1.5rem] border border-[#51392F]/8 bg-[#F4EFE6] p-5 shadow-sm sm:rounded-[1.75rem] sm:p-6">
+              <div className="mb-4 h-11 w-11 rounded-2xl bg-white sm:h-12 sm:w-12" />
+              <h3 className="text-lg font-semibold text-[#51392F] sm:text-xl">{service.title}</h3>
               <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
                 {service.description}
               </p>
@@ -218,20 +226,20 @@ export default function Home() {
       </section>
 
       <section id="learn" className="border-y border-[#51392F]/8 bg-[#F4EFE6]">
-        <div className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
-          <div className="rounded-[1.75rem] bg-white p-8 text-[#51392F] shadow-sm">
-            <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#8A2F24]">Learn Resources</p>
-            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-12">
+          <div className="rounded-[1.5rem] bg-white p-6 text-[#51392F] shadow-sm sm:rounded-[1.75rem] sm:p-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">Learn Resources</p>
+            <h2 className="mt-3 text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
               Plainspoken guidance on material selection, performance, pricing context, and delivery planning.
             </h2>
           </div>
         </div>
       </section>
 
-      <section id="about" className="mx-auto max-w-7xl px-6 py-20 sm:px-8 lg:px-12">
-        <div className="rounded-[2rem] bg-[#51392F] px-8 py-10 text-white sm:px-12">
-          <p className="text-sm font-semibold uppercase tracking-[0.24em] text-[#F4EFE6]">About FoundWell</p>
-          <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">
+      <section id="about" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-12">
+        <div className="rounded-[1.75rem] bg-[#51392F] px-6 py-8 text-white sm:rounded-[2rem] sm:px-8 sm:py-10 sm:px-12">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#F4EFE6] sm:text-sm">About FoundWell</p>
+          <h2 className="mt-3 text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
             High-quality flooring at better prices, managed with clarity from sample selection to door delivery.
           </h2>
         </div>
