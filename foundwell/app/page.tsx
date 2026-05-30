@@ -44,7 +44,7 @@ const services = [
 function BrandMark() {
   return (
     <a href="/" className="flex items-center gap-2.5 sm:gap-3" aria-label="Go to FoundWell home">
-      <span className="text-base font-semibold tracking-[0.18em] text-white sm:text-lg md:tracking-[0.22em] lg:text-xl">
+      <span className="text-base font-medium tracking-[0.12em] text-white sm:text-lg md:tracking-[0.16em] lg:text-xl">
         FOUNDWELL
       </span>
       <span className="relative block h-7 w-14 sm:h-8 sm:w-16 md:h-9 md:w-18" aria-hidden="true">
