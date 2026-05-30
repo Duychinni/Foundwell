@@ -5,22 +5,16 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     title: "",
-    primaryCta: "Browse Floors",
-    secondaryCta: "Request Samples",
     background:
       "linear-gradient(rgba(81,57,47,0.08), rgba(81,57,47,0.14)), url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80')",
   },
   {
     title: "Engineered Hardwood",
-    primaryCta: "Shop Collections",
-    secondaryCta: "Request Specs",
     background:
       "linear-gradient(rgba(81,57,47,0.03), rgba(81,57,47,0.08)), url('/engineered-hardwood-slide2.png')",
   },
   {
     title: "Material-led flooring for serious projects.",
-    primaryCta: "Explore Styles",
-    secondaryCta: "Talk to FoundWell",
     background:
       "linear-gradient(rgba(81,57,47,0.12), rgba(81,57,47,0.20)), url('https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1800&q=80')",
   },
@@ -155,13 +149,13 @@ export default function Home() {
                   href="/shop-floors"
                   className="inline-flex min-h-12 w-full max-w-[280px] items-center justify-center rounded-full bg-[#8A2F24] px-6 py-3 text-[12px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-[#76261d] sm:min-w-[210px] sm:max-w-none sm:px-8 sm:py-4 sm:text-[13px]"
                 >
-                  {slides[activeSlide].primaryCta}
+                  Browse Floors
                 </a>
                 <a
                   href="#about"
                   className="inline-flex min-h-12 w-full max-w-[280px] items-center justify-center rounded-full border border-white/35 bg-white/10 px-6 py-3 text-[12px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition hover:bg-white/16 sm:min-w-[210px] sm:max-w-none sm:px-8 sm:py-4 sm:text-[13px]"
                 >
-                  {slides[activeSlide].secondaryCta}
+                  Request Samples
                 </a>
               </div>
             </div>
