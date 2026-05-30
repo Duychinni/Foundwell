@@ -126,7 +126,7 @@ export default function ShopFloorsPage() {
           {products.map((product) => (
             <article key={product.name}>
               <div
-                className="relative h-[220px] overflow-hidden rounded-[1rem] bg-cover bg-center sm:h-[260px] sm:rounded-[1.1rem]"
+                className="relative aspect-square overflow-hidden rounded-[1rem] bg-cover bg-center sm:rounded-[1.1rem]"
                 style={{ backgroundImage: `url('${product.image}')` }}
               >
                 <span className="absolute bottom-3 right-3 rounded-full bg-white/92 px-3 py-1 text-[11px] font-medium text-[#51392F]">
