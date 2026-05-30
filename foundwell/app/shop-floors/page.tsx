@@ -160,14 +160,10 @@ export default function ShopFloorsPage() {
                 <div className="absolute inset-0 opacity-20 bg-[linear-gradient(135deg,rgba(255,255,255,0.18)_0%,rgba(255,255,255,0)_35%,rgba(0,0,0,0.08)_100%)]" />
                 <div className="absolute inset-0 opacity-18 bg-[repeating-linear-gradient(90deg,rgba(86,58,37,0.18)_0px,rgba(86,58,37,0.18)_2px,transparent_2px,transparent_58px)]" />
                 <div className="absolute inset-0 opacity-14 bg-[repeating-linear-gradient(4deg,rgba(255,255,255,0.18)_0px,rgba(255,255,255,0.18)_1px,transparent_1px,transparent_48px)]" />
-                <span className="absolute bottom-3 left-3 rounded-full bg-white/92 px-3 py-1 text-[11px] font-medium text-[#51392F]">
-                  {product.code}
-                </span>
               </div>
 
               <div className="px-0 pb-0 pt-3 text-black">
-                <p className="text-xl font-semibold leading-none">{product.code}</p>
-                <h2 className="mt-2 text-base font-semibold">{product.name}</h2>
+                <h2 className="text-base font-semibold">{product.name}</h2>
                 <p className="mt-1 text-sm leading-6 text-black/75">{product.description}</p>
               </div>
             </article>
