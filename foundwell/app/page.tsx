@@ -119,9 +119,9 @@ export default function Home() {
               <BrandMark />
 
               <nav className="hidden items-center gap-7 text-[13px] font-medium tracking-[0.08em] text-white lg:flex xl:gap-9">
-                <a href="/shop-floors" className="text-white drop-shadow-[0_0_14px_rgba(255,255,255,0.28)] transition hover:text-white hover:drop-shadow-[0_0_22px_rgba(255,255,255,0.45)]">Browse Floors</a>
-                <a href="#learn" className="text-white drop-shadow-[0_0_14px_rgba(255,255,255,0.28)] transition hover:text-white hover:drop-shadow-[0_0_22px_rgba(255,255,255,0.45)]">Learn Resources</a>
-                <a href="#about" className="text-white drop-shadow-[0_0_14px_rgba(255,255,255,0.28)] transition hover:text-white hover:drop-shadow-[0_0_22px_rgba(255,255,255,0.45)]">About Us</a>
+                <a href="/shop-floors" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">Browse Floors</a>
+                <a href="#learn" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">Learn Resources</a>
+                <a href="#about" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">About Us</a>
               </nav>
             </div>
           </header>
@@ -140,7 +140,7 @@ export default function Home() {
                 {slides[activeSlide].title}
               </h1>
 
-              <p className="mx-auto mt-4 max-w-xl px-4 text-[11px] font-medium uppercase tracking-[0.18em] text-[#F4EFE6] sm:mt-5 sm:max-w-2xl sm:px-0 sm:text-xs lg:text-sm">
+              <p className="mx-auto mt-4 max-w-xl px-4 text-[11px] font-medium uppercase tracking-[0.18em] text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.18)] sm:mt-5 sm:max-w-2xl sm:px-0 sm:text-xs lg:text-sm">
                 {activeSlide === 0 ? "High-quality flooring. Better direct pricing." : "Better materials. Smarter pricing."}
               </p>
 
