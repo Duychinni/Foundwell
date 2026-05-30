@@ -85,7 +85,7 @@ export default function RequestQuotePage() {
           />
           <button
             type="submit"
-            className="inline-flex h-11 items-center justify-center rounded-xl bg-[#8A2F24] px-5 text-xs font-medium uppercase tracking-[0.1em] text-white transition hover:bg-[#76261d] sm:col-span-2 sm:w-[210px]"
+            className="inline-flex h-11 items-center justify-center rounded-full bg-[#8A2F24] px-6 text-[11px] font-medium uppercase tracking-[0.14em] text-white transition hover:bg-[#76261d] sm:col-span-2 sm:w-[230px]"
           >
             Submit Quote Request
           </button>
