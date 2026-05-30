@@ -139,7 +139,7 @@ export default function Home() {
               </h1>
 
               <p className="mx-auto mt-4 max-w-xl px-4 text-[11px] font-medium uppercase tracking-[0.18em] text-[#F4EFE6] sm:mt-5 sm:max-w-2xl sm:px-0 sm:text-xs lg:text-sm">
-                {activeSlide === 0 ? "Better materials. Smarter pricing." : "Better flooring. Clearer pricing."}
+                Better materials. Smarter pricing.
               </p>
 
               <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4">
