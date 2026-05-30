@@ -131,10 +131,13 @@ export default function ShopFloorsPage() {
         <div className="mt-8 grid gap-x-4 gap-y-7 sm:gap-x-5 sm:gap-y-9 md:grid-cols-2 xl:grid-cols-3">
           {products.map((product) => (
             <article key={product.code}>
-              <div
-                className="relative aspect-square max-w-[300px] overflow-hidden rounded-[1rem] bg-cover bg-center sm:max-w-[320px] sm:rounded-[1.1rem]"
-                style={{ backgroundImage: `url('${product.image}')` }}
-              />
+              <div className="relative aspect-square max-w-[300px] overflow-hidden rounded-[1rem] bg-[#f3ede3] sm:max-w-[320px] sm:rounded-[1.1rem]">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="h-full w-full object-cover"
+                />
+              </div>
 
               <div className="px-0 pb-0 pt-3 text-black">
                 <h2 className="text-base font-semibold">{product.name}</h2>
