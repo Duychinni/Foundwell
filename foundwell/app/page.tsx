@@ -135,7 +135,7 @@ export default function Home() {
           </div>
 
           <div className="mx-auto flex w-full max-w-[1400px] flex-1 items-center justify-center px-4 pb-20 pt-8 text-center sm:px-6 sm:pb-24 sm:pt-10 lg:px-12 lg:pb-28">
-            <div className="max-w-5xl text-white">
+            <div className="max-w-5xl rounded-[2rem] bg-[radial-gradient(circle_at_center,rgba(81,57,47,0.38)_0%,rgba(81,57,47,0.22)_42%,rgba(81,57,47,0.04)_78%,rgba(81,57,47,0)_100%)] px-5 py-8 text-white sm:px-8 sm:py-10 lg:px-10">
               <h1 className="mx-auto max-w-5xl text-3xl font-serif font-normal leading-[1.08] tracking-[0.01em] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.6rem]">
                 {slides[activeSlide].title}
               </h1>
