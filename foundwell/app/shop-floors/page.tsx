@@ -1,14 +1,3 @@
-const filters = [
-  "Color",
-  "Use Case",
-  "Material",
-  "Collection",
-  "Length",
-  "Width",
-  "Thickness",
-  "All filters",
-];
-
 const products = [
   {
     name: "Serra XL",
@@ -146,23 +135,7 @@ export default function ShopFloorsPage() {
           </h1>
         </div>
 
-        <div className="flex flex-wrap items-center gap-2.5 text-sm text-[#51392F]/80 sm:gap-3">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              className="rounded-full border border-[#51392F]/10 bg-[#F4EFE6] px-3.5 py-2 text-sm transition hover:border-[#51392F]/20 hover:bg-[#efe7db] sm:px-4"
-            >
-              {filter}
-            </button>
-          ))}
-
-          <div className="flex w-full flex-wrap items-center gap-3 pt-2 text-xs sm:ml-auto sm:w-auto sm:gap-4 sm:pt-0 sm:text-sm">
-            <span>12 of 12 items shown</span>
-            <button className="rounded-full border border-[#51392F]/10 bg-white px-4 py-2 transition hover:border-[#51392F]/20 hover:bg-[#faf7f2]">
-              Sort by
-            </button>
-          </div>
-        </div>
+        <p className="text-sm text-[#51392F]/70">12 flooring options</p>
 
         <div className="mt-8 grid gap-x-4 gap-y-7 sm:gap-x-5 sm:gap-y-9 md:grid-cols-2 xl:grid-cols-3">
           {products.map((product) => (
