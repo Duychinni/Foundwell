@@ -1,92 +1,73 @@
-type Product = {
-  code: string;
-  name: string;
-  price: string;
-  tag: string;
-  primaryImage: string;
-  hoverImage: string;
-};
-
-const products: Product[] = [
+const products = [
   {
     code: "B183",
     name: "Natural Beige Oak",
-    price: "$4.99 per Sq.Ft",
+    description: "Rich amber oak tones with warm, natural character.",
     tag: "SPC Vinyl",
-    primaryImage: "/floors/b183.png",
-    hoverImage: "/floors/rooms/b183-room.png",
+    image: "/floors/b183.png",
   },
   {
     code: "B184",
     name: "Warm Sand Oak",
-    price: "$4.99 per Sq.Ft",
+    description: "Soft gray oak with warm sandy undertones.",
     tag: "SPC Vinyl",
-    primaryImage: "/floors/b184.png",
-    hoverImage: "/floors/rooms/b184-room.png",
+    image: "/floors/b184.png",
   },
   {
     code: "B186",
     name: "Light Ash Oak",
-    price: "$4.99 per Sq.Ft",
+    description: "Natural brown oak with authentic rustic grain.",
     tag: "SPC Vinyl",
-    primaryImage: "/floors/b186.png",
-    hoverImage: "/floors/rooms/b186-room.png",
+    image: "/floors/b186.png",
   },
   {
     code: "B189",
     name: "Smoked Taupe Oak",
-    price: "$4.99 per Sq.Ft",
+    description: "Light taupe oak with subtle beige undertones.",
     tag: "SPC Vinyl",
-    primaryImage: "/floors/b189.png",
-    hoverImage: "/floors/rooms/b189-room.png",
+    image: "/floors/b189.png",
   },
   {
     code: "B190",
     name: "Soft Honey Oak",
-    price: "$4.99 per Sq.Ft",
+    description: "Soft golden hues that bring warmth and brightness.",
     tag: "SPC Vinyl",
-    primaryImage: "/floors/b190.png",
-    hoverImage: "/floors/rooms/b190-room.png",
+    image: "/floors/b190.png",
   },
   {
     code: "B191",
     name: "Midtone Wheat Oak",
-    price: "$4.99 per Sq.Ft",
+    description: "Balanced midtone oak with cozy, natural depth.",
     tag: "SPC Vinyl",
-    primaryImage: "/floors/b191.png",
-    hoverImage: "/floors/rooms/b191-room.png",
+    image: "/floors/b191.png",
   },
   {
     code: "B193",
     name: "Raw Linen Oak",
-    price: "$4.99 per Sq.Ft",
+    description: "Light neutral oak with subtle linen undertones.",
     tag: "SPC Vinyl",
-    primaryImage: "/floors/b193.png",
-    hoverImage: "/floors/rooms/b193-room.png",
+    image: "/floors/b193.png",
   },
   {
     code: "B194",
     name: "Drifted Stone Oak",
-    price: "$4.99 per Sq.Ft",
+    description: "Cool gray oak with a soft, weathered look.",
     tag: "SPC Vinyl",
-    primaryImage: "/floors/b194.png",
-    hoverImage: "/floors/rooms/b194-room.png",
+    image: "/floors/b194.png",
   },
   {
     code: "B195",
     name: "Coastal Taupe Oak",
-    price: "$4.99 per Sq.Ft",
+    description: "Soft taupe oak with a relaxed, coastal feel.",
     tag: "SPC Vinyl",
-    primaryImage: "/floors/b195.png",
-    hoverImage: "/floors/rooms/b195-room.png",
+    image: "/floors/b195.png",
   },
   {
     code: "B197",
     name: "Scandinavian Blonde Oak",
-    price: "$4.99 per Sq.Ft",
+    description: "Light blonde oak for a clean, airy, modern look.",
     tag: "SPC Vinyl",
-    primaryImage: "/floors/b197.png",
-    hoverImage: "/floors/rooms/b197-room.png",
+    image: "/floors/b197.png",
   },
 ];
 
@@ -105,44 +86,9 @@ function BrandMark() {
   );
 }
 
-function ProductCard({ product }: { product: Product }) {
-  return (
-    <article className="group">
-      <div className="relative aspect-square overflow-hidden rounded-[1rem] bg-[#ebe4d8] sm:rounded-[1.15rem]">
-        <img
-          src={product.primaryImage}
-          alt={product.name}
-          className="absolute inset-0 h-full w-full object-cover transition-opacity duration-300 group-hover:opacity-0"
-        />
-        <img
-          src={product.hoverImage}
-          alt={`${product.name} room view`}
-          className="absolute inset-0 h-full w-full object-cover opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        />
-        <span className="absolute bottom-3 right-3 rounded-full bg-white px-3 py-1 text-[11px] font-medium text-[#51392F] shadow-sm">
-          {product.tag}
-        </span>
-      </div>
-
-      <div className="flex items-start justify-between gap-4 pt-4">
-        <div>
-          <h2 className="text-[28px] font-medium leading-[1.05] tracking-[-0.02em] text-black sm:text-[30px] lg:text-[32px]">
-            {product.name}
-          </h2>
-          <p className="mt-1 text-sm text-black/65">{product.price}</p>
-        </div>
-
-        <button className="mt-1 inline-flex h-11 items-center justify-center rounded-full bg-[#EFE8DC] px-5 text-sm font-medium text-[#51392F] transition hover:bg-[#e6ddd0]">
-          Add Sample
-        </button>
-      </div>
-    </article>
-  );
-}
-
 export default function ShopFloorsPage() {
   return (
-    <main className="min-h-screen bg-[#F6F3EE] text-[#51392F]">
+    <main className="min-h-screen bg-white text-[#51392F]">
       <header className="border-b border-[#51392F]/8 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 sm:py-5 lg:px-12">
           <div className="flex w-full items-start justify-between gap-4 lg:items-center">
@@ -165,21 +111,39 @@ export default function ShopFloorsPage() {
         </div>
       </header>
 
-      <section className="mx-auto max-w-[1400px] px-4 py-10 sm:px-6 lg:px-12">
+      <section className="h-20 w-full bg-[linear-gradient(90deg,#F4EFE6_0%,#d9c2aa_55%,#AD7042_100%)] sm:h-24" />
+
+      <section className="mx-auto max-w-[1120px] px-4 py-8 sm:px-6 sm:py-10">
         <div className="mb-8 max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">Shop Floors</p>
-          <h1 className="mt-3 text-2xl font-semibold leading-tight text-black sm:text-3xl lg:text-4xl">
-            Browse 10 Natural Oak Flooring Options
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">Browse Floors</p>
+          <h1 className="mt-3 text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
+            One SPC construction, available across multiple finishes.
           </h1>
+          <p className="mt-4 text-sm leading-7 text-black/75 sm:text-base">
+            Every option shown below uses the same core specification. The finish changes, but the build quality stays consistent.
+          </p>
         </div>
 
-        <div className="flex justify-end pb-6 text-sm text-black">
+        <div className="flex justify-end pr-3 text-sm text-black sm:pr-4">
           <p>Showing 10 of 10</p>
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-5">
+        <div className="mt-8 grid gap-x-4 gap-y-7 sm:gap-x-5 sm:gap-y-9 md:grid-cols-2 xl:grid-cols-3">
           {products.map((product) => (
-            <ProductCard key={product.code} product={product} />
+            <article key={product.code}>
+              <div className="relative aspect-square max-w-[300px] overflow-hidden rounded-[1rem] bg-[#f3ede3] sm:max-w-[320px] sm:rounded-[1.1rem]">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+
+              <div className="px-0 pb-0 pt-3 text-black">
+                <h2 className="text-base font-semibold">{product.name}</h2>
+                <p className="mt-1 text-sm leading-6 text-black/75">{product.description}</p>
+              </div>
+            </article>
           ))}
         </div>
       </section>
