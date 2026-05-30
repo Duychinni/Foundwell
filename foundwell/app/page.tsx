@@ -6,7 +6,7 @@ const slides = [
   {
     title: "",
     background:
-      "linear-gradient(rgba(81,57,47,0.08), rgba(81,57,47,0.14)), url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80')",
+      "linear-gradient(rgba(81,57,47,0.06), rgba(81,57,47,0.12)), url('https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=1800&q=80')",
   },
   {
     title: "Engineered Hardwood",
@@ -141,7 +141,7 @@ export default function Home() {
               </h1>
 
               <p className="mx-auto mt-4 max-w-xl px-4 text-[11px] font-medium uppercase tracking-[0.18em] text-[#F4EFE6] sm:mt-5 sm:max-w-2xl sm:px-0 sm:text-xs lg:text-sm">
-                Better materials. Smarter pricing.
+                {activeSlide === 0 ? "High-quality flooring. Better direct pricing." : "Better materials. Smarter pricing."}
               </p>
 
               <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4">
