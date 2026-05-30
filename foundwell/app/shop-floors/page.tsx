@@ -4,80 +4,70 @@ const products = [
     name: "Natural Beige Oak",
     description: "Rich amber oak tones with warm, natural character.",
     tag: "SPC Vinyl",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+    image: "/engineered-hardwood-slide2.png",
   },
   {
     code: "B184",
     name: "Warm Sand Oak",
     description: "Soft gray oak with warm sandy undertones.",
     tag: "SPC Vinyl",
-    image:
-      "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6?auto=format&fit=crop&w=1200&q=80",
+    image: "/wood-floor-realistic.jpg",
   },
   {
     code: "B186",
     name: "Light Ash Oak",
     description: "Natural brown oak with authentic rustic grain.",
     tag: "SPC Vinyl",
-    image:
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80",
+    image: "/landing-slide-one-clean.png",
   },
   {
     code: "B189",
     name: "Smoked Taupe Oak",
     description: "Light taupe oak with subtle beige undertones.",
     tag: "SPC Vinyl",
-    image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
+    image: "/landing-slide-three.png",
   },
   {
     code: "B190",
     name: "Soft Honey Oak",
     description: "Soft golden hues that bring warmth and brightness.",
     tag: "SPC Vinyl",
-    image:
-      "https://images.unsplash.com/photo-1616594039964-3f1cb0e8d4d8?auto=format&fit=crop&w=1200&q=80",
+    image: "/landing-slide-one.png",
   },
   {
     code: "B191",
     name: "Midtone Wheat Oak",
     description: "Balanced midtone oak with cozy, natural depth.",
     tag: "SPC Vinyl",
-    image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1200&q=80",
+    image: "/engineered-hardwood-slide2.png",
   },
   {
     code: "B193",
     name: "Raw Linen Oak",
     description: "Light neutral oak with subtle linen undertones.",
     tag: "SPC Vinyl",
-    image:
-      "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=80",
+    image: "/wood-floor-realistic.jpg",
   },
   {
     code: "B194",
     name: "Drifted Stone Oak",
     description: "Cool gray oak with a soft, weathered look.",
     tag: "SPC Vinyl",
-    image:
-      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=1200&q=80",
+    image: "/landing-slide-one-clean.png",
   },
   {
     code: "B195",
     name: "Coastal Taupe Oak",
     description: "Soft taupe oak with a relaxed, coastal feel.",
     tag: "SPC Vinyl",
-    image:
-      "https://images.unsplash.com/photo-1616594039964-3f1cb0e8d4d8?auto=format&fit=crop&w=1200&q=80",
+    image: "/landing-slide-three.png",
   },
   {
     code: "B197",
     name: "Scandinavian Blonde Oak",
     description: "Light blonde oak for a clean, airy, modern look.",
     tag: "SPC Vinyl",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+    image: "/landing-slide-one.png",
   },
 ];
 
