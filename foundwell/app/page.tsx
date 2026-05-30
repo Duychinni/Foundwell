@@ -6,7 +6,7 @@ const slides = [
   {
     title: "Direct Flooring Supply",
     background:
-      "linear-gradient(rgba(81,57,47,0.06), rgba(81,57,47,0.12)), url('https://images.unsplash.com/photo-1502005097973-6a7082348e28?auto=format&fit=crop&w=1800&q=80')",
+      "linear-gradient(rgba(81,57,47,0.06), rgba(81,57,47,0.12)), url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1800&q=80')",
   },
   {
     title: "Engineered Hardwood",
