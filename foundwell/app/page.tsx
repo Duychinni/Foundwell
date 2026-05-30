@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const slides = [
   {
-    title: "Better materials. Smarter pricing.",
+    title: "",
     background:
       "linear-gradient(rgba(81,57,47,0.08), rgba(81,57,47,0.14)), url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80')",
   },
@@ -138,11 +138,9 @@ export default function Home() {
                 {slides[activeSlide].title}
               </h1>
 
-              {activeSlide !== 0 ? (
-                <p className="mx-auto mt-4 max-w-xl px-4 text-[11px] font-medium uppercase tracking-[0.18em] text-[#F4EFE6] sm:mt-5 sm:max-w-2xl sm:px-0 sm:text-xs lg:text-sm">
-                  Better flooring. Clearer pricing.
-                </p>
-              ) : null}
+              <p className="mx-auto mt-4 max-w-xl px-4 text-[11px] font-medium uppercase tracking-[0.18em] text-[#F4EFE6] sm:mt-5 sm:max-w-2xl sm:px-0 sm:text-xs lg:text-sm">
+                {activeSlide === 0 ? "Better materials. Smarter pricing." : "Better flooring. Clearer pricing."}
+              </p>
 
               <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4">
                 <a
