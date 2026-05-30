@@ -90,7 +90,7 @@ export default function ShopFloorsPage() {
             <BrandMark />
 
             <nav className="hidden items-center gap-7 text-[13px] font-normal tracking-[0.04em] text-[#51392F]/75 lg:flex xl:gap-9">
-              <a href="/shop-floors" className="text-[#51392F]">Browse Floors</a>
+              <a href="/shop-floors" className="text-[#51392F]">Shop Floors</a>
               <a href="/#learn" className="transition hover:text-[#51392F]">Learn Resources</a>
               <a href="/#about" className="transition hover:text-[#51392F]">About Us</a>
             </nav>
@@ -99,7 +99,7 @@ export default function ShopFloorsPage() {
 
         <div className="mx-auto w-full max-w-[1400px] px-4 pb-4 sm:px-6 lg:hidden">
           <div className="flex flex-wrap gap-2 text-[11px] font-medium uppercase tracking-[0.12em] text-[#51392F]">
-            <a href="/shop-floors" className="rounded-full border border-[#51392F]/10 bg-[#F4EFE6] px-3 py-2">Browse Floors</a>
+            <a href="/shop-floors" className="rounded-full border border-[#51392F]/10 bg-[#F4EFE6] px-3 py-2">Shop Floors</a>
             <a href="/#learn" className="rounded-full border border-[#51392F]/10 bg-white px-3 py-2">Resources</a>
             <a href="/#about" className="rounded-full border border-[#51392F]/10 bg-white px-3 py-2">About</a>
           </div>

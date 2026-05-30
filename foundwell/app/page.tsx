@@ -119,7 +119,7 @@ export default function Home() {
               <BrandMark />
 
               <nav className="hidden items-center gap-8 text-[15px] font-medium tracking-[0.08em] text-white lg:flex xl:gap-10">
-                <a href="/shop-floors" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">Browse Floors</a>
+                <a href="/shop-floors" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">Shop Floors</a>
                 <a href="#learn" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">Learn Resources</a>
                 <a href="#about" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">About Us</a>
               </nav>
@@ -128,7 +128,7 @@ export default function Home() {
 
           <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:hidden">
             <div className="flex flex-wrap gap-2 pb-2 text-[11px] font-medium uppercase tracking-[0.12em] text-white">
-              <a href="/shop-floors" className="rounded-full border border-white/25 bg-white/10 px-3 py-2 backdrop-blur-sm">Browse Floors</a>
+              <a href="/shop-floors" className="rounded-full border border-white/25 bg-white/10 px-3 py-2 backdrop-blur-sm">Shop Floors</a>
               <a href="#learn" className="rounded-full border border-white/20 bg-white/8 px-3 py-2 backdrop-blur-sm">Resources</a>
               <a href="#about" className="rounded-full border border-white/20 bg-white/8 px-3 py-2 backdrop-blur-sm">About</a>
             </div>
@@ -149,7 +149,7 @@ export default function Home() {
                   href="/shop-floors"
                   className="inline-flex h-12 w-full max-w-[280px] items-center justify-center rounded-full bg-[#8A2F24] px-6 text-[12px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-[#76261d] sm:h-14 sm:w-[220px] sm:max-w-none sm:px-8 sm:text-[13px]"
                 >
-                  {activeSlide === 1 ? "Explore Collection" : "Shop Floors"}
+                  {activeSlide === 1 ? "Explore Collection" : "Browse Floors"}
                 </a>
                 {activeSlide !== 1 ? (
                   <a
