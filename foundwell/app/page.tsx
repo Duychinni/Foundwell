@@ -118,7 +118,7 @@ export default function Home() {
             <div className="flex w-full items-start justify-between gap-4 lg:items-center">
               <BrandMark />
 
-              <nav className="hidden items-center gap-7 text-[13px] font-medium tracking-[0.08em] text-white lg:flex xl:gap-9">
+              <nav className="hidden items-center gap-8 text-[15px] font-medium tracking-[0.08em] text-white lg:flex xl:gap-10">
                 <a href="/shop-floors" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">Browse Floors</a>
                 <a href="#learn" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">Learn Resources</a>
                 <a href="#about" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">About Us</a>
