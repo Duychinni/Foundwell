@@ -298,7 +298,7 @@ export default function ShopFloorsPage() {
             <BrandMark />
 
             <nav className="hidden items-center gap-7 text-[13px] font-normal tracking-[0.04em] text-[#51392F]/75 lg:flex xl:gap-9">
-              <a href="/shop-floors" className="text-[#51392F]">Shop Floors</a>
+              <a href="/shop-floors" className="transition hover:text-[#51392F]">Shop Floors</a>
               <a href="/#learn" className="transition hover:text-[#51392F]">Learn Resources</a>
               <a href="/#about" className="transition hover:text-[#51392F]">About Us</a>
             </nav>
