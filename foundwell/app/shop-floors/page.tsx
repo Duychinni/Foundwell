@@ -4,6 +4,7 @@ import { useState } from "react";
 
 type Product = {
   name: string;
+  slug: string;
   description: string;
   images: [string, string, string];
 };
@@ -11,53 +12,103 @@ type Product = {
 const products: Product[] = [
   {
     name: "Toasted Oak",
+    slug: "toasted-oak",
     description: "Warm natural oak tones with authentic wood grain.",
-    images: ["/landing-slide-one-clean.png", "/engineered-hardwood-slide2.png", "/landing-slide-three.png"],
+    images: [
+      "/floors/toasted-oak/room.jpg",
+      "/floors/toasted-oak/texture.jpg",
+      "/floors/toasted-oak/detail.jpg",
+    ],
   },
   {
     name: "Washed Oak",
+    slug: "washed-oak",
     description: "Soft greige oak with contemporary character.",
-    images: ["/engineered-hardwood-slide2.png", "/landing-slide-three.png", "/landing-slide-one-clean.png"],
+    images: [
+      "/floors/washed-oak/room.jpg",
+      "/floors/washed-oak/texture.jpg",
+      "/floors/washed-oak/detail.jpg",
+    ],
   },
   {
     name: "Sherwood Oak",
+    slug: "sherwood-oak",
     description: "Classic oak character with balanced warmth and depth.",
-    images: ["/landing-slide-three.png", "/landing-slide-one-clean.png", "/engineered-hardwood-slide2.png"],
+    images: [
+      "/floors/sherwood-oak/room.jpg",
+      "/floors/sherwood-oak/texture.jpg",
+      "/floors/sherwood-oak/detail.jpg",
+    ],
   },
   {
     name: "Modena Oak",
+    slug: "modena-oak",
     description: "Light taupe oak designed for calm, elevated interiors.",
-    images: ["/landing-slide-one-clean.png", "/landing-slide-three.png", "/engineered-hardwood-slide2.png"],
+    images: [
+      "/floors/modena-oak/room.jpg",
+      "/floors/modena-oak/texture.jpg",
+      "/floors/modena-oak/detail.jpg",
+    ],
   },
   {
     name: "Grey Beach",
+    slug: "grey-beach",
     description: "Cool coastal oak with a soft weathered finish.",
-    images: ["/engineered-hardwood-slide2.png", "/landing-slide-one-clean.png", "/landing-slide-three.png"],
+    images: [
+      "/floors/grey-beach/room.jpg",
+      "/floors/grey-beach/texture.jpg",
+      "/floors/grey-beach/detail.jpg",
+    ],
   },
   {
     name: "Cairo Oak",
+    slug: "cairo-oak",
     description: "Golden midtone oak with grounded, premium texture.",
-    images: ["/landing-slide-three.png", "/engineered-hardwood-slide2.png", "/landing-slide-one-clean.png"],
+    images: [
+      "/floors/cairo-oak/room.jpg",
+      "/floors/cairo-oak/texture.jpg",
+      "/floors/cairo-oak/detail.jpg",
+    ],
   },
   {
     name: "Oxford Oak",
+    slug: "oxford-oak",
     description: "Light neutral oak tailored for modern interior palettes.",
-    images: ["/landing-slide-one-clean.png", "/engineered-hardwood-slide2.png", "/landing-slide-three.png"],
+    images: [
+      "/floors/oxford-oak/room.jpg",
+      "/floors/oxford-oak/texture.jpg",
+      "/floors/oxford-oak/detail.jpg",
+    ],
   },
   {
     name: "Nevada Oak",
+    slug: "nevada-oak",
     description: "Cool contemporary oak with understated natural variation.",
-    images: ["/landing-slide-three.png", "/landing-slide-one-clean.png", "/engineered-hardwood-slide2.png"],
+    images: [
+      "/floors/nevada-oak/room.jpg",
+      "/floors/nevada-oak/texture.jpg",
+      "/floors/nevada-oak/detail.jpg",
+    ],
   },
   {
     name: "Sutton Oak",
+    slug: "sutton-oak",
     description: "Soft taupe oak with quiet sophistication and warmth.",
-    images: ["/engineered-hardwood-slide2.png", "/landing-slide-three.png", "/landing-slide-one-clean.png"],
+    images: [
+      "/floors/sutton-oak/room.jpg",
+      "/floors/sutton-oak/texture.jpg",
+      "/floors/sutton-oak/detail.jpg",
+    ],
   },
   {
     name: "Castle Oak",
+    slug: "castle-oak",
     description: "Bright blonde oak for airy, refined, premium spaces.",
-    images: ["/landing-slide-one-clean.png", "/landing-slide-three.png", "/engineered-hardwood-slide2.png"],
+    images: [
+      "/floors/castle-oak/room.jpg",
+      "/floors/castle-oak/texture.jpg",
+      "/floors/castle-oak/detail.jpg",
+    ],
   },
 ];
 
@@ -186,7 +237,7 @@ export default function ShopFloorsPage() {
 
         <div className="grid grid-cols-1 gap-x-[32px] gap-y-12 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-[40px]">
           {products.map((product) => (
-            <ProductCard key={product.name} product={product} />
+            <ProductCard key={product.slug} product={product} />
           ))}
         </div>
       </section>
