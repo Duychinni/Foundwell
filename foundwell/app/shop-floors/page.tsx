@@ -263,9 +263,12 @@ function ProductCard({ product }: { product: Product }) {
         <p className="mt-2 max-w-[34ch] text-[15px] leading-7 text-[#2B2B2B]/72">
           {product.description}
         </p>
-        <button className="mt-5 inline-flex items-center justify-center rounded-full bg-[#EDE7DF] px-5 py-3 text-sm font-medium text-[#2B2B2B] transition duration-300 hover:bg-[#e4dbcf]">
-          Request Sample
-        </button>
+        <a
+          href="/request-quote"
+          className="mt-5 inline-flex items-center justify-center rounded-full bg-[#EDE7DF] px-5 py-3 text-sm font-medium text-[#2B2B2B] transition duration-300 hover:bg-[#e4dbcf]"
+        >
+          Request Quote
+        </a>
       </div>
     </article>
   );
