@@ -303,36 +303,23 @@ export default function ShopFloorsPage() {
         <div className="mb-10 h-px w-full bg-[#51392F]/10" />
 
         <div className="overflow-hidden rounded-[1.5rem] border border-black/8 bg-white px-6 py-7 sm:px-8 sm:py-9 lg:px-10">
-          <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
-            <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#4E6A57] sm:text-xs">
-                V-Line Collection
-              </p>
-              <h1 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.03em] text-[#111111] sm:text-4xl lg:text-[3.15rem]">
-                V-Line SPC Flooring
-              </h1>
-              <p className="mt-5 max-w-3xl text-[15px] leading-8 text-black/68 sm:text-[17px]">
-                One premium SPC construction across ten curated finishes — built for residential projects, commercial spaces, and design-led installs that demand durability with a cleaner architectural look.
-              </p>
-            </div>
-
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
-              <div className="rounded-[1rem] border border-black/8 bg-[#F6F7F5] px-4 py-4">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#4E6A57]">Performance</p>
-                <p className="mt-2 text-sm leading-6 text-[#111111]">Waterproof, scratch-resistant, and built for everyday wear.</p>
-              </div>
-              <div className="rounded-[1rem] border border-black/8 bg-[#F6F7F5] px-4 py-4">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#4E6A57]">Installation</p>
-                <p className="mt-2 text-sm leading-6 text-[#111111]">Fast-fit SPC format with a clean, premium finished look.</p>
-              </div>
-            </div>
+          <div>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#4E6A57] sm:text-xs">
+              V-Line Collection
+            </p>
+            <h1 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.03em] text-[#111111] sm:text-4xl lg:text-[3.15rem]">
+              V-Line SPC Flooring
+            </h1>
+            <p className="mt-5 max-w-3xl text-[15px] leading-8 text-black/68 sm:text-[17px]">
+              One premium SPC construction across ten curated finishes — built for residential projects, commercial spaces, and design-led installs that demand durability with a cleaner architectural look.
+            </p>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-2.5 text-[11px] font-medium uppercase tracking-[0.14em] text-[#111111] sm:text-xs">
-            <span className="rounded-full border border-black/10 bg-[#F6F7F5] px-3 py-2">Waterproof</span>
-            <span className="rounded-full border border-black/10 bg-[#F6F7F5] px-3 py-2">Scratch-resistant</span>
-            <span className="rounded-full border border-black/10 bg-[#F6F7F5] px-3 py-2">Easy installation</span>
-            <span className="rounded-full border border-black/10 bg-[#F6F7F5] px-3 py-2">Residential & commercial</span>
+          <div className="mt-8 flex flex-wrap gap-2.5 text-[11px] font-medium uppercase tracking-[0.14em] text-white sm:text-xs">
+            <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Waterproof</span>
+            <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Scratch-resistant</span>
+            <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Easy installation</span>
+            <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Residential & commercial</span>
           </div>
         </div>
 
