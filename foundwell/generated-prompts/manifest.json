@@ -1,352 +1,402 @@
 [
   {
-    "flooring": "Cairo Oak",
-    "type": "hero living room",
-    "reference": "public/floor-references/cairo-oak-reference.jpg",
-    "output": "public/generated-flooring/cairo-oak-hero.jpg",
-    "prompt": "Use public/floor-references/cairo-oak-reference.jpg as the exact flooring reference for Cairo Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, upscale styling, and realistic shadows. Flooring must occupy at least 50% of the visible image area and be the primary focus. Premium flooring manufacturer photography, McMillan Floors style, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Cairo Oak",
+    "slug": "cairo-oak",
+    "referenceImagePath": "public/floor-references/cairo-oak-reference.jpg",
+    "imageType": "hero",
+    "outputPath": "public/generated-flooring/cairo-oak-hero.jpg",
+    "prompt": "Use public/floor-references/cairo-oak-reference.jpg as the exact flooring reference for Cairo Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, a designer coffee table, upscale styling, and realistic shadows. Flooring is the visual focus."
   },
   {
-    "flooring": "Cairo Oak",
-    "type": "luxury kitchen",
-    "reference": "public/floor-references/cairo-oak-reference.jpg",
-    "output": "public/generated-flooring/cairo-oak-kitchen.jpg",
-    "prompt": "Use public/floor-references/cairo-oak-reference.jpg as the exact flooring reference for Cairo Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance exactly. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and clearly visible flooring throughout. Flooring must occupy at least 50% of the visible image area. Premium architectural photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Cairo Oak",
+    "slug": "cairo-oak",
+    "referenceImagePath": "public/floor-references/cairo-oak-reference.jpg",
+    "imageType": "kitchen",
+    "outputPath": "public/generated-flooring/cairo-oak-kitchen.jpg",
+    "prompt": "Use public/floor-references/cairo-oak-reference.jpg as the exact flooring reference for Cairo Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and flooring clearly visible throughout the scene."
   },
   {
-    "flooring": "Cairo Oak",
-    "type": "alternate living room",
-    "reference": "public/floor-references/cairo-oak-reference.jpg",
-    "output": "public/generated-flooring/cairo-oak-living-room-alt.jpg",
-    "prompt": "Use public/floor-references/cairo-oak-reference.jpg as the exact flooring reference for Cairo Oak. Match flooring color, tone, grain pattern, plank width, bevel edges, texture variation, and installed appearance exactly. Create a different luxury living room scene with different furniture, different layout, and different lighting angle. Flooring remains the primary focus and occupies at least 50% of the visible image area. Premium flooring manufacturer photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Cairo Oak",
+    "slug": "cairo-oak",
+    "referenceImagePath": "public/floor-references/cairo-oak-reference.jpg",
+    "imageType": "living-room-alt",
+    "outputPath": "public/generated-flooring/cairo-oak-living-room-alt.jpg",
+    "prompt": "Use public/floor-references/cairo-oak-reference.jpg as the exact flooring reference for Cairo Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a different luxury living room with a different layout, different furniture, different decor, and a different lighting angle while keeping the same flooring as the clear visual focus."
   },
   {
-    "flooring": "Cairo Oak",
-    "type": "closeup texture 1",
-    "reference": "public/floor-references/cairo-oak-reference.jpg",
-    "output": "public/generated-flooring/cairo-oak-closeup-1.jpg",
-    "prompt": "Use public/floor-references/cairo-oak-reference.jpg as the exact flooring reference for Cairo Oak. Create a professional flooring manufacturer close-up with visible grain detail, realistic plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium catalog product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Cairo Oak",
+    "slug": "cairo-oak",
+    "referenceImagePath": "public/floor-references/cairo-oak-reference.jpg",
+    "imageType": "closeup-1",
+    "outputPath": "public/generated-flooring/cairo-oak-closeup-1.jpg",
+    "prompt": "Use public/floor-references/cairo-oak-reference.jpg as the exact flooring reference for Cairo Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a professional flooring texture close-up with visible grain detail, realistic plank seams, bevel edges, texture variation, and catalog-quality product photography. Flooring only, no furniture, no room elements."
   },
   {
-    "flooring": "Cairo Oak",
-    "type": "closeup texture 2",
-    "reference": "public/floor-references/cairo-oak-reference.jpg",
-    "output": "public/generated-flooring/cairo-oak-closeup-2.jpg",
-    "prompt": "Use public/floor-references/cairo-oak-reference.jpg as the exact flooring reference for Cairo Oak. Create a second professional flooring catalog close-up from a different angle, showing visible grain detail, plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium manufacturer product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Cairo Oak",
+    "slug": "cairo-oak",
+    "referenceImagePath": "public/floor-references/cairo-oak-reference.jpg",
+    "imageType": "closeup-2",
+    "outputPath": "public/generated-flooring/cairo-oak-closeup-2.jpg",
+    "prompt": "Use public/floor-references/cairo-oak-reference.jpg as the exact flooring reference for Cairo Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a second flooring-only catalog-quality texture shot from a different angle with visible grain detail, realistic plank seams, bevel edges, and texture variation. No furniture, no room elements."
   },
   {
-    "flooring": "Castle Oak",
-    "type": "hero living room",
-    "reference": "public/floor-references/castle-oak-reference.jpg",
-    "output": "public/generated-flooring/castle-oak-hero.jpg",
-    "prompt": "Use public/floor-references/castle-oak-reference.jpg as the exact flooring reference for Castle Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, upscale styling, and realistic shadows. Flooring must occupy at least 50% of the visible image area and be the primary focus. Premium flooring manufacturer photography, McMillan Floors style, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Castle Oak",
+    "slug": "castle-oak",
+    "referenceImagePath": "public/floor-references/castle-oak-reference.jpg",
+    "imageType": "hero",
+    "outputPath": "public/generated-flooring/castle-oak-hero.jpg",
+    "prompt": "Use public/floor-references/castle-oak-reference.jpg as the exact flooring reference for Castle Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, a designer coffee table, upscale styling, and realistic shadows. Flooring is the visual focus."
   },
   {
-    "flooring": "Castle Oak",
-    "type": "luxury kitchen",
-    "reference": "public/floor-references/castle-oak-reference.jpg",
-    "output": "public/generated-flooring/castle-oak-kitchen.jpg",
-    "prompt": "Use public/floor-references/castle-oak-reference.jpg as the exact flooring reference for Castle Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance exactly. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and clearly visible flooring throughout. Flooring must occupy at least 50% of the visible image area. Premium architectural photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Castle Oak",
+    "slug": "castle-oak",
+    "referenceImagePath": "public/floor-references/castle-oak-reference.jpg",
+    "imageType": "kitchen",
+    "outputPath": "public/generated-flooring/castle-oak-kitchen.jpg",
+    "prompt": "Use public/floor-references/castle-oak-reference.jpg as the exact flooring reference for Castle Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and flooring clearly visible throughout the scene."
   },
   {
-    "flooring": "Castle Oak",
-    "type": "alternate living room",
-    "reference": "public/floor-references/castle-oak-reference.jpg",
-    "output": "public/generated-flooring/castle-oak-living-room-alt.jpg",
-    "prompt": "Use public/floor-references/castle-oak-reference.jpg as the exact flooring reference for Castle Oak. Match flooring color, tone, grain pattern, plank width, bevel edges, texture variation, and installed appearance exactly. Create a different luxury living room scene with different furniture, different layout, and different lighting angle. Flooring remains the primary focus and occupies at least 50% of the visible image area. Premium flooring manufacturer photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Castle Oak",
+    "slug": "castle-oak",
+    "referenceImagePath": "public/floor-references/castle-oak-reference.jpg",
+    "imageType": "living-room-alt",
+    "outputPath": "public/generated-flooring/castle-oak-living-room-alt.jpg",
+    "prompt": "Use public/floor-references/castle-oak-reference.jpg as the exact flooring reference for Castle Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a different luxury living room with a different layout, different furniture, different decor, and a different lighting angle while keeping the same flooring as the clear visual focus."
   },
   {
-    "flooring": "Castle Oak",
-    "type": "closeup texture 1",
-    "reference": "public/floor-references/castle-oak-reference.jpg",
-    "output": "public/generated-flooring/castle-oak-closeup-1.jpg",
-    "prompt": "Use public/floor-references/castle-oak-reference.jpg as the exact flooring reference for Castle Oak. Create a professional flooring manufacturer close-up with visible grain detail, realistic plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium catalog product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Castle Oak",
+    "slug": "castle-oak",
+    "referenceImagePath": "public/floor-references/castle-oak-reference.jpg",
+    "imageType": "closeup-1",
+    "outputPath": "public/generated-flooring/castle-oak-closeup-1.jpg",
+    "prompt": "Use public/floor-references/castle-oak-reference.jpg as the exact flooring reference for Castle Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a professional flooring texture close-up with visible grain detail, realistic plank seams, bevel edges, texture variation, and catalog-quality product photography. Flooring only, no furniture, no room elements."
   },
   {
-    "flooring": "Castle Oak",
-    "type": "closeup texture 2",
-    "reference": "public/floor-references/castle-oak-reference.jpg",
-    "output": "public/generated-flooring/castle-oak-closeup-2.jpg",
-    "prompt": "Use public/floor-references/castle-oak-reference.jpg as the exact flooring reference for Castle Oak. Create a second professional flooring catalog close-up from a different angle, showing visible grain detail, plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium manufacturer product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Castle Oak",
+    "slug": "castle-oak",
+    "referenceImagePath": "public/floor-references/castle-oak-reference.jpg",
+    "imageType": "closeup-2",
+    "outputPath": "public/generated-flooring/castle-oak-closeup-2.jpg",
+    "prompt": "Use public/floor-references/castle-oak-reference.jpg as the exact flooring reference for Castle Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a second flooring-only catalog-quality texture shot from a different angle with visible grain detail, realistic plank seams, bevel edges, and texture variation. No furniture, no room elements."
   },
   {
-    "flooring": "Coastal Greige Oak",
-    "type": "hero living room",
-    "reference": "public/floor-references/coastal-greige-oak-reference.jpg",
-    "output": "public/generated-flooring/coastal-greige-oak-hero.jpg",
-    "prompt": "Use public/floor-references/coastal-greige-oak-reference.jpg as the exact flooring reference for Coastal Greige Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, upscale styling, and realistic shadows. Flooring must occupy at least 50% of the visible image area and be the primary focus. Premium flooring manufacturer photography, McMillan Floors style, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Coastal Greige Oak",
+    "slug": "coastal-greige-oak",
+    "referenceImagePath": "public/floor-references/coastal-greige-oak-reference.jpg",
+    "imageType": "hero",
+    "outputPath": "public/generated-flooring/coastal-greige-oak-hero.jpg",
+    "prompt": "Use public/floor-references/coastal-greige-oak-reference.jpg as the exact flooring reference for Coastal Greige Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, a designer coffee table, upscale styling, and realistic shadows. Flooring is the visual focus."
   },
   {
-    "flooring": "Coastal Greige Oak",
-    "type": "luxury kitchen",
-    "reference": "public/floor-references/coastal-greige-oak-reference.jpg",
-    "output": "public/generated-flooring/coastal-greige-oak-kitchen.jpg",
-    "prompt": "Use public/floor-references/coastal-greige-oak-reference.jpg as the exact flooring reference for Coastal Greige Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance exactly. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and clearly visible flooring throughout. Flooring must occupy at least 50% of the visible image area. Premium architectural photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Coastal Greige Oak",
+    "slug": "coastal-greige-oak",
+    "referenceImagePath": "public/floor-references/coastal-greige-oak-reference.jpg",
+    "imageType": "kitchen",
+    "outputPath": "public/generated-flooring/coastal-greige-oak-kitchen.jpg",
+    "prompt": "Use public/floor-references/coastal-greige-oak-reference.jpg as the exact flooring reference for Coastal Greige Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and flooring clearly visible throughout the scene."
   },
   {
-    "flooring": "Coastal Greige Oak",
-    "type": "alternate living room",
-    "reference": "public/floor-references/coastal-greige-oak-reference.jpg",
-    "output": "public/generated-flooring/coastal-greige-oak-living-room-alt.jpg",
-    "prompt": "Use public/floor-references/coastal-greige-oak-reference.jpg as the exact flooring reference for Coastal Greige Oak. Match flooring color, tone, grain pattern, plank width, bevel edges, texture variation, and installed appearance exactly. Create a different luxury living room scene with different furniture, different layout, and different lighting angle. Flooring remains the primary focus and occupies at least 50% of the visible image area. Premium flooring manufacturer photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Coastal Greige Oak",
+    "slug": "coastal-greige-oak",
+    "referenceImagePath": "public/floor-references/coastal-greige-oak-reference.jpg",
+    "imageType": "living-room-alt",
+    "outputPath": "public/generated-flooring/coastal-greige-oak-living-room-alt.jpg",
+    "prompt": "Use public/floor-references/coastal-greige-oak-reference.jpg as the exact flooring reference for Coastal Greige Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a different luxury living room with a different layout, different furniture, different decor, and a different lighting angle while keeping the same flooring as the clear visual focus."
   },
   {
-    "flooring": "Coastal Greige Oak",
-    "type": "closeup texture 1",
-    "reference": "public/floor-references/coastal-greige-oak-reference.jpg",
-    "output": "public/generated-flooring/coastal-greige-oak-closeup-1.jpg",
-    "prompt": "Use public/floor-references/coastal-greige-oak-reference.jpg as the exact flooring reference for Coastal Greige Oak. Create a professional flooring manufacturer close-up with visible grain detail, realistic plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium catalog product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Coastal Greige Oak",
+    "slug": "coastal-greige-oak",
+    "referenceImagePath": "public/floor-references/coastal-greige-oak-reference.jpg",
+    "imageType": "closeup-1",
+    "outputPath": "public/generated-flooring/coastal-greige-oak-closeup-1.jpg",
+    "prompt": "Use public/floor-references/coastal-greige-oak-reference.jpg as the exact flooring reference for Coastal Greige Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a professional flooring texture close-up with visible grain detail, realistic plank seams, bevel edges, texture variation, and catalog-quality product photography. Flooring only, no furniture, no room elements."
   },
   {
-    "flooring": "Coastal Greige Oak",
-    "type": "closeup texture 2",
-    "reference": "public/floor-references/coastal-greige-oak-reference.jpg",
-    "output": "public/generated-flooring/coastal-greige-oak-closeup-2.jpg",
-    "prompt": "Use public/floor-references/coastal-greige-oak-reference.jpg as the exact flooring reference for Coastal Greige Oak. Create a second professional flooring catalog close-up from a different angle, showing visible grain detail, plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium manufacturer product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Coastal Greige Oak",
+    "slug": "coastal-greige-oak",
+    "referenceImagePath": "public/floor-references/coastal-greige-oak-reference.jpg",
+    "imageType": "closeup-2",
+    "outputPath": "public/generated-flooring/coastal-greige-oak-closeup-2.jpg",
+    "prompt": "Use public/floor-references/coastal-greige-oak-reference.jpg as the exact flooring reference for Coastal Greige Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a second flooring-only catalog-quality texture shot from a different angle with visible grain detail, realistic plank seams, bevel edges, and texture variation. No furniture, no room elements."
   },
   {
-    "flooring": "Light Ash Oak",
-    "type": "hero living room",
-    "reference": "public/floor-references/light-ash-oak-reference.jpg",
-    "output": "public/generated-flooring/light-ash-oak-hero.jpg",
-    "prompt": "Use public/floor-references/light-ash-oak-reference.jpg as the exact flooring reference for Light Ash Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, upscale styling, and realistic shadows. Flooring must occupy at least 50% of the visible image area and be the primary focus. Premium flooring manufacturer photography, McMillan Floors style, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Light Ash Oak",
+    "slug": "light-ash-oak",
+    "referenceImagePath": "public/floor-references/light-ash-oak-reference.jpg",
+    "imageType": "hero",
+    "outputPath": "public/generated-flooring/light-ash-oak-hero.jpg",
+    "prompt": "Use public/floor-references/light-ash-oak-reference.jpg as the exact flooring reference for Light Ash Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, a designer coffee table, upscale styling, and realistic shadows. Flooring is the visual focus."
   },
   {
-    "flooring": "Light Ash Oak",
-    "type": "luxury kitchen",
-    "reference": "public/floor-references/light-ash-oak-reference.jpg",
-    "output": "public/generated-flooring/light-ash-oak-kitchen.jpg",
-    "prompt": "Use public/floor-references/light-ash-oak-reference.jpg as the exact flooring reference for Light Ash Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance exactly. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and clearly visible flooring throughout. Flooring must occupy at least 50% of the visible image area. Premium architectural photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Light Ash Oak",
+    "slug": "light-ash-oak",
+    "referenceImagePath": "public/floor-references/light-ash-oak-reference.jpg",
+    "imageType": "kitchen",
+    "outputPath": "public/generated-flooring/light-ash-oak-kitchen.jpg",
+    "prompt": "Use public/floor-references/light-ash-oak-reference.jpg as the exact flooring reference for Light Ash Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and flooring clearly visible throughout the scene."
   },
   {
-    "flooring": "Light Ash Oak",
-    "type": "alternate living room",
-    "reference": "public/floor-references/light-ash-oak-reference.jpg",
-    "output": "public/generated-flooring/light-ash-oak-living-room-alt.jpg",
-    "prompt": "Use public/floor-references/light-ash-oak-reference.jpg as the exact flooring reference for Light Ash Oak. Match flooring color, tone, grain pattern, plank width, bevel edges, texture variation, and installed appearance exactly. Create a different luxury living room scene with different furniture, different layout, and different lighting angle. Flooring remains the primary focus and occupies at least 50% of the visible image area. Premium flooring manufacturer photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Light Ash Oak",
+    "slug": "light-ash-oak",
+    "referenceImagePath": "public/floor-references/light-ash-oak-reference.jpg",
+    "imageType": "living-room-alt",
+    "outputPath": "public/generated-flooring/light-ash-oak-living-room-alt.jpg",
+    "prompt": "Use public/floor-references/light-ash-oak-reference.jpg as the exact flooring reference for Light Ash Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a different luxury living room with a different layout, different furniture, different decor, and a different lighting angle while keeping the same flooring as the clear visual focus."
   },
   {
-    "flooring": "Light Ash Oak",
-    "type": "closeup texture 1",
-    "reference": "public/floor-references/light-ash-oak-reference.jpg",
-    "output": "public/generated-flooring/light-ash-oak-closeup-1.jpg",
-    "prompt": "Use public/floor-references/light-ash-oak-reference.jpg as the exact flooring reference for Light Ash Oak. Create a professional flooring manufacturer close-up with visible grain detail, realistic plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium catalog product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Light Ash Oak",
+    "slug": "light-ash-oak",
+    "referenceImagePath": "public/floor-references/light-ash-oak-reference.jpg",
+    "imageType": "closeup-1",
+    "outputPath": "public/generated-flooring/light-ash-oak-closeup-1.jpg",
+    "prompt": "Use public/floor-references/light-ash-oak-reference.jpg as the exact flooring reference for Light Ash Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a professional flooring texture close-up with visible grain detail, realistic plank seams, bevel edges, texture variation, and catalog-quality product photography. Flooring only, no furniture, no room elements."
   },
   {
-    "flooring": "Light Ash Oak",
-    "type": "closeup texture 2",
-    "reference": "public/floor-references/light-ash-oak-reference.jpg",
-    "output": "public/generated-flooring/light-ash-oak-closeup-2.jpg",
-    "prompt": "Use public/floor-references/light-ash-oak-reference.jpg as the exact flooring reference for Light Ash Oak. Create a second professional flooring catalog close-up from a different angle, showing visible grain detail, plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium manufacturer product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Light Ash Oak",
+    "slug": "light-ash-oak",
+    "referenceImagePath": "public/floor-references/light-ash-oak-reference.jpg",
+    "imageType": "closeup-2",
+    "outputPath": "public/generated-flooring/light-ash-oak-closeup-2.jpg",
+    "prompt": "Use public/floor-references/light-ash-oak-reference.jpg as the exact flooring reference for Light Ash Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a second flooring-only catalog-quality texture shot from a different angle with visible grain detail, realistic plank seams, bevel edges, and texture variation. No furniture, no room elements."
   },
   {
-    "flooring": "Natural Beige Oak",
-    "type": "hero living room",
-    "reference": "public/floor-references/natural-beige-oak-reference.jpg",
-    "output": "public/generated-flooring/natural-beige-oak-hero.jpg",
-    "prompt": "Use public/floor-references/natural-beige-oak-reference.jpg as the exact flooring reference for Natural Beige Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, upscale styling, and realistic shadows. Flooring must occupy at least 50% of the visible image area and be the primary focus. Premium flooring manufacturer photography, McMillan Floors style, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Natural Beige Oak",
+    "slug": "natural-beige-oak",
+    "referenceImagePath": "public/floor-references/natural-beige-oak-reference.jpg",
+    "imageType": "hero",
+    "outputPath": "public/generated-flooring/natural-beige-oak-hero.jpg",
+    "prompt": "Use public/floor-references/natural-beige-oak-reference.jpg as the exact flooring reference for Natural Beige Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, a designer coffee table, upscale styling, and realistic shadows. Flooring is the visual focus."
   },
   {
-    "flooring": "Natural Beige Oak",
-    "type": "luxury kitchen",
-    "reference": "public/floor-references/natural-beige-oak-reference.jpg",
-    "output": "public/generated-flooring/natural-beige-oak-kitchen.jpg",
-    "prompt": "Use public/floor-references/natural-beige-oak-reference.jpg as the exact flooring reference for Natural Beige Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance exactly. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and clearly visible flooring throughout. Flooring must occupy at least 50% of the visible image area. Premium architectural photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Natural Beige Oak",
+    "slug": "natural-beige-oak",
+    "referenceImagePath": "public/floor-references/natural-beige-oak-reference.jpg",
+    "imageType": "kitchen",
+    "outputPath": "public/generated-flooring/natural-beige-oak-kitchen.jpg",
+    "prompt": "Use public/floor-references/natural-beige-oak-reference.jpg as the exact flooring reference for Natural Beige Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and flooring clearly visible throughout the scene."
   },
   {
-    "flooring": "Natural Beige Oak",
-    "type": "alternate living room",
-    "reference": "public/floor-references/natural-beige-oak-reference.jpg",
-    "output": "public/generated-flooring/natural-beige-oak-living-room-alt.jpg",
-    "prompt": "Use public/floor-references/natural-beige-oak-reference.jpg as the exact flooring reference for Natural Beige Oak. Match flooring color, tone, grain pattern, plank width, bevel edges, texture variation, and installed appearance exactly. Create a different luxury living room scene with different furniture, different layout, and different lighting angle. Flooring remains the primary focus and occupies at least 50% of the visible image area. Premium flooring manufacturer photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Natural Beige Oak",
+    "slug": "natural-beige-oak",
+    "referenceImagePath": "public/floor-references/natural-beige-oak-reference.jpg",
+    "imageType": "living-room-alt",
+    "outputPath": "public/generated-flooring/natural-beige-oak-living-room-alt.jpg",
+    "prompt": "Use public/floor-references/natural-beige-oak-reference.jpg as the exact flooring reference for Natural Beige Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a different luxury living room with a different layout, different furniture, different decor, and a different lighting angle while keeping the same flooring as the clear visual focus."
   },
   {
-    "flooring": "Natural Beige Oak",
-    "type": "closeup texture 1",
-    "reference": "public/floor-references/natural-beige-oak-reference.jpg",
-    "output": "public/generated-flooring/natural-beige-oak-closeup-1.jpg",
-    "prompt": "Use public/floor-references/natural-beige-oak-reference.jpg as the exact flooring reference for Natural Beige Oak. Create a professional flooring manufacturer close-up with visible grain detail, realistic plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium catalog product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Natural Beige Oak",
+    "slug": "natural-beige-oak",
+    "referenceImagePath": "public/floor-references/natural-beige-oak-reference.jpg",
+    "imageType": "closeup-1",
+    "outputPath": "public/generated-flooring/natural-beige-oak-closeup-1.jpg",
+    "prompt": "Use public/floor-references/natural-beige-oak-reference.jpg as the exact flooring reference for Natural Beige Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a professional flooring texture close-up with visible grain detail, realistic plank seams, bevel edges, texture variation, and catalog-quality product photography. Flooring only, no furniture, no room elements."
   },
   {
-    "flooring": "Natural Beige Oak",
-    "type": "closeup texture 2",
-    "reference": "public/floor-references/natural-beige-oak-reference.jpg",
-    "output": "public/generated-flooring/natural-beige-oak-closeup-2.jpg",
-    "prompt": "Use public/floor-references/natural-beige-oak-reference.jpg as the exact flooring reference for Natural Beige Oak. Create a second professional flooring catalog close-up from a different angle, showing visible grain detail, plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium manufacturer product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Natural Beige Oak",
+    "slug": "natural-beige-oak",
+    "referenceImagePath": "public/floor-references/natural-beige-oak-reference.jpg",
+    "imageType": "closeup-2",
+    "outputPath": "public/generated-flooring/natural-beige-oak-closeup-2.jpg",
+    "prompt": "Use public/floor-references/natural-beige-oak-reference.jpg as the exact flooring reference for Natural Beige Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a second flooring-only catalog-quality texture shot from a different angle with visible grain detail, realistic plank seams, bevel edges, and texture variation. No furniture, no room elements."
   },
   {
-    "flooring": "Nordic Blonde Oak",
-    "type": "hero living room",
-    "reference": "public/floor-references/nordic-blonde-oak-reference.jpg",
-    "output": "public/generated-flooring/nordic-blonde-oak-hero.jpg",
-    "prompt": "Use public/floor-references/nordic-blonde-oak-reference.jpg as the exact flooring reference for Nordic Blonde Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, upscale styling, and realistic shadows. Flooring must occupy at least 50% of the visible image area and be the primary focus. Premium flooring manufacturer photography, McMillan Floors style, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Nordic Blonde Oak",
+    "slug": "nordic-blonde-oak",
+    "referenceImagePath": "public/floor-references/nordic-blonde-oak-reference.jpg",
+    "imageType": "hero",
+    "outputPath": "public/generated-flooring/nordic-blonde-oak-hero.jpg",
+    "prompt": "Use public/floor-references/nordic-blonde-oak-reference.jpg as the exact flooring reference for Nordic Blonde Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, a designer coffee table, upscale styling, and realistic shadows. Flooring is the visual focus."
   },
   {
-    "flooring": "Nordic Blonde Oak",
-    "type": "luxury kitchen",
-    "reference": "public/floor-references/nordic-blonde-oak-reference.jpg",
-    "output": "public/generated-flooring/nordic-blonde-oak-kitchen.jpg",
-    "prompt": "Use public/floor-references/nordic-blonde-oak-reference.jpg as the exact flooring reference for Nordic Blonde Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance exactly. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and clearly visible flooring throughout. Flooring must occupy at least 50% of the visible image area. Premium architectural photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Nordic Blonde Oak",
+    "slug": "nordic-blonde-oak",
+    "referenceImagePath": "public/floor-references/nordic-blonde-oak-reference.jpg",
+    "imageType": "kitchen",
+    "outputPath": "public/generated-flooring/nordic-blonde-oak-kitchen.jpg",
+    "prompt": "Use public/floor-references/nordic-blonde-oak-reference.jpg as the exact flooring reference for Nordic Blonde Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and flooring clearly visible throughout the scene."
   },
   {
-    "flooring": "Nordic Blonde Oak",
-    "type": "alternate living room",
-    "reference": "public/floor-references/nordic-blonde-oak-reference.jpg",
-    "output": "public/generated-flooring/nordic-blonde-oak-living-room-alt.jpg",
-    "prompt": "Use public/floor-references/nordic-blonde-oak-reference.jpg as the exact flooring reference for Nordic Blonde Oak. Match flooring color, tone, grain pattern, plank width, bevel edges, texture variation, and installed appearance exactly. Create a different luxury living room scene with different furniture, different layout, and different lighting angle. Flooring remains the primary focus and occupies at least 50% of the visible image area. Premium flooring manufacturer photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Nordic Blonde Oak",
+    "slug": "nordic-blonde-oak",
+    "referenceImagePath": "public/floor-references/nordic-blonde-oak-reference.jpg",
+    "imageType": "living-room-alt",
+    "outputPath": "public/generated-flooring/nordic-blonde-oak-living-room-alt.jpg",
+    "prompt": "Use public/floor-references/nordic-blonde-oak-reference.jpg as the exact flooring reference for Nordic Blonde Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a different luxury living room with a different layout, different furniture, different decor, and a different lighting angle while keeping the same flooring as the clear visual focus."
   },
   {
-    "flooring": "Nordic Blonde Oak",
-    "type": "closeup texture 1",
-    "reference": "public/floor-references/nordic-blonde-oak-reference.jpg",
-    "output": "public/generated-flooring/nordic-blonde-oak-closeup-1.jpg",
-    "prompt": "Use public/floor-references/nordic-blonde-oak-reference.jpg as the exact flooring reference for Nordic Blonde Oak. Create a professional flooring manufacturer close-up with visible grain detail, realistic plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium catalog product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Nordic Blonde Oak",
+    "slug": "nordic-blonde-oak",
+    "referenceImagePath": "public/floor-references/nordic-blonde-oak-reference.jpg",
+    "imageType": "closeup-1",
+    "outputPath": "public/generated-flooring/nordic-blonde-oak-closeup-1.jpg",
+    "prompt": "Use public/floor-references/nordic-blonde-oak-reference.jpg as the exact flooring reference for Nordic Blonde Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a professional flooring texture close-up with visible grain detail, realistic plank seams, bevel edges, texture variation, and catalog-quality product photography. Flooring only, no furniture, no room elements."
   },
   {
-    "flooring": "Nordic Blonde Oak",
-    "type": "closeup texture 2",
-    "reference": "public/floor-references/nordic-blonde-oak-reference.jpg",
-    "output": "public/generated-flooring/nordic-blonde-oak-closeup-2.jpg",
-    "prompt": "Use public/floor-references/nordic-blonde-oak-reference.jpg as the exact flooring reference for Nordic Blonde Oak. Create a second professional flooring catalog close-up from a different angle, showing visible grain detail, plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium manufacturer product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Nordic Blonde Oak",
+    "slug": "nordic-blonde-oak",
+    "referenceImagePath": "public/floor-references/nordic-blonde-oak-reference.jpg",
+    "imageType": "closeup-2",
+    "outputPath": "public/generated-flooring/nordic-blonde-oak-closeup-2.jpg",
+    "prompt": "Use public/floor-references/nordic-blonde-oak-reference.jpg as the exact flooring reference for Nordic Blonde Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a second flooring-only catalog-quality texture shot from a different angle with visible grain detail, realistic plank seams, bevel edges, and texture variation. No furniture, no room elements."
   },
   {
-    "flooring": "Raw Linen Oak",
-    "type": "hero living room",
-    "reference": "public/floor-references/raw-linen-oak-reference.jpg",
-    "output": "public/generated-flooring/raw-linen-oak-hero.jpg",
-    "prompt": "Use public/floor-references/raw-linen-oak-reference.jpg as the exact flooring reference for Raw Linen Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, upscale styling, and realistic shadows. Flooring must occupy at least 50% of the visible image area and be the primary focus. Premium flooring manufacturer photography, McMillan Floors style, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Raw Linen Oak",
+    "slug": "raw-linen-oak",
+    "referenceImagePath": "public/floor-references/raw-linen-oak-reference.jpg",
+    "imageType": "hero",
+    "outputPath": "public/generated-flooring/raw-linen-oak-hero.jpg",
+    "prompt": "Use public/floor-references/raw-linen-oak-reference.jpg as the exact flooring reference for Raw Linen Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, a designer coffee table, upscale styling, and realistic shadows. Flooring is the visual focus."
   },
   {
-    "flooring": "Raw Linen Oak",
-    "type": "luxury kitchen",
-    "reference": "public/floor-references/raw-linen-oak-reference.jpg",
-    "output": "public/generated-flooring/raw-linen-oak-kitchen.jpg",
-    "prompt": "Use public/floor-references/raw-linen-oak-reference.jpg as the exact flooring reference for Raw Linen Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance exactly. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and clearly visible flooring throughout. Flooring must occupy at least 50% of the visible image area. Premium architectural photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Raw Linen Oak",
+    "slug": "raw-linen-oak",
+    "referenceImagePath": "public/floor-references/raw-linen-oak-reference.jpg",
+    "imageType": "kitchen",
+    "outputPath": "public/generated-flooring/raw-linen-oak-kitchen.jpg",
+    "prompt": "Use public/floor-references/raw-linen-oak-reference.jpg as the exact flooring reference for Raw Linen Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and flooring clearly visible throughout the scene."
   },
   {
-    "flooring": "Raw Linen Oak",
-    "type": "alternate living room",
-    "reference": "public/floor-references/raw-linen-oak-reference.jpg",
-    "output": "public/generated-flooring/raw-linen-oak-living-room-alt.jpg",
-    "prompt": "Use public/floor-references/raw-linen-oak-reference.jpg as the exact flooring reference for Raw Linen Oak. Match flooring color, tone, grain pattern, plank width, bevel edges, texture variation, and installed appearance exactly. Create a different luxury living room scene with different furniture, different layout, and different lighting angle. Flooring remains the primary focus and occupies at least 50% of the visible image area. Premium flooring manufacturer photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Raw Linen Oak",
+    "slug": "raw-linen-oak",
+    "referenceImagePath": "public/floor-references/raw-linen-oak-reference.jpg",
+    "imageType": "living-room-alt",
+    "outputPath": "public/generated-flooring/raw-linen-oak-living-room-alt.jpg",
+    "prompt": "Use public/floor-references/raw-linen-oak-reference.jpg as the exact flooring reference for Raw Linen Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a different luxury living room with a different layout, different furniture, different decor, and a different lighting angle while keeping the same flooring as the clear visual focus."
   },
   {
-    "flooring": "Raw Linen Oak",
-    "type": "closeup texture 1",
-    "reference": "public/floor-references/raw-linen-oak-reference.jpg",
-    "output": "public/generated-flooring/raw-linen-oak-closeup-1.jpg",
-    "prompt": "Use public/floor-references/raw-linen-oak-reference.jpg as the exact flooring reference for Raw Linen Oak. Create a professional flooring manufacturer close-up with visible grain detail, realistic plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium catalog product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Raw Linen Oak",
+    "slug": "raw-linen-oak",
+    "referenceImagePath": "public/floor-references/raw-linen-oak-reference.jpg",
+    "imageType": "closeup-1",
+    "outputPath": "public/generated-flooring/raw-linen-oak-closeup-1.jpg",
+    "prompt": "Use public/floor-references/raw-linen-oak-reference.jpg as the exact flooring reference for Raw Linen Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a professional flooring texture close-up with visible grain detail, realistic plank seams, bevel edges, texture variation, and catalog-quality product photography. Flooring only, no furniture, no room elements."
   },
   {
-    "flooring": "Raw Linen Oak",
-    "type": "closeup texture 2",
-    "reference": "public/floor-references/raw-linen-oak-reference.jpg",
-    "output": "public/generated-flooring/raw-linen-oak-closeup-2.jpg",
-    "prompt": "Use public/floor-references/raw-linen-oak-reference.jpg as the exact flooring reference for Raw Linen Oak. Create a second professional flooring catalog close-up from a different angle, showing visible grain detail, plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium manufacturer product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Raw Linen Oak",
+    "slug": "raw-linen-oak",
+    "referenceImagePath": "public/floor-references/raw-linen-oak-reference.jpg",
+    "imageType": "closeup-2",
+    "outputPath": "public/generated-flooring/raw-linen-oak-closeup-2.jpg",
+    "prompt": "Use public/floor-references/raw-linen-oak-reference.jpg as the exact flooring reference for Raw Linen Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a second flooring-only catalog-quality texture shot from a different angle with visible grain detail, realistic plank seams, bevel edges, and texture variation. No furniture, no room elements."
   },
   {
-    "flooring": "Smoked Taupe Oak",
-    "type": "hero living room",
-    "reference": "public/floor-references/smoked-taupe-oak-reference.jpg",
-    "output": "public/generated-flooring/smoked-taupe-oak-hero.jpg",
-    "prompt": "Use public/floor-references/smoked-taupe-oak-reference.jpg as the exact flooring reference for Smoked Taupe Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, upscale styling, and realistic shadows. Flooring must occupy at least 50% of the visible image area and be the primary focus. Premium flooring manufacturer photography, McMillan Floors style, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Smoked Taupe Oak",
+    "slug": "smoked-taupe-oak",
+    "referenceImagePath": "public/floor-references/smoked-taupe-oak-reference.jpg",
+    "imageType": "hero",
+    "outputPath": "public/generated-flooring/smoked-taupe-oak-hero.jpg",
+    "prompt": "Use public/floor-references/smoked-taupe-oak-reference.jpg as the exact flooring reference for Smoked Taupe Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, a designer coffee table, upscale styling, and realistic shadows. Flooring is the visual focus."
   },
   {
-    "flooring": "Smoked Taupe Oak",
-    "type": "luxury kitchen",
-    "reference": "public/floor-references/smoked-taupe-oak-reference.jpg",
-    "output": "public/generated-flooring/smoked-taupe-oak-kitchen.jpg",
-    "prompt": "Use public/floor-references/smoked-taupe-oak-reference.jpg as the exact flooring reference for Smoked Taupe Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance exactly. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and clearly visible flooring throughout. Flooring must occupy at least 50% of the visible image area. Premium architectural photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Smoked Taupe Oak",
+    "slug": "smoked-taupe-oak",
+    "referenceImagePath": "public/floor-references/smoked-taupe-oak-reference.jpg",
+    "imageType": "kitchen",
+    "outputPath": "public/generated-flooring/smoked-taupe-oak-kitchen.jpg",
+    "prompt": "Use public/floor-references/smoked-taupe-oak-reference.jpg as the exact flooring reference for Smoked Taupe Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and flooring clearly visible throughout the scene."
   },
   {
-    "flooring": "Smoked Taupe Oak",
-    "type": "alternate living room",
-    "reference": "public/floor-references/smoked-taupe-oak-reference.jpg",
-    "output": "public/generated-flooring/smoked-taupe-oak-living-room-alt.jpg",
-    "prompt": "Use public/floor-references/smoked-taupe-oak-reference.jpg as the exact flooring reference for Smoked Taupe Oak. Match flooring color, tone, grain pattern, plank width, bevel edges, texture variation, and installed appearance exactly. Create a different luxury living room scene with different furniture, different layout, and different lighting angle. Flooring remains the primary focus and occupies at least 50% of the visible image area. Premium flooring manufacturer photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Smoked Taupe Oak",
+    "slug": "smoked-taupe-oak",
+    "referenceImagePath": "public/floor-references/smoked-taupe-oak-reference.jpg",
+    "imageType": "living-room-alt",
+    "outputPath": "public/generated-flooring/smoked-taupe-oak-living-room-alt.jpg",
+    "prompt": "Use public/floor-references/smoked-taupe-oak-reference.jpg as the exact flooring reference for Smoked Taupe Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a different luxury living room with a different layout, different furniture, different decor, and a different lighting angle while keeping the same flooring as the clear visual focus."
   },
   {
-    "flooring": "Smoked Taupe Oak",
-    "type": "closeup texture 1",
-    "reference": "public/floor-references/smoked-taupe-oak-reference.jpg",
-    "output": "public/generated-flooring/smoked-taupe-oak-closeup-1.jpg",
-    "prompt": "Use public/floor-references/smoked-taupe-oak-reference.jpg as the exact flooring reference for Smoked Taupe Oak. Create a professional flooring manufacturer close-up with visible grain detail, realistic plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium catalog product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Smoked Taupe Oak",
+    "slug": "smoked-taupe-oak",
+    "referenceImagePath": "public/floor-references/smoked-taupe-oak-reference.jpg",
+    "imageType": "closeup-1",
+    "outputPath": "public/generated-flooring/smoked-taupe-oak-closeup-1.jpg",
+    "prompt": "Use public/floor-references/smoked-taupe-oak-reference.jpg as the exact flooring reference for Smoked Taupe Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a professional flooring texture close-up with visible grain detail, realistic plank seams, bevel edges, texture variation, and catalog-quality product photography. Flooring only, no furniture, no room elements."
   },
   {
-    "flooring": "Smoked Taupe Oak",
-    "type": "closeup texture 2",
-    "reference": "public/floor-references/smoked-taupe-oak-reference.jpg",
-    "output": "public/generated-flooring/smoked-taupe-oak-closeup-2.jpg",
-    "prompt": "Use public/floor-references/smoked-taupe-oak-reference.jpg as the exact flooring reference for Smoked Taupe Oak. Create a second professional flooring catalog close-up from a different angle, showing visible grain detail, plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium manufacturer product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Smoked Taupe Oak",
+    "slug": "smoked-taupe-oak",
+    "referenceImagePath": "public/floor-references/smoked-taupe-oak-reference.jpg",
+    "imageType": "closeup-2",
+    "outputPath": "public/generated-flooring/smoked-taupe-oak-closeup-2.jpg",
+    "prompt": "Use public/floor-references/smoked-taupe-oak-reference.jpg as the exact flooring reference for Smoked Taupe Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a second flooring-only catalog-quality texture shot from a different angle with visible grain detail, realistic plank seams, bevel edges, and texture variation. No furniture, no room elements."
   },
   {
-    "flooring": "Soft Honey Oak",
-    "type": "hero living room",
-    "reference": "public/floor-references/soft-honey-oak-reference.jpg",
-    "output": "public/generated-flooring/soft-honey-oak-hero.jpg",
-    "prompt": "Use public/floor-references/soft-honey-oak-reference.jpg as the exact flooring reference for Soft Honey Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, upscale styling, and realistic shadows. Flooring must occupy at least 50% of the visible image area and be the primary focus. Premium flooring manufacturer photography, McMillan Floors style, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Soft Honey Oak",
+    "slug": "soft-honey-oak",
+    "referenceImagePath": "public/floor-references/soft-honey-oak-reference.jpg",
+    "imageType": "hero",
+    "outputPath": "public/generated-flooring/soft-honey-oak-hero.jpg",
+    "prompt": "Use public/floor-references/soft-honey-oak-reference.jpg as the exact flooring reference for Soft Honey Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, a designer coffee table, upscale styling, and realistic shadows. Flooring is the visual focus."
   },
   {
-    "flooring": "Soft Honey Oak",
-    "type": "luxury kitchen",
-    "reference": "public/floor-references/soft-honey-oak-reference.jpg",
-    "output": "public/generated-flooring/soft-honey-oak-kitchen.jpg",
-    "prompt": "Use public/floor-references/soft-honey-oak-reference.jpg as the exact flooring reference for Soft Honey Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance exactly. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and clearly visible flooring throughout. Flooring must occupy at least 50% of the visible image area. Premium architectural photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Soft Honey Oak",
+    "slug": "soft-honey-oak",
+    "referenceImagePath": "public/floor-references/soft-honey-oak-reference.jpg",
+    "imageType": "kitchen",
+    "outputPath": "public/generated-flooring/soft-honey-oak-kitchen.jpg",
+    "prompt": "Use public/floor-references/soft-honey-oak-reference.jpg as the exact flooring reference for Soft Honey Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and flooring clearly visible throughout the scene."
   },
   {
-    "flooring": "Soft Honey Oak",
-    "type": "alternate living room",
-    "reference": "public/floor-references/soft-honey-oak-reference.jpg",
-    "output": "public/generated-flooring/soft-honey-oak-living-room-alt.jpg",
-    "prompt": "Use public/floor-references/soft-honey-oak-reference.jpg as the exact flooring reference for Soft Honey Oak. Match flooring color, tone, grain pattern, plank width, bevel edges, texture variation, and installed appearance exactly. Create a different luxury living room scene with different furniture, different layout, and different lighting angle. Flooring remains the primary focus and occupies at least 50% of the visible image area. Premium flooring manufacturer photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Soft Honey Oak",
+    "slug": "soft-honey-oak",
+    "referenceImagePath": "public/floor-references/soft-honey-oak-reference.jpg",
+    "imageType": "living-room-alt",
+    "outputPath": "public/generated-flooring/soft-honey-oak-living-room-alt.jpg",
+    "prompt": "Use public/floor-references/soft-honey-oak-reference.jpg as the exact flooring reference for Soft Honey Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a different luxury living room with a different layout, different furniture, different decor, and a different lighting angle while keeping the same flooring as the clear visual focus."
   },
   {
-    "flooring": "Soft Honey Oak",
-    "type": "closeup texture 1",
-    "reference": "public/floor-references/soft-honey-oak-reference.jpg",
-    "output": "public/generated-flooring/soft-honey-oak-closeup-1.jpg",
-    "prompt": "Use public/floor-references/soft-honey-oak-reference.jpg as the exact flooring reference for Soft Honey Oak. Create a professional flooring manufacturer close-up with visible grain detail, realistic plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium catalog product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Soft Honey Oak",
+    "slug": "soft-honey-oak",
+    "referenceImagePath": "public/floor-references/soft-honey-oak-reference.jpg",
+    "imageType": "closeup-1",
+    "outputPath": "public/generated-flooring/soft-honey-oak-closeup-1.jpg",
+    "prompt": "Use public/floor-references/soft-honey-oak-reference.jpg as the exact flooring reference for Soft Honey Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a professional flooring texture close-up with visible grain detail, realistic plank seams, bevel edges, texture variation, and catalog-quality product photography. Flooring only, no furniture, no room elements."
   },
   {
-    "flooring": "Soft Honey Oak",
-    "type": "closeup texture 2",
-    "reference": "public/floor-references/soft-honey-oak-reference.jpg",
-    "output": "public/generated-flooring/soft-honey-oak-closeup-2.jpg",
-    "prompt": "Use public/floor-references/soft-honey-oak-reference.jpg as the exact flooring reference for Soft Honey Oak. Create a second professional flooring catalog close-up from a different angle, showing visible grain detail, plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium manufacturer product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Soft Honey Oak",
+    "slug": "soft-honey-oak",
+    "referenceImagePath": "public/floor-references/soft-honey-oak-reference.jpg",
+    "imageType": "closeup-2",
+    "outputPath": "public/generated-flooring/soft-honey-oak-closeup-2.jpg",
+    "prompt": "Use public/floor-references/soft-honey-oak-reference.jpg as the exact flooring reference for Soft Honey Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a second flooring-only catalog-quality texture shot from a different angle with visible grain detail, realistic plank seams, bevel edges, and texture variation. No furniture, no room elements."
   },
   {
-    "flooring": "Warm Sand Oak",
-    "type": "hero living room",
-    "reference": "public/floor-references/warm-sand-oak-reference.jpg",
-    "output": "public/generated-flooring/warm-sand-oak-hero.jpg",
-    "prompt": "Use public/floor-references/warm-sand-oak-reference.jpg as the exact flooring reference for Warm Sand Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, upscale styling, and realistic shadows. Flooring must occupy at least 50% of the visible image area and be the primary focus. Premium flooring manufacturer photography, McMillan Floors style, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Warm Sand Oak",
+    "slug": "warm-sand-oak",
+    "referenceImagePath": "public/floor-references/warm-sand-oak-reference.jpg",
+    "imageType": "hero",
+    "outputPath": "public/generated-flooring/warm-sand-oak-hero.jpg",
+    "prompt": "Use public/floor-references/warm-sand-oak-reference.jpg as the exact flooring reference for Warm Sand Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, a designer coffee table, upscale styling, and realistic shadows. Flooring is the visual focus."
   },
   {
-    "flooring": "Warm Sand Oak",
-    "type": "luxury kitchen",
-    "reference": "public/floor-references/warm-sand-oak-reference.jpg",
-    "output": "public/generated-flooring/warm-sand-oak-kitchen.jpg",
-    "prompt": "Use public/floor-references/warm-sand-oak-reference.jpg as the exact flooring reference for Warm Sand Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance exactly. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and clearly visible flooring throughout. Flooring must occupy at least 50% of the visible image area. Premium architectural photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Warm Sand Oak",
+    "slug": "warm-sand-oak",
+    "referenceImagePath": "public/floor-references/warm-sand-oak-reference.jpg",
+    "imageType": "kitchen",
+    "outputPath": "public/generated-flooring/warm-sand-oak-kitchen.jpg",
+    "prompt": "Use public/floor-references/warm-sand-oak-reference.jpg as the exact flooring reference for Warm Sand Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and flooring clearly visible throughout the scene."
   },
   {
-    "flooring": "Warm Sand Oak",
-    "type": "alternate living room",
-    "reference": "public/floor-references/warm-sand-oak-reference.jpg",
-    "output": "public/generated-flooring/warm-sand-oak-living-room-alt.jpg",
-    "prompt": "Use public/floor-references/warm-sand-oak-reference.jpg as the exact flooring reference for Warm Sand Oak. Match flooring color, tone, grain pattern, plank width, bevel edges, texture variation, and installed appearance exactly. Create a different luxury living room scene with different furniture, different layout, and different lighting angle. Flooring remains the primary focus and occupies at least 50% of the visible image area. Premium flooring manufacturer photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+    "productName": "Warm Sand Oak",
+    "slug": "warm-sand-oak",
+    "referenceImagePath": "public/floor-references/warm-sand-oak-reference.jpg",
+    "imageType": "living-room-alt",
+    "outputPath": "public/generated-flooring/warm-sand-oak-living-room-alt.jpg",
+    "prompt": "Use public/floor-references/warm-sand-oak-reference.jpg as the exact flooring reference for Warm Sand Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a different luxury living room with a different layout, different furniture, different decor, and a different lighting angle while keeping the same flooring as the clear visual focus."
   },
   {
-    "flooring": "Warm Sand Oak",
-    "type": "closeup texture 1",
-    "reference": "public/floor-references/warm-sand-oak-reference.jpg",
-    "output": "public/generated-flooring/warm-sand-oak-closeup-1.jpg",
-    "prompt": "Use public/floor-references/warm-sand-oak-reference.jpg as the exact flooring reference for Warm Sand Oak. Create a professional flooring manufacturer close-up with visible grain detail, realistic plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium catalog product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Warm Sand Oak",
+    "slug": "warm-sand-oak",
+    "referenceImagePath": "public/floor-references/warm-sand-oak-reference.jpg",
+    "imageType": "closeup-1",
+    "outputPath": "public/generated-flooring/warm-sand-oak-closeup-1.jpg",
+    "prompt": "Use public/floor-references/warm-sand-oak-reference.jpg as the exact flooring reference for Warm Sand Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a professional flooring texture close-up with visible grain detail, realistic plank seams, bevel edges, texture variation, and catalog-quality product photography. Flooring only, no furniture, no room elements."
   },
   {
-    "flooring": "Warm Sand Oak",
-    "type": "closeup texture 2",
-    "reference": "public/floor-references/warm-sand-oak-reference.jpg",
-    "output": "public/generated-flooring/warm-sand-oak-closeup-2.jpg",
-    "prompt": "Use public/floor-references/warm-sand-oak-reference.jpg as the exact flooring reference for Warm Sand Oak. Create a second professional flooring catalog close-up from a different angle, showing visible grain detail, plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium manufacturer product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+    "productName": "Warm Sand Oak",
+    "slug": "warm-sand-oak",
+    "referenceImagePath": "public/floor-references/warm-sand-oak-reference.jpg",
+    "imageType": "closeup-2",
+    "outputPath": "public/generated-flooring/warm-sand-oak-closeup-2.jpg",
+    "prompt": "Use public/floor-references/warm-sand-oak-reference.jpg as the exact flooring reference for Warm Sand Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a second flooring-only catalog-quality texture shot from a different angle with visible grain detail, realistic plank seams, bevel edges, and texture variation. No furniture, no room elements."
   }
 ]

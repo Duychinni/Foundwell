@@ -1,0 +1,7 @@
+Product: Raw Linen Oak
+Slug: raw-linen-oak
+Reference: public/floor-references/raw-linen-oak-reference.jpg
+Image Type: closeup-1
+Output: public/generated-flooring/raw-linen-oak-closeup-1.jpg
+
+Use public/floor-references/raw-linen-oak-reference.jpg as the exact flooring reference for Raw Linen Oak. Match the flooring color, tone, wood grain pattern, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Keep the flooring visually consistent across all generated images. The flooring must be the product being sold and the primary focus of the image. Flooring should occupy at least 50% of the visible image area, remain clearly visible, and not be hidden by rugs, heavy shadows, or furniture. Style should match premium flooring manufacturer photography similar to McMillan Floors: photorealistic architectural photography, luxury builder-grade homes, natural daylight, realistic materials, premium interior design, ultra-detailed flooring texture, visible plank seams, professional real-estate photography quality, ultra photorealistic, 8K quality. Do not include people, pets, text, logos, watermarks, labels, or signs. Create a professional flooring texture close-up with visible grain detail, realistic plank seams, bevel edges, texture variation, and catalog-quality product photography. Flooring only, no furniture, no room elements.
