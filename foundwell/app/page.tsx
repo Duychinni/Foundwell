@@ -200,18 +200,18 @@ export default function Home() {
 
       <section id="services" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-12">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#4E6A57] sm:text-sm">
             Core categories
           </p>
           <h2 className="mt-3 text-2xl font-semibold text-[#51392F] sm:text-3xl lg:text-4xl">
-            Flooring programs built for commercial decisions, not showroom browsing.
+            Flooring programs built for specification, pricing clarity, and project use.
           </h2>
         </div>
 
         <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-6 md:grid-cols-2 xl:grid-cols-4">
           {services.map((service) => (
-            <div key={service.title} className="rounded-[1.5rem] border border-[#51392F]/8 bg-[#F4EFE6] p-5 shadow-sm sm:rounded-[1.75rem] sm:p-6">
-              <div className="mb-4 h-11 w-11 rounded-2xl bg-white sm:h-12 sm:w-12" />
+            <div key={service.title} className="rounded-[1.5rem] border border-[#51392F]/8 bg-[#F8F3EA] p-5 shadow-sm transition hover:shadow-md sm:rounded-[1.75rem] sm:p-6">
+              <div className="mb-4 h-[2px] w-14 rounded-full bg-[#4E6A57]" />
               <h3 className="text-lg font-semibold text-[#51392F] sm:text-xl">{service.title}</h3>
               <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
                 {service.description}
@@ -235,14 +235,14 @@ export default function Home() {
 
           <div className="mt-10 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
             <div className="rounded-[1.5rem] border border-[#51392F]/8 bg-white p-6 shadow-sm sm:p-7">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Material selection</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#4E6A57]">Material selection</p>
               <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
                 Compare finish, grain, tone, and SPC build quality based on the real demands of the project — not just showroom appearance.
               </p>
             </div>
 
-            <div className="rounded-[1.5rem] border border-[#51392F]/8 bg-[#EDE3D4] p-6 shadow-sm sm:p-7">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Pricing context</p>
+            <div className="rounded-[1.5rem] border border-[#51392F]/8 bg-white p-6 shadow-sm sm:p-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#4E6A57]">Pricing context</p>
               <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
                 Understand how direct sourcing affects cost, where markup typically enters the chain, and how to judge value beyond the sticker price.
               </p>
@@ -250,13 +250,13 @@ export default function Home() {
 
             <div className="grid gap-4 sm:grid-cols-2 lg:col-span-2">
               <div className="rounded-[1.5rem] border border-[#51392F]/8 bg-white p-6 shadow-sm sm:p-7">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Performance</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#4E6A57]">Performance</p>
                 <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
                   Get straightforward guidance on waterproof construction, wear performance, installation conditions, and everyday practicality.
                 </p>
               </div>
               <div className="rounded-[1.5rem] border border-[#51392F]/8 bg-white p-6 shadow-sm sm:p-7">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Delivery planning</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#4E6A57]">Delivery planning</p>
                 <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
                   Plan samples, quantities, shipping, and timing with better visibility from first decision through final delivery.
                 </p>
@@ -268,8 +268,8 @@ export default function Home() {
 
       <section id="about" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-12">
         <div className="relative overflow-hidden rounded-[1.9rem] bg-[#51392F]">
-          <div className="absolute inset-0 bg-[url('/landing-slide-three.png')] bg-cover bg-center opacity-28" />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(81,57,47,0.92)_0%,rgba(81,57,47,0.76)_45%,rgba(81,57,47,0.58)_100%)]" />
+          <div className="absolute inset-0 bg-[url('/landing-slide-three.png')] bg-cover bg-center opacity-40" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(81,57,47,0.86)_0%,rgba(81,57,47,0.68)_45%,rgba(81,57,47,0.5)_100%)]" />
 
           <div className="relative z-10 max-w-3xl px-6 py-10 text-white sm:px-8 sm:py-12 lg:px-12 lg:py-14">
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#F4EFE6] sm:text-sm">About FoundWell</p>
@@ -282,19 +282,19 @@ export default function Home() {
 
             <div className="mt-8 grid gap-5 sm:grid-cols-3">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#F4EFE6]">Direct sourcing</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9FB7A7]">Direct sourcing</p>
                 <p className="mt-2 text-sm leading-7 text-white/80">
                   We reduce unnecessary layers between the product and the client.
                 </p>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#F4EFE6]">Quality standard</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9FB7A7]">Quality standard</p>
                 <p className="mt-2 text-sm leading-7 text-white/80">
                   Our focus stays on luxury-grade SPC with better finish consistency.
                 </p>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#F4EFE6]">Client value</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9FB7A7]">Client value</p>
                 <p className="mt-2 text-sm leading-7 text-white/80">
                   The result is better material at better pricing with more transparency.
                 </p>
