@@ -299,7 +299,7 @@ export default function ShopFloorsPage() {
         </div>
       </header>
 
-      <section className="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 sm:py-14 lg:px-12 lg:py-16">
+      <section className="mx-auto max-w-[1400px] px-4 py-14 sm:px-6 sm:py-16 lg:px-12 lg:py-20">
         <div className="mb-10 h-px w-full bg-[#51392F]/10" />
 
         <div className="max-w-4xl overflow-hidden rounded-[1.5rem] border border-black/8 bg-white px-6 py-7 sm:px-8 sm:py-8 lg:px-9">
@@ -323,7 +323,7 @@ export default function ShopFloorsPage() {
 
         </div>
 
-        <div className="flex justify-end pb-8 pt-10 text-sm text-[#51392F]">
+        <div className="flex justify-end pb-4 pt-10 text-sm text-[#51392F]">
           <p>Showing 10 of 10</p>
         </div>
 
