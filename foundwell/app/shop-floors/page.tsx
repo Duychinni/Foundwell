@@ -5,6 +5,7 @@ import { useState } from "react";
 type Product = {
   name: string;
   slug: string;
+  referenceSlug: string;
   description: string;
 };
 
@@ -12,51 +13,61 @@ const products: Product[] = [
   {
     name: "Toasted Oak",
     slug: "toasted-oak",
+    referenceSlug: "natural-beige-oak",
     description: "Warm natural oak tones with authentic wood grain.",
   },
   {
     name: "Washed Oak",
     slug: "washed-oak",
+    referenceSlug: "warm-sand-oak",
     description: "Soft greige oak with contemporary character.",
   },
   {
     name: "Sherwood Oak",
     slug: "sherwood-oak",
+    referenceSlug: "light-ash-oak",
     description: "Classic oak character with balanced warmth and depth.",
   },
   {
     name: "Modena Oak",
     slug: "modena-oak",
+    referenceSlug: "smoked-taupe-oak",
     description: "Light taupe oak designed for calm, elevated interiors.",
   },
   {
     name: "Grey Beach",
     slug: "grey-beach",
+    referenceSlug: "soft-honey-oak",
     description: "Cool coastal oak with a soft weathered finish.",
   },
   {
     name: "Cairo Oak",
     slug: "cairo-oak",
+    referenceSlug: "cairo-oak",
     description: "Golden midtone oak with grounded, premium texture.",
   },
   {
     name: "Oxford Oak",
     slug: "oxford-oak",
+    referenceSlug: "raw-linen-oak",
     description: "Light neutral oak tailored for modern interior palettes.",
   },
   {
     name: "Nevada Oak",
     slug: "nevada-oak",
+    referenceSlug: "castle-oak",
     description: "Cool contemporary oak with understated natural variation.",
   },
   {
     name: "Sutton Oak",
     slug: "sutton-oak",
+    referenceSlug: "coastal-greige-oak",
     description: "Soft taupe oak with quiet sophistication and warmth.",
   },
   {
     name: "Castle Oak",
     slug: "castle-oak",
+    referenceSlug: "nordic-blonde-oak",
     description: "Bright blonde oak for airy, refined, premium spaces.",
   },
 ];
@@ -95,23 +106,14 @@ function Arrow({ direction }: { direction: "left" | "right" }) {
   );
 }
 
-function galleryImagePath(slug: string, imageType: (typeof imageTypes)[number]) {
-  return `/generated-flooring/${slug}-${imageType}.jpg`;
-}
-
-function fallbackReferencePath(slug: string) {
-  return `/floor-references/${slug}-reference.jpg`;
+function fallbackReferencePath(referenceSlug: string) {
+  return `/floor-references/${referenceSlug}-reference.jpg`;
 }
 
 function ProductCard({ product }: { product: Product }) {
   const [index, setIndex] = useState(0);
-  const [erroredImages, setErroredImages] = useState<Record<string, boolean>>({});
 
-  const activeType = imageTypes[index];
-  const generatedPath = galleryImagePath(product.slug, activeType);
-  const fallbackPath = fallbackReferencePath(product.slug);
-  const src = erroredImages[generatedPath] ? fallbackPath : generatedPath;
-
+  const src = fallbackReferencePath(product.referenceSlug);
   const prev = () => setIndex((current) => (current - 1 + imageTypes.length) % imageTypes.length);
   const next = () => setIndex((current) => (current + 1) % imageTypes.length);
 
@@ -121,10 +123,7 @@ function ProductCard({ product }: { product: Product }) {
         <img
           src={src}
           alt={product.name}
-          className="h-full w-full object-cover object-center transition duration-300 group-hover:scale-[1.02]"
-          onError={() => {
-            setErroredImages((current) => ({ ...current, [generatedPath]: true }));
-          }}
+          className="h-full w-full object-contain object-center transition duration-300 group-hover:scale-[1.02]"
         />
 
         <button
