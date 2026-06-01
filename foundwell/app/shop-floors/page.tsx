@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 
 type Product = {
   name: string;
@@ -103,10 +103,10 @@ function Arrow({ direction }: { direction: "left" | "right" }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.5"
+      strokeWidth="1.7"
       strokeLinecap="round"
       strokeLinejoin="round"
-      className="h-4 w-4"
+      className="h-5 w-5"
       aria-hidden="true"
     >
       {direction === "left" ? <path d="m15 18-6-6 6-6" /> : <path d="m9 18 6-6-6-6" />}
@@ -130,6 +130,8 @@ function fallbackReferencePath(referenceSlug: string) {
 function ProductCard({ product }: { product: Product }) {
   const [index, setIndex] = useState(0);
   const [brokenSources, setBrokenSources] = useState<Record<string, boolean>>({});
+  const dragStartX = useRef<number | null>(null);
+  const dragDeltaX = useRef(0);
 
   const gallery = useMemo<GalleryImage[]>(() => {
     return imageTypes.map((type) => ({
@@ -164,9 +166,40 @@ function ProductCard({ product }: { product: Product }) {
     setIndex((current) => (current + 1) % slides.length);
   };
 
+  const handlePointerDown = (clientX: number) => {
+    dragStartX.current = clientX;
+    dragDeltaX.current = 0;
+  };
+
+  const handlePointerMove = (clientX: number) => {
+    if (dragStartX.current === null) return;
+    dragDeltaX.current = clientX - dragStartX.current;
+  };
+
+  const handlePointerUp = () => {
+    if (dragStartX.current === null) return;
+    const threshold = 40;
+    if (dragDeltaX.current <= -threshold) {
+      next();
+    } else if (dragDeltaX.current >= threshold) {
+      prev();
+    }
+    dragStartX.current = null;
+    dragDeltaX.current = 0;
+  };
+
   return (
     <article className="group">
-      <div className="relative aspect-square overflow-hidden rounded-[12px] bg-[#F4F0EA] transition duration-300 group-hover:shadow-[0_22px_50px_rgba(0,0,0,0.08)]">
+      <div
+        className="relative aspect-square overflow-hidden rounded-[12px] bg-[#F4F0EA] transition duration-300 group-hover:shadow-[0_22px_50px_rgba(0,0,0,0.08)] touch-pan-y select-none"
+        onMouseDown={(event) => handlePointerDown(event.clientX)}
+        onMouseMove={(event) => handlePointerMove(event.clientX)}
+        onMouseUp={handlePointerUp}
+        onMouseLeave={handlePointerUp}
+        onTouchStart={(event) => handlePointerDown(event.touches[0].clientX)}
+        onTouchMove={(event) => handlePointerMove(event.touches[0].clientX)}
+        onTouchEnd={handlePointerUp}
+      >
         <div
           className="flex h-full transition-transform duration-500 ease-out"
           style={{ transform: `translateX(-${safeIndex * 100}%)` }}
@@ -183,6 +216,7 @@ function ProductCard({ product }: { product: Product }) {
                 const currentSrc = new URL(event.currentTarget.currentSrc).pathname;
                 setBrokenSources((current) => ({ ...current, [currentSrc]: true }));
               }}
+              draggable={false}
             />
           ))}
         </div>
@@ -191,7 +225,7 @@ function ProductCard({ product }: { product: Product }) {
           type="button"
           onClick={prev}
           aria-label={`Previous image for ${product.name}`}
-          className="absolute left-2 top-1/2 z-10 inline-flex h-8 w-8 -translate-y-1/2 items-center justify-center text-white/85 transition hover:text-white"
+          className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center text-white/90 transition hover:text-white"
         >
           <Arrow direction="left" />
         </button>
@@ -200,7 +234,7 @@ function ProductCard({ product }: { product: Product }) {
           type="button"
           onClick={next}
           aria-label={`Next image for ${product.name}`}
-          className="absolute right-2 top-1/2 z-10 inline-flex h-8 w-8 -translate-y-1/2 items-center justify-center text-white/85 transition hover:text-white"
+          className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center text-white/90 transition hover:text-white"
         >
           <Arrow direction="right" />
         </button>
