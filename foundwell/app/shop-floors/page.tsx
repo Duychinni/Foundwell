@@ -323,15 +323,15 @@ export default function ShopFloorsPage() {
 
         </div>
 
-        <div className="mt-6 flex flex-wrap gap-2.5 text-[11px] font-medium uppercase tracking-[0.14em] text-white sm:text-xs">
+        <div className="flex justify-end pb-8 pt-10 text-sm text-[#51392F]">
+          <p>Showing 10 of 10</p>
+        </div>
+
+        <div className="mb-6 flex flex-wrap gap-2.5 text-[11px] font-medium uppercase tracking-[0.14em] text-white sm:text-xs">
           <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Waterproof</span>
           <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Scratch-resistant</span>
           <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Easy installation</span>
           <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Residential & commercial</span>
-        </div>
-
-        <div className="flex justify-end pb-8 pt-10 text-sm text-[#51392F]">
-          <p>Showing 10 of 10</p>
         </div>
 
         <div className="grid grid-cols-1 gap-x-[32px] gap-y-12 md:grid-cols-2 lg:grid-cols-3 xl:gap-x-[40px]">
