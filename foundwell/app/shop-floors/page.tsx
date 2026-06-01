@@ -79,7 +79,7 @@ type ImageType = (typeof imageTypes)[number];
 type GalleryImage = {
   key: string;
   type: ImageType;
-  generatedPath: string;
+  generatedPaths: string[];
 };
 
 function BrandMark() {
@@ -115,7 +115,12 @@ function Arrow({ direction }: { direction: "left" | "right" }) {
 }
 
 function generatedPath(slug: string, type: ImageType) {
-  return `/generated-flooring/${slug}-${type}.jpg`;
+  return [
+    `/generated-flooring/${slug}-${type}.jpg`,
+    `/generated-flooring/${slug}-${type}.jpeg`,
+    `/generated-flooring/${slug}-${type}.png`,
+    `/generated-flooring/${slug}-${type}.webp`,
+  ];
 }
 
 function fallbackReferencePath(referenceSlug: string) {
@@ -130,11 +135,11 @@ function ProductCard({ product }: { product: Product }) {
     return imageTypes.map((type) => ({
       key: `${product.slug}-${type}`,
       type,
-      generatedPath: generatedPath(product.slug, type),
+      generatedPaths: generatedPath(product.slug, type),
     }));
   }, [product.slug]);
 
-  const availableSlides = gallery.filter((item) => !brokenGenerated[item.generatedPath]);
+  const availableSlides = gallery.filter((item) => item.generatedPaths.some((candidate) => !brokenGenerated[candidate]));
   const fallbackOnly = availableSlides.length === 0;
   const fallbackSrc = fallbackReferencePath(product.referenceSlug);
   const safeIndex = fallbackOnly ? 0 : index % availableSlides.length;
@@ -163,17 +168,22 @@ function ProductCard({ product }: { product: Product }) {
             className="flex h-full transition-transform duration-500 ease-out"
             style={{ transform: `translateX(-${safeIndex * 100}%)` }}
           >
-            {gallery.map((item) => (
-              <img
-                key={item.key}
-                src={item.generatedPath}
-                alt={`${product.name} ${item.type}`}
-                className="h-full min-w-full object-cover object-center transition duration-300 group-hover:scale-[1.02]"
-                onError={() => {
-                  setBrokenGenerated((current) => ({ ...current, [item.generatedPath]: true }));
-                }}
-              />
-            ))}
+            {gallery.map((item) => {
+              const workingSrc = item.generatedPaths.find((candidate) => !brokenGenerated[candidate]) ?? item.generatedPaths[0];
+
+              return (
+                <img
+                  key={item.key}
+                  src={workingSrc}
+                  alt={`${product.name} ${item.type}`}
+                  className="h-full min-w-full object-cover object-center transition duration-300 group-hover:scale-[1.02]"
+                  onError={(event) => {
+                    const currentSrc = new URL(event.currentTarget.currentSrc).pathname;
+                    setBrokenGenerated((current) => ({ ...current, [currentSrc]: true }));
+                  }}
+                />
+              );
+            })}
           </div>
         )}
 
