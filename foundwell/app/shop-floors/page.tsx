@@ -103,7 +103,7 @@ function Arrow({ direction }: { direction: "left" | "right" }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.8"
+      strokeWidth="1.5"
       strokeLinecap="round"
       strokeLinejoin="round"
       className="h-4 w-4"
@@ -191,7 +191,7 @@ function ProductCard({ product }: { product: Product }) {
           type="button"
           onClick={prev}
           aria-label={`Previous image for ${product.name}`}
-          className="absolute left-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
+          className="absolute left-2 top-1/2 z-10 inline-flex h-8 w-8 -translate-y-1/2 items-center justify-center text-white/85 transition hover:text-white"
         >
           <Arrow direction="left" />
         </button>
@@ -200,7 +200,7 @@ function ProductCard({ product }: { product: Product }) {
           type="button"
           onClick={next}
           aria-label={`Next image for ${product.name}`}
-          className="absolute right-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
+          className="absolute right-2 top-1/2 z-10 inline-flex h-8 w-8 -translate-y-1/2 items-center justify-center text-white/85 transition hover:text-white"
         >
           <Arrow direction="right" />
         </button>
