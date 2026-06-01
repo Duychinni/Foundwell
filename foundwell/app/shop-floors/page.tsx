@@ -156,7 +156,7 @@ function ProductCard({ product }: { product: Product }) {
         <img
           src={product.images[index]}
           alt={product.name}
-          className="h-full w-full object-cover object-center transition duration-300 group-hover:scale-[1.02]"
+          className="h-full w-full object-contain object-center transition duration-300 group-hover:scale-[1.02]"
         />
 
         <button
