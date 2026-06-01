@@ -263,12 +263,17 @@ function ProductCard({ product }: { product: Product }) {
         <p className="mt-2 max-w-[34ch] text-[15px] leading-7 text-[#51392F]/72">
           {product.description}
         </p>
-        <a
-          href="/request-quote"
-          className="mt-5 inline-flex items-center justify-center rounded-full border border-[#8A2F24]/10 bg-[#EDE3D4] px-5 py-3 text-sm font-medium text-[#51392F] transition duration-300 hover:bg-[#e3d5c3]"
-        >
-          Request Quote
-        </a>
+        <div className="mt-5 flex items-end justify-between gap-4">
+          <a
+            href="/request-quote"
+            className="inline-flex items-center justify-center rounded-full border border-[#8A2F24]/10 bg-[#EDE3D4] px-5 py-3 text-sm font-medium text-[#51392F] transition duration-300 hover:bg-[#e3d5c3]"
+          >
+            Request Quote
+          </a>
+          <p className="text-right text-sm font-medium text-[#51392F]/78">
+            Estimated $4.99 / sq. ft.
+          </p>
+        </div>
       </div>
     </article>
   );
