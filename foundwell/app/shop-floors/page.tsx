@@ -145,16 +145,12 @@ function ProductCard({ product }: { product: Product }) {
   }, [product.slug]);
 
   const referenceFallbackSrc = fallbackReferencePath(product.referenceSlug);
-  const firstWorkingGenerated = gallery
-    .flatMap((item) => item.sources)
-    .find((candidate) => !brokenSources[candidate]);
-  const fallbackSrc = firstWorkingGenerated ?? referenceFallbackSrc;
 
   const slides = gallery.map((item) => {
     const generatedSrc = item.sources.find((candidate) => !brokenSources[candidate]);
     return {
       ...item,
-      src: generatedSrc ?? fallbackSrc,
+      src: generatedSrc ?? referenceFallbackSrc,
       isFallback: !generatedSrc,
     };
   });

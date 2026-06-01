@@ -82,14 +82,17 @@ const featureCards = [
   {
     title: "100% Waterproof",
     copy: "Built to resist spills and moisture for kitchens, baths, and everyday project use.",
+    image: "/detail-features/waterproof.png",
   },
   {
     title: "Scratch Resistant",
     copy: "A durable wear layer helps protect the floor from daily scuffs, movement, and impact.",
+    image: "/detail-features/scratch-resistant.png",
   },
   {
     title: "Realistic Wood Feel",
     copy: "Wood-textured surfaces and beveled detailing create a cleaner, more natural presentation.",
+    image: "/detail-features/wood-feel.png",
   },
 ];
 
@@ -169,10 +172,10 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
     const referenceFallback = fallbackReferencePath(product.referenceSlug);
     return imageTypes.map((type) => {
       const generated = generatedCandidates(product.slug, type);
-      const src = generated.find((candidate) => !brokenSources[candidate]) ?? referenceFallback;
+      const generatedSrc = generated.find((candidate) => !brokenSources[candidate]);
       return {
         type,
-        src,
+        src: generatedSrc ?? referenceFallback,
       };
     });
   }, [brokenSources, product.referenceSlug, product.slug]);
@@ -273,7 +276,10 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         <div className="grid gap-4 md:grid-cols-3">
           {featureCards.map((card) => (
             <div key={card.title} className="overflow-hidden rounded-[1.35rem] border border-[#51392F]/8 bg-white">
-              <div className="h-52 bg-[url('/landing-slide-three.png')] bg-cover bg-center opacity-85" />
+              <div
+                className="h-52 bg-cover bg-center"
+                style={{ backgroundImage: `url('${card.image}')` }}
+              />
               <div className="p-5">
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">{card.title}</p>
                 <p className="mt-3 text-sm leading-7 text-[#51392F]/75">{card.copy}</p>
