@@ -1,73 +1,144 @@
-const products = [
+"use client";
+
+import { useState } from "react";
+
+type Product = {
+  code: string;
+  name: string;
+  description: string;
+  price: string;
+  tag: string;
+  images: string[];
+};
+
+const products: Product[] = [
   {
     code: "B183",
     name: "Natural Beige Oak",
     description: "Rich amber oak tones with warm, natural character.",
+    price: "$4.99 per Sq.Ft",
     tag: "SPC Vinyl",
-    image: "/floors/b183.png",
+    images: ["/floors/b183.png", "/landing-slide-one-clean.png", "/landing-slide-three.png"],
   },
   {
     code: "B184",
     name: "Warm Sand Oak",
     description: "Soft gray oak with warm sandy undertones.",
+    price: "$4.99 per Sq.Ft",
     tag: "SPC Vinyl",
-    image: "/floors/b184.png",
+    images: ["/floors/b184.png", "/engineered-hardwood-slide2.png", "/landing-slide-one.png"],
   },
   {
     code: "B186",
     name: "Light Ash Oak",
     description: "Natural brown oak with authentic rustic grain.",
+    price: "$4.99 per Sq.Ft",
     tag: "SPC Vinyl",
-    image: "/floors/b186.png",
+    images: ["/floors/b186.png", "/landing-slide-three.png", "/landing-slide-one-clean.png"],
   },
   {
     code: "B189",
     name: "Smoked Taupe Oak",
     description: "Light taupe oak with subtle beige undertones.",
+    price: "$4.99 per Sq.Ft",
     tag: "SPC Vinyl",
-    image: "/floors/b189.png",
+    images: ["/floors/b189.png", "/landing-slide-one.png", "/engineered-hardwood-slide2.png"],
   },
   {
     code: "B190",
     name: "Soft Honey Oak",
     description: "Soft golden hues that bring warmth and brightness.",
+    price: "$4.99 per Sq.Ft",
     tag: "SPC Vinyl",
-    image: "/floors/b190.png",
+    images: ["/floors/b190.png", "/landing-slide-three.png", "/landing-slide-one-clean.png"],
   },
   {
     code: "B191",
     name: "Midtone Wheat Oak",
     description: "Balanced midtone oak with cozy, natural depth.",
+    price: "$4.99 per Sq.Ft",
     tag: "SPC Vinyl",
-    image: "/floors/b191.png",
+    images: ["/floors/b191.png", "/engineered-hardwood-slide2.png", "/landing-slide-one.png"],
   },
   {
     code: "B193",
     name: "Raw Linen Oak",
     description: "Light neutral oak with subtle linen undertones.",
+    price: "$4.99 per Sq.Ft",
     tag: "SPC Vinyl",
-    image: "/floors/b193.png",
+    images: ["/floors/b193.png", "/landing-slide-one-clean.png", "/landing-slide-three.png"],
   },
   {
     code: "B194",
     name: "Drifted Stone Oak",
     description: "Cool gray oak with a soft, weathered look.",
+    price: "$4.99 per Sq.Ft",
     tag: "SPC Vinyl",
-    image: "/floors/b194.png",
+    images: ["/floors/b194.png", "/landing-slide-one.png", "/engineered-hardwood-slide2.png"],
   },
   {
     code: "B195",
     name: "Coastal Taupe Oak",
     description: "Soft taupe oak with a relaxed, coastal feel.",
+    price: "$4.99 per Sq.Ft",
     tag: "SPC Vinyl",
-    image: "/floors/b195.png",
+    images: ["/floors/b195.png", "/landing-slide-three.png", "/landing-slide-one-clean.png"],
   },
   {
     code: "B197",
     name: "Scandinavian Blonde Oak",
     description: "Light blonde oak for a clean, airy, modern look.",
+    price: "$4.99 per Sq.Ft",
     tag: "SPC Vinyl",
-    image: "/floors/b197.png",
+    images: ["/floors/b197.png", "/engineered-hardwood-slide2.png", "/landing-slide-one.png"],
+  },
+  {
+    code: "B198",
+    name: "Quiet Greige Oak",
+    description: "Muted greige oak with a smooth contemporary tone.",
+    price: "$4.99 per Sq.Ft",
+    tag: "SPC Vinyl",
+    images: ["/floors/b184.png", "/landing-slide-three.png", "/landing-slide-one-clean.png"],
+  },
+  {
+    code: "B199",
+    name: "Golden Wheat Oak",
+    description: "Warm wheat-brown planks with soft golden depth.",
+    price: "$4.99 per Sq.Ft",
+    tag: "SPC Vinyl",
+    images: ["/floors/b190.png", "/landing-slide-one.png", "/engineered-hardwood-slide2.png"],
+  },
+  {
+    code: "B200",
+    name: "Dusty Linen Oak",
+    description: "A pale linen oak with understated natural grain.",
+    price: "$4.99 per Sq.Ft",
+    tag: "SPC Vinyl",
+    images: ["/floors/b193.png", "/landing-slide-three.png", "/landing-slide-one-clean.png"],
+  },
+  {
+    code: "B201",
+    name: "Weathered Sand Oak",
+    description: "Soft-weathered oak tones with a calm sandy cast.",
+    price: "$4.99 per Sq.Ft",
+    tag: "SPC Vinyl",
+    images: ["/floors/b184.png", "/engineered-hardwood-slide2.png", "/landing-slide-one.png"],
+  },
+  {
+    code: "B202",
+    name: "Natural Stone Beige",
+    description: "A balanced beige oak finish with a grounded feel.",
+    price: "$4.99 per Sq.Ft",
+    tag: "SPC Vinyl",
+    images: ["/floors/b183.png", "/landing-slide-three.png", "/landing-slide-one-clean.png"],
+  },
+  {
+    code: "B203",
+    name: "Soft Drift Oak",
+    description: "Light driftwood-inspired oak with cool neutral softness.",
+    price: "$4.99 per Sq.Ft",
+    tag: "SPC Vinyl",
+    images: ["/floors/b194.png", "/landing-slide-one.png", "/engineered-hardwood-slide2.png"],
   },
 ];
 
@@ -86,9 +157,78 @@ function BrandMark() {
   );
 }
 
+function Arrow({ direction }: { direction: "left" | "right" }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.8"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-4 w-4"
+      aria-hidden="true"
+    >
+      {direction === "left" ? <path d="m15 18-6-6 6-6" /> : <path d="m9 18 6-6-6-6" />}
+    </svg>
+  );
+}
+
+function ProductCard({ product }: { product: Product }) {
+  const [index, setIndex] = useState(0);
+
+  const prev = () => setIndex((current) => (current - 1 + product.images.length) % product.images.length);
+  const next = () => setIndex((current) => (current + 1) % product.images.length);
+
+  return (
+    <article className="group">
+      <div className="relative aspect-square overflow-hidden rounded-[1rem] bg-[#ebe4d8] sm:rounded-[1.15rem]">
+        <img
+          src={product.images[index]}
+          alt={product.name}
+          className="h-full w-full object-cover"
+        />
+
+        <button
+          onClick={prev}
+          aria-label={`Previous image for ${product.name}`}
+          className="absolute left-3 top-1/2 inline-flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-white/70 text-[#51392F] backdrop-blur-sm transition hover:bg-white"
+        >
+          <Arrow direction="left" />
+        </button>
+
+        <button
+          onClick={next}
+          aria-label={`Next image for ${product.name}`}
+          className="absolute right-3 top-1/2 inline-flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-white/70 text-[#51392F] backdrop-blur-sm transition hover:bg-white"
+        >
+          <Arrow direction="right" />
+        </button>
+
+        <span className="absolute bottom-3 right-3 rounded-full bg-white px-3 py-1 text-[11px] font-medium text-[#51392F] shadow-sm">
+          {product.tag}
+        </span>
+      </div>
+
+      <div className="flex items-start justify-between gap-4 pt-4">
+        <div>
+          <h2 className="text-[28px] font-medium leading-[1.05] tracking-[-0.02em] text-black sm:text-[30px] lg:text-[32px]">
+            {product.name}
+          </h2>
+          <p className="mt-1 text-sm text-black/65">{product.price}</p>
+        </div>
+
+        <button className="mt-1 inline-flex h-11 items-center justify-center rounded-full bg-[#EFE8DC] px-5 text-sm font-medium text-[#51392F] transition hover:bg-[#e6ddd0]">
+          Add Sample
+        </button>
+      </div>
+    </article>
+  );
+}
+
 export default function ShopFloorsPage() {
   return (
-    <main className="min-h-screen bg-white text-[#51392F]">
+    <main className="min-h-screen bg-[#F6F3EE] text-[#51392F]">
       <header className="border-b border-[#51392F]/8 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 sm:py-5 lg:px-12">
           <div className="flex w-full items-start justify-between gap-4 lg:items-center">
@@ -111,39 +251,21 @@ export default function ShopFloorsPage() {
         </div>
       </header>
 
-      <section className="h-20 w-full bg-[linear-gradient(90deg,#F4EFE6_0%,#d9c2aa_55%,#AD7042_100%)] sm:h-24" />
-
-      <section className="mx-auto max-w-[1120px] px-4 py-8 sm:px-6 sm:py-10">
+      <section className="mx-auto max-w-[1400px] px-4 py-10 sm:px-6 lg:px-12">
         <div className="mb-8 max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">Browse Floors</p>
-          <h1 className="mt-3 text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
-            One SPC construction, available across multiple finishes.
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">Shop Floors</p>
+          <h1 className="mt-3 text-2xl font-semibold leading-tight text-black sm:text-3xl lg:text-4xl">
+            Browse 16 Natural Oak Flooring Options
           </h1>
-          <p className="mt-4 text-sm leading-7 text-black/75 sm:text-base">
-            Every option shown below uses the same core specification. The finish changes, but the build quality stays consistent.
-          </p>
         </div>
 
-        <div className="flex justify-end pr-3 text-sm text-black sm:pr-4">
-          <p>Showing 10 of 10</p>
+        <div className="flex justify-end pb-6 text-sm text-black">
+          <p>Showing 16 of 16</p>
         </div>
 
-        <div className="mt-8 grid gap-x-4 gap-y-7 sm:gap-x-5 sm:gap-y-9 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-5">
           {products.map((product) => (
-            <article key={product.code}>
-              <div className="relative aspect-square max-w-[300px] overflow-hidden rounded-[1rem] bg-[#f3ede3] sm:max-w-[320px] sm:rounded-[1.1rem]">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="h-full w-full object-cover"
-                />
-              </div>
-
-              <div className="px-0 pb-0 pt-3 text-black">
-                <h2 className="text-base font-semibold">{product.name}</h2>
-                <p className="mt-1 text-sm leading-6 text-black/75">{product.description}</p>
-              </div>
-            </article>
+            <ProductCard key={product.code} product={product} />
           ))}
         </div>
       </section>
