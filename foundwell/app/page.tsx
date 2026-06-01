@@ -1,0 +1,309 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+const slides = [
+  {
+    title: "Direct Flooring Supply",
+    background:
+      "url('/landing-slide-one-clean.png')",
+  },
+  {
+    title: "Engineered Hardwood",
+    primaryOnly: true,
+    primaryLabel: "Explore Collection",
+    background:
+      "url('/engineered-hardwood-slide2.png')",
+  },
+  {
+    title: "Material-led flooring for serious projects.",
+    background:
+      "url('/landing-slide-three.png')",
+  },
+];
+
+const services = [
+  {
+    title: "Engineered Hardwood",
+    description: "Commercial-ready wood flooring with finish consistency, grade clarity, and dependable lead-time visibility.",
+  },
+  {
+    title: "SPC & LVT",
+    description: "Durable, specification-friendly resilient flooring options suited to multi-unit, hospitality, and light commercial use.",
+  },
+  {
+    title: "Laminate",
+    description: "Cost-conscious flooring selections designed to balance appearance, wear performance, and practical install requirements.",
+  },
+  {
+    title: "Tile & Surface Programs",
+    description: "Supplementary surface categories for projects that need coordinated material decisions across spaces.",
+  },
+];
+
+function BrandMark() {
+  return (
+    <a href="/" className="flex items-center gap-2.5 sm:gap-3" aria-label="Go to FoundWell home">
+      <span className="text-base font-medium tracking-[0.12em] text-white sm:text-lg md:tracking-[0.16em] lg:text-xl">
+        FOUNDWELL
+      </span>
+      <span className="relative block h-7 w-14 sm:h-8 sm:w-16 md:h-9 md:w-18" aria-hidden="true">
+        <span className="absolute left-0 top-0 h-2 w-7 rounded-sm bg-white sm:h-2.5 sm:w-8" />
+        <span className="absolute left-4 top-2.5 h-2 w-8 rounded-sm bg-[#8A2F24] sm:left-5 sm:top-3 sm:h-2.5 sm:w-9" />
+        <span className="absolute left-1.5 top-5 h-2 w-9 rounded-sm bg-[#AD7042] sm:left-2 sm:top-6 sm:h-2.5 sm:w-10" />
+      </span>
+    </a>
+  );
+}
+
+function Arrow({ direction }: { direction: "left" | "right" }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="h-4 w-4"
+      aria-hidden="true"
+    >
+      {direction === "left" ? (
+        <path d="m15 18-6-6 6-6" />
+      ) : (
+        <path d="m9 18 6-6-6-6" />
+      )}
+    </svg>
+  );
+}
+
+export default function Home() {
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const goToPrev = () => {
+    setActiveSlide((current) => (current - 1 + slides.length) % slides.length);
+  };
+
+  const goToNext = () => {
+    setActiveSlide((current) => (current + 1) % slides.length);
+  };
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      goToNext();
+    }, 7000);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
+  return (
+    <main className="bg-white text-[#51392F]">
+      <section className="relative min-h-screen overflow-hidden bg-[#51392F]">
+        {slides.map((slide, index) => (
+          <div
+            key={`${slide.title}-${index}`}
+            className={`absolute inset-0 bg-cover bg-center transition-all duration-700 ${
+              index === activeSlide
+                ? "pointer-events-auto opacity-100 scale-100"
+                : "pointer-events-none opacity-0 scale-[1.015]"
+            }`}
+            style={{ backgroundImage: slide.background }}
+          />
+        ))}
+
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.12)_34%,rgba(255,255,255,0.1)_100%)]" />
+
+        <div className="relative z-10 flex min-h-screen flex-col">
+          <header className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-4 py-5 sm:px-6 sm:py-7 lg:px-12">
+            <div className="flex w-full items-start justify-between gap-4 lg:items-center">
+              <BrandMark />
+
+              <nav className="hidden items-center gap-8 text-[15px] font-medium tracking-[0.08em] text-white lg:flex xl:gap-10">
+                <a href="/shop-floors" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">Shop Floors</a>
+                <a href="#learn" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">Learn Resources</a>
+                <a href="#about" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">About Us</a>
+              </nav>
+            </div>
+          </header>
+
+          <div className="mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:hidden">
+            <div className="flex flex-wrap gap-2 pb-2 text-[11px] font-medium uppercase tracking-[0.12em] text-white">
+              <a href="/shop-floors" className="rounded-full border border-white/25 bg-white/10 px-3 py-2 backdrop-blur-sm">Shop Floors</a>
+              <a href="#learn" className="rounded-full border border-white/20 bg-white/8 px-3 py-2 backdrop-blur-sm">Resources</a>
+              <a href="#about" className="rounded-full border border-white/20 bg-white/8 px-3 py-2 backdrop-blur-sm">About</a>
+            </div>
+          </div>
+
+          <div className="mx-auto flex w-full max-w-[1400px] flex-1 items-center justify-center px-4 pb-20 pt-8 text-center sm:px-6 sm:pb-24 sm:pt-10 lg:px-12 lg:pb-28">
+            <div className="max-w-5xl px-5 py-8 text-white sm:px-8 sm:py-10 lg:px-10">
+              <h1 className="mx-auto max-w-5xl text-3xl font-serif font-normal leading-[1.08] tracking-[0.01em] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.6rem]">
+                {slides[activeSlide].title}
+              </h1>
+
+              <p className="mx-auto mt-4 max-w-xl px-4 text-[11px] font-medium uppercase tracking-[0.18em] text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.18)] sm:mt-5 sm:max-w-2xl sm:px-0 sm:text-xs lg:text-sm">
+                {activeSlide === 0 ? "High-quality flooring. Better direct pricing." : "Better materials. Smarter pricing."}
+              </p>
+
+              <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:mt-8 sm:flex-row sm:gap-4">
+                <a
+                  href="/shop-floors"
+                  className="inline-flex h-12 w-full max-w-[280px] items-center justify-center rounded-full bg-[#8A2F24] px-6 text-[12px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-[#76261d] sm:h-14 sm:w-[220px] sm:max-w-none sm:px-8 sm:text-[13px]"
+                >
+                  {activeSlide === 1 ? "Explore Collection" : "Browse Floors"}
+                </a>
+                {activeSlide !== 1 ? (
+                  <a
+                    href="/request-quote"
+                    className="inline-flex h-12 w-full max-w-[280px] items-center justify-center rounded-full border border-white/35 bg-white/10 px-6 text-[12px] font-semibold uppercase tracking-[0.12em] text-white backdrop-blur-sm transition hover:bg-white/16 sm:h-14 sm:w-[220px] sm:max-w-none sm:px-8 sm:text-[13px]"
+                  >
+                    Request Quote
+                  </a>
+                ) : null}
+              </div>
+            </div>
+          </div>
+
+          <div className="relative z-10 mx-auto flex w-full max-w-[1400px] flex-col items-center gap-3 px-4 pb-[max(1.25rem,env(safe-area-inset-bottom))] sm:gap-4 sm:px-6 sm:pb-10 lg:px-12">
+            <div className="flex items-center gap-3 sm:gap-4">
+              <button
+                onClick={goToPrev}
+                aria-label="Previous slide"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-sm transition hover:bg-white/18"
+              >
+                <Arrow direction="left" />
+              </button>
+
+              <button
+                onClick={goToNext}
+                aria-label="Next slide"
+                className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-white/10 text-white backdrop-blur-sm transition hover:bg-white/18"
+              >
+                <Arrow direction="right" />
+              </button>
+            </div>
+
+            <div className="flex items-center gap-3">
+              {slides.map((slide, index) => (
+                <button
+                  key={`${slide.title}-${index}`}
+                  aria-label={`Go to slide ${index + 1}`}
+                  onClick={() => setActiveSlide(index)}
+                  className={`h-2 rounded-full transition-all ${
+                    index === activeSlide ? "w-14 bg-white" : "w-8 bg-white/35"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-12">
+        <div className="max-w-3xl">
+          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">
+            Core categories
+          </p>
+          <h2 className="mt-3 text-2xl font-semibold text-[#51392F] sm:text-3xl lg:text-4xl">
+            Flooring programs built for specification, pricing clarity, and project use.
+          </h2>
+        </div>
+
+        <div className="mt-8 grid gap-4 sm:mt-10 sm:gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {services.map((service) => (
+            <div key={service.title} className="rounded-[1.5rem] border border-[#51392F]/8 bg-[#F8F3EA] p-5 shadow-sm transition hover:shadow-md sm:rounded-[1.75rem] sm:p-6">
+              <div className="mb-4 h-[2px] w-14 rounded-full bg-[#8A2F24]" />
+              <h3 className="text-lg font-semibold text-[#51392F] sm:text-xl">{service.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
+                {service.description}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="learn" className="border-y border-[#51392F]/8 bg-[#F4EFE6]">
+        <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-12">
+          <div className="max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">Learn Resources</p>
+            <h2 className="mt-3 text-2xl font-semibold leading-tight text-[#51392F] sm:text-3xl lg:text-4xl">
+              Better flooring decisions start with clearer information.
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-[#51392F]/75 sm:text-base">
+              We focus on the parts of SPC flooring that actually affect project fit, long-term value, and buying confidence — so you can compare products with more clarity and less noise.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-4 lg:grid-cols-[1.2fr_0.8fr]">
+            <div className="rounded-[1.5rem] border border-[#51392F]/8 bg-white p-6 shadow-sm sm:p-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#4E6A57]">Material selection</p>
+              <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
+                Compare finish, grain, tone, and SPC build quality based on the real demands of the project — not just showroom appearance.
+              </p>
+            </div>
+
+            <div className="rounded-[1.5rem] border border-[#51392F]/8 bg-white p-6 shadow-sm sm:p-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#4E6A57]">Pricing context</p>
+              <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
+                Understand how direct sourcing affects cost, where markup typically enters the chain, and how to judge value beyond the sticker price.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2 lg:col-span-2">
+              <div className="rounded-[1.5rem] border border-[#51392F]/8 bg-white p-6 shadow-sm sm:p-7">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#4E6A57]">Performance</p>
+                <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
+                  Get straightforward guidance on waterproof construction, wear performance, installation conditions, and everyday practicality.
+                </p>
+              </div>
+              <div className="rounded-[1.5rem] border border-[#51392F]/8 bg-white p-6 shadow-sm sm:p-7">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#4E6A57]">Delivery planning</p>
+                <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
+                  Plan samples, quantities, shipping, and timing with better visibility from first decision through final delivery.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-12">
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">About FoundWell</p>
+        <div className="relative overflow-hidden rounded-[1.9rem] bg-[#51392F]">
+          <div className="absolute inset-0 bg-[url('/landing-slide-three.png')] bg-cover bg-center opacity-50" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(81,57,47,0.8)_0%,rgba(81,57,47,0.62)_45%,rgba(81,57,47,0.46)_100%)]" />
+
+          <div className="relative z-10 max-w-3xl px-6 py-10 text-white sm:px-8 sm:py-12 lg:px-12 lg:py-14">
+            <h2 className="text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
+              Luxury-grade SPC flooring, sourced more directly and priced with less friction.
+            </h2>
+            <p className="mt-5 text-sm leading-8 text-white/82 sm:text-base">
+              FoundWell is built around a simple idea: source better flooring closer to the manufacturer, stay selective about quality, and create a clearer path from specification to delivery for clients in the U.S.
+            </p>
+
+            <div className="mt-8 grid gap-5 sm:grid-cols-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9FB7A7]">Direct sourcing</p>
+                <p className="mt-2 text-sm leading-7 text-white/80">
+                  We reduce unnecessary layers between the product and the client.
+                </p>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9FB7A7]">Quality standard</p>
+                <p className="mt-2 text-sm leading-7 text-white/80">
+                  Our focus stays on luxury-grade SPC with better finish consistency.
+                </p>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9FB7A7]">Client value</p>
+                <p className="mt-2 text-sm leading-7 text-white/80">
+                  The result is better material at better pricing with more transparency.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  );
+}
