@@ -15,7 +15,7 @@ const products: Product[] = [
     description: "Bright blonde oak for airy, refined, premium spaces.",
   },
   {
-    name: "Cairo Oak",
+    name: "Cairo",
     slug: "cairo-oak",
     referenceSlug: "cairo-oak",
     description: "Golden midtone oak with grounded, premium texture.",
@@ -27,25 +27,25 @@ const products: Product[] = [
     description: "Rich taupe-brown oak with a classic, elevated character.",
   },
   {
-    name: "Sutton Oak",
+    name: "Sutton",
     slug: "sutton-oak",
     referenceSlug: "coastal-greige-oak",
     description: "Soft taupe oak with quiet sophistication and warmth.",
   },
   {
-    name: "Washed Oak",
+    name: "Washed Grey",
     slug: "washed-oak",
     referenceSlug: "warm-sand-oak",
     description: "Soft greige oak with contemporary character.",
   },
   {
-    name: "Nevada Oak",
+    name: "Nevada",
     slug: "nevada-oak",
     referenceSlug: "castle-oak",
     description: "Cool contemporary oak with understated natural variation.",
   },
   {
-    name: "Suprem Oak",
+    name: "Suprem",
     slug: "suprem-oak",
     referenceSlug: "soft-honey-oak",
     description: "Warm honeyed oak with a smooth premium showroom feel.",
@@ -57,7 +57,7 @@ const products: Product[] = [
     description: "Light neutral oak tailored for modern interior palettes.",
   },
   {
-    name: "Stardust Oak",
+    name: "Stardust",
     slug: "stardust-oak",
     referenceSlug: "natural-beige-oak",
     description: "Balanced beige oak with subtle grain and luminous warmth.",
