@@ -5,59 +5,59 @@ import { useState } from "react";
 type Product = {
   name: string;
   description: string;
-  images: [string, string];
+  images: [string, string, string];
 };
 
 const products: Product[] = [
   {
     name: "Toasted Oak",
     description: "Warm natural oak tones with authentic wood grain.",
-    images: ["/floors/b183.png", "/landing-slide-one-clean.png"],
+    images: ["/landing-slide-one-clean.png", "/engineered-hardwood-slide2.png", "/landing-slide-three.png"],
   },
   {
     name: "Washed Oak",
     description: "Soft greige oak with contemporary character.",
-    images: ["/floors/b184.png", "/engineered-hardwood-slide2.png"],
+    images: ["/engineered-hardwood-slide2.png", "/landing-slide-three.png", "/landing-slide-one-clean.png"],
   },
   {
     name: "Sherwood Oak",
-    description: "Natural brown oak with a grounded, premium finish.",
-    images: ["/floors/b186.png", "/landing-slide-three.png"],
+    description: "Classic oak character with balanced warmth and depth.",
+    images: ["/landing-slide-three.png", "/landing-slide-one-clean.png", "/engineered-hardwood-slide2.png"],
   },
   {
     name: "Modena Oak",
     description: "Light taupe oak designed for calm, elevated interiors.",
-    images: ["/floors/b189.png", "/landing-slide-one-clean.png"],
+    images: ["/landing-slide-one-clean.png", "/landing-slide-three.png", "/engineered-hardwood-slide2.png"],
   },
   {
     name: "Grey Beach",
-    description: "Soft golden oak with a refined sun-washed warmth.",
-    images: ["/floors/b190.png", "/engineered-hardwood-slide2.png"],
+    description: "Cool coastal oak with a soft weathered finish.",
+    images: ["/engineered-hardwood-slide2.png", "/landing-slide-one-clean.png", "/landing-slide-three.png"],
   },
   {
     name: "Cairo Oak",
-    description: "Balanced midtone oak with rich, natural depth.",
-    images: ["/floors/b191.png", "/landing-slide-three.png"],
+    description: "Golden midtone oak with grounded, premium texture.",
+    images: ["/landing-slide-three.png", "/engineered-hardwood-slide2.png", "/landing-slide-one-clean.png"],
   },
   {
     name: "Oxford Oak",
     description: "Light neutral oak tailored for modern interior palettes.",
-    images: ["/floors/b193.png", "/landing-slide-one-clean.png"],
+    images: ["/landing-slide-one-clean.png", "/engineered-hardwood-slide2.png", "/landing-slide-three.png"],
   },
   {
     name: "Nevada Oak",
-    description: "Cool weathered oak with understated contemporary appeal.",
-    images: ["/floors/b194.png", "/engineered-hardwood-slide2.png"],
+    description: "Cool contemporary oak with understated natural variation.",
+    images: ["/landing-slide-three.png", "/landing-slide-one-clean.png", "/engineered-hardwood-slide2.png"],
   },
   {
     name: "Sutton Oak",
-    description: "Soft taupe oak with quiet sophistication and texture.",
-    images: ["/floors/b195.png", "/landing-slide-three.png"],
+    description: "Soft taupe oak with quiet sophistication and warmth.",
+    images: ["/engineered-hardwood-slide2.png", "/landing-slide-three.png", "/landing-slide-one-clean.png"],
   },
   {
     name: "Castle Oak",
-    description: "Light blonde oak for bright, open, premium spaces.",
-    images: ["/floors/b197.png", "/landing-slide-one-clean.png"],
+    description: "Bright blonde oak for airy, refined, premium spaces.",
+    images: ["/landing-slide-one-clean.png", "/landing-slide-three.png", "/engineered-hardwood-slide2.png"],
   },
 ];
 
@@ -105,14 +105,14 @@ function ProductCard({ product }: { product: Product }) {
         <img
           src={product.images[index]}
           alt={product.name}
-          className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+          className="h-full w-full object-cover object-center transition duration-300 group-hover:scale-[1.02]"
         />
 
         <button
           type="button"
           onClick={prev}
           aria-label={`Previous image for ${product.name}`}
-          className="absolute left-4 top-1/2 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
+          className="absolute left-4 top-1/2 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
         >
           <Arrow direction="left" />
         </button>
@@ -121,7 +121,7 @@ function ProductCard({ product }: { product: Product }) {
           type="button"
           onClick={next}
           aria-label={`Next image for ${product.name}`}
-          className="absolute right-4 top-1/2 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/85 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
+          className="absolute right-4 top-1/2 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
         >
           <Arrow direction="right" />
         </button>
