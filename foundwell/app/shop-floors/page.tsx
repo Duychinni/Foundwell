@@ -80,7 +80,6 @@ type GalleryImage = {
   key: string;
   type: ImageType;
   generatedPath: string;
-  fallbackPath: string;
 };
 
 function BrandMark() {
@@ -128,68 +127,86 @@ function ProductCard({ product }: { product: Product }) {
   const [brokenGenerated, setBrokenGenerated] = useState<Record<string, boolean>>({});
 
   const gallery = useMemo<GalleryImage[]>(() => {
-    const fallback = fallbackReferencePath(product.referenceSlug);
     return imageTypes.map((type) => ({
       key: `${product.slug}-${type}`,
       type,
       generatedPath: generatedPath(product.slug, type),
-      fallbackPath: fallback,
     }));
-  }, [product.referenceSlug, product.slug]);
+  }, [product.slug]);
 
-  const prev = () => setIndex((current) => (current - 1 + gallery.length) % gallery.length);
-  const next = () => setIndex((current) => (current + 1) % gallery.length);
+  const availableSlides = gallery.filter((item) => !brokenGenerated[item.generatedPath]);
+  const fallbackOnly = availableSlides.length === 0;
+  const fallbackSrc = fallbackReferencePath(product.referenceSlug);
+  const safeIndex = fallbackOnly ? 0 : index % availableSlides.length;
+
+  const prev = () => {
+    if (fallbackOnly) return;
+    setIndex((current) => (current - 1 + availableSlides.length) % availableSlides.length);
+  };
+
+  const next = () => {
+    if (fallbackOnly) return;
+    setIndex((current) => (current + 1) % availableSlides.length);
+  };
 
   return (
     <article className="group">
       <div className="relative aspect-square overflow-hidden rounded-[12px] bg-[#F4F0EA] transition duration-300 group-hover:shadow-[0_22px_50px_rgba(0,0,0,0.08)]">
-        <div
-          className="flex h-full transition-transform duration-500 ease-out"
-          style={{ transform: `translateX(-${index * 100}%)` }}
-        >
-          {gallery.map((item) => {
-            const itemSrc = brokenGenerated[item.generatedPath] ? item.fallbackPath : item.generatedPath;
-
-            return (
+        {fallbackOnly ? (
+          <img
+            src={fallbackSrc}
+            alt={`${product.name} reference`}
+            className="h-full w-full object-contain object-center transition duration-300 group-hover:scale-[1.02]"
+          />
+        ) : (
+          <div
+            className="flex h-full transition-transform duration-500 ease-out"
+            style={{ transform: `translateX(-${safeIndex * 100}%)` }}
+          >
+            {gallery.map((item) => (
               <img
                 key={item.key}
-                src={itemSrc}
+                src={item.generatedPath}
                 alt={`${product.name} ${item.type}`}
                 className="h-full min-w-full object-cover object-center transition duration-300 group-hover:scale-[1.02]"
                 onError={() => {
                   setBrokenGenerated((current) => ({ ...current, [item.generatedPath]: true }));
                 }}
               />
-            );
-          })}
-        </div>
+            ))}
+          </div>
+        )}
 
-        <button
-          type="button"
-          onClick={prev}
-          aria-label={`Previous image for ${product.name}`}
-          className="absolute left-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
-        >
-          <Arrow direction="left" />
-        </button>
+        {!fallbackOnly && (
+          <>
+            <button
+              type="button"
+              onClick={prev}
+              aria-label={`Previous image for ${product.name}`}
+              className="absolute left-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
+            >
+              <Arrow direction="left" />
+            </button>
 
-        <button
-          type="button"
-          onClick={next}
-          aria-label={`Next image for ${product.name}`}
-          className="absolute right-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
-        >
-          <Arrow direction="right" />
-        </button>
+            <button
+              type="button"
+              onClick={next}
+              aria-label={`Next image for ${product.name}`}
+              className="absolute right-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
+            >
+              <Arrow direction="right" />
+            </button>
 
-        <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-1.5 rounded-full bg-white/82 px-2 py-1 backdrop-blur-sm">
-          {gallery.map((item, dotIndex) => (
-            <span
-              key={item.key}
-              className={`h-1.5 w-1.5 rounded-full ${dotIndex === index ? "bg-[#51392F]" : "bg-[#51392F]/25"}`}
-            />
-          ))}
-        </div>
+            <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-1.5 rounded-full bg-white/82 px-2 py-1 backdrop-blur-sm">
+              {availableSlides.map((item, dotIndex) => (
+                <span
+                  key={item.key}
+                  className={`h-1.5 w-1.5 rounded-full ${dotIndex === safeIndex ? "bg-[#51392F]" : "bg-[#51392F]/25"}`}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </div>
 
       <div className="pt-5">
