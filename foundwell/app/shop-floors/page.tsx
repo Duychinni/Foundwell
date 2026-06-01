@@ -137,24 +137,32 @@ function ProductCard({ product }: { product: Product }) {
     }));
   }, [product.referenceSlug, product.slug]);
 
-  const active = gallery[index];
-  const activeSrc = brokenGenerated[active.generatedPath] ? active.fallbackPath : active.generatedPath;
-
   const prev = () => setIndex((current) => (current - 1 + gallery.length) % gallery.length);
   const next = () => setIndex((current) => (current + 1) % gallery.length);
 
   return (
     <article className="group">
       <div className="relative aspect-square overflow-hidden rounded-[12px] bg-[#F4F0EA] transition duration-300 group-hover:shadow-[0_22px_50px_rgba(0,0,0,0.08)]">
-        <img
-          key={active.key}
-          src={activeSrc}
-          alt={`${product.name} ${active.type}`}
-          className="h-full w-full object-cover object-center transition duration-300 group-hover:scale-[1.02]"
-          onError={() => {
-            setBrokenGenerated((current) => ({ ...current, [active.generatedPath]: true }));
-          }}
-        />
+        <div
+          className="flex h-full transition-transform duration-500 ease-out"
+          style={{ transform: `translateX(-${index * 100}%)` }}
+        >
+          {gallery.map((item) => {
+            const itemSrc = brokenGenerated[item.generatedPath] ? item.fallbackPath : item.generatedPath;
+
+            return (
+              <img
+                key={item.key}
+                src={itemSrc}
+                alt={`${product.name} ${item.type}`}
+                className="h-full min-w-full object-cover object-center transition duration-300 group-hover:scale-[1.02]"
+                onError={() => {
+                  setBrokenGenerated((current) => ({ ...current, [item.generatedPath]: true }));
+                }}
+              />
+            );
+          })}
+        </div>
 
         <button
           type="button"
