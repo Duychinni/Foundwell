@@ -6,7 +6,6 @@ type Product = {
   name: string;
   slug: string;
   description: string;
-  images: [string, string, string];
 };
 
 const products: Product[] = [
@@ -14,103 +13,55 @@ const products: Product[] = [
     name: "Toasted Oak",
     slug: "toasted-oak",
     description: "Warm natural oak tones with authentic wood grain.",
-    images: [
-      "/floors/toasted-oak/room.jpg",
-      "/floors/toasted-oak/texture.jpg",
-      "/floors/toasted-oak/detail.jpg",
-    ],
   },
   {
     name: "Washed Oak",
     slug: "washed-oak",
     description: "Soft greige oak with contemporary character.",
-    images: [
-      "/floors/washed-oak/room.jpg",
-      "/floors/washed-oak/texture.jpg",
-      "/floors/washed-oak/detail.jpg",
-    ],
   },
   {
     name: "Sherwood Oak",
     slug: "sherwood-oak",
     description: "Classic oak character with balanced warmth and depth.",
-    images: [
-      "/floors/sherwood-oak/room.jpg",
-      "/floors/sherwood-oak/texture.jpg",
-      "/floors/sherwood-oak/detail.jpg",
-    ],
   },
   {
     name: "Modena Oak",
     slug: "modena-oak",
     description: "Light taupe oak designed for calm, elevated interiors.",
-    images: [
-      "/floors/modena-oak/room.jpg",
-      "/floors/modena-oak/texture.jpg",
-      "/floors/modena-oak/detail.jpg",
-    ],
   },
   {
     name: "Grey Beach",
     slug: "grey-beach",
     description: "Cool coastal oak with a soft weathered finish.",
-    images: [
-      "/floors/grey-beach/room.jpg",
-      "/floors/grey-beach/texture.jpg",
-      "/floors/grey-beach/detail.jpg",
-    ],
   },
   {
     name: "Cairo Oak",
     slug: "cairo-oak",
     description: "Golden midtone oak with grounded, premium texture.",
-    images: [
-      "/floors/cairo-oak/room.jpg",
-      "/floors/cairo-oak/texture.jpg",
-      "/floors/cairo-oak/detail.jpg",
-    ],
   },
   {
     name: "Oxford Oak",
     slug: "oxford-oak",
     description: "Light neutral oak tailored for modern interior palettes.",
-    images: [
-      "/floors/oxford-oak/room.jpg",
-      "/floors/oxford-oak/texture.jpg",
-      "/floors/oxford-oak/detail.jpg",
-    ],
   },
   {
     name: "Nevada Oak",
     slug: "nevada-oak",
     description: "Cool contemporary oak with understated natural variation.",
-    images: [
-      "/floors/nevada-oak/room.jpg",
-      "/floors/nevada-oak/texture.jpg",
-      "/floors/nevada-oak/detail.jpg",
-    ],
   },
   {
     name: "Sutton Oak",
     slug: "sutton-oak",
     description: "Soft taupe oak with quiet sophistication and warmth.",
-    images: [
-      "/floors/sutton-oak/room.jpg",
-      "/floors/sutton-oak/texture.jpg",
-      "/floors/sutton-oak/detail.jpg",
-    ],
   },
   {
     name: "Castle Oak",
     slug: "castle-oak",
     description: "Bright blonde oak for airy, refined, premium spaces.",
-    images: [
-      "/floors/castle-oak/room.jpg",
-      "/floors/castle-oak/texture.jpg",
-      "/floors/castle-oak/detail.jpg",
-    ],
   },
 ];
+
+const imageTypes = ["hero", "kitchen", "living-room-alt", "closeup-1", "closeup-2"] as const;
 
 function BrandMark() {
   return (
@@ -144,19 +95,36 @@ function Arrow({ direction }: { direction: "left" | "right" }) {
   );
 }
 
+function galleryImagePath(slug: string, imageType: (typeof imageTypes)[number]) {
+  return `/generated-flooring/${slug}-${imageType}.jpg`;
+}
+
+function fallbackReferencePath(slug: string) {
+  return `/floor-references/${slug}-reference.jpg`;
+}
+
 function ProductCard({ product }: { product: Product }) {
   const [index, setIndex] = useState(0);
+  const [erroredImages, setErroredImages] = useState<Record<string, boolean>>({});
 
-  const prev = () => setIndex((current) => (current - 1 + product.images.length) % product.images.length);
-  const next = () => setIndex((current) => (current + 1) % product.images.length);
+  const activeType = imageTypes[index];
+  const generatedPath = galleryImagePath(product.slug, activeType);
+  const fallbackPath = fallbackReferencePath(product.slug);
+  const src = erroredImages[generatedPath] ? fallbackPath : generatedPath;
+
+  const prev = () => setIndex((current) => (current - 1 + imageTypes.length) % imageTypes.length);
+  const next = () => setIndex((current) => (current + 1) % imageTypes.length);
 
   return (
     <article className="group">
       <div className="relative aspect-square overflow-hidden rounded-[12px] bg-[#F4F0EA] transition duration-300 group-hover:shadow-[0_22px_50px_rgba(0,0,0,0.08)]">
         <img
-          src={product.images[index]}
+          src={src}
           alt={product.name}
-          className="h-full w-full object-contain object-center transition duration-300 group-hover:scale-[1.02]"
+          className="h-full w-full object-cover object-center transition duration-300 group-hover:scale-[1.02]"
+          onError={() => {
+            setErroredImages((current) => ({ ...current, [generatedPath]: true }));
+          }}
         />
 
         <button
