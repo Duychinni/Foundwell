@@ -79,7 +79,7 @@ type ImageType = (typeof imageTypes)[number];
 type GalleryImage = {
   key: string;
   type: ImageType;
-  generatedPaths: string[];
+  sources: string[];
 };
 
 function BrandMark() {
@@ -114,7 +114,7 @@ function Arrow({ direction }: { direction: "left" | "right" }) {
   );
 }
 
-function generatedPath(slug: string, type: ImageType) {
+function generatedCandidates(slug: string, type: ImageType) {
   return [
     `/generated-flooring/${slug}-${type}.jpg`,
     `/generated-flooring/${slug}-${type}.jpeg`,
@@ -129,65 +129,68 @@ function fallbackReferencePath(referenceSlug: string) {
 
 function ProductCard({ product }: { product: Product }) {
   const [index, setIndex] = useState(0);
-  const [brokenGenerated, setBrokenGenerated] = useState<Record<string, boolean>>({});
+  const [brokenSources, setBrokenSources] = useState<Record<string, boolean>>({});
 
   const gallery = useMemo<GalleryImage[]>(() => {
     return imageTypes.map((type) => ({
       key: `${product.slug}-${type}`,
       type,
-      generatedPaths: generatedPath(product.slug, type),
+      sources: generatedCandidates(product.slug, type),
     }));
   }, [product.slug]);
 
-  const availableSlides = gallery.filter((item) => item.generatedPaths.some((candidate) => !brokenGenerated[candidate]));
-  const fallbackOnly = availableSlides.length === 0;
+  const resolvedSlides = gallery
+    .map((item) => {
+      const src = item.sources.find((candidate) => !brokenSources[candidate]);
+      if (!src) return null;
+      return { ...item, src };
+    })
+    .filter(Boolean) as Array<GalleryImage & { src: string }>;
+
   const fallbackSrc = fallbackReferencePath(product.referenceSlug);
-  const safeIndex = fallbackOnly ? 0 : index % availableSlides.length;
+  const hasRealSlides = resolvedSlides.length > 0;
+  const safeIndex = hasRealSlides ? index % resolvedSlides.length : 0;
 
   const prev = () => {
-    if (fallbackOnly) return;
-    setIndex((current) => (current - 1 + availableSlides.length) % availableSlides.length);
+    if (!hasRealSlides) return;
+    setIndex((current) => (current - 1 + resolvedSlides.length) % resolvedSlides.length);
   };
 
   const next = () => {
-    if (fallbackOnly) return;
-    setIndex((current) => (current + 1) % availableSlides.length);
+    if (!hasRealSlides) return;
+    setIndex((current) => (current + 1) % resolvedSlides.length);
   };
 
   return (
     <article className="group">
       <div className="relative aspect-square overflow-hidden rounded-[12px] bg-[#F4F0EA] transition duration-300 group-hover:shadow-[0_22px_50px_rgba(0,0,0,0.08)]">
-        {fallbackOnly ? (
+        {hasRealSlides ? (
+          <div
+            className="flex h-full transition-transform duration-500 ease-out"
+            style={{ transform: `translateX(-${safeIndex * 100}%)` }}
+          >
+            {resolvedSlides.map((item) => (
+              <img
+                key={item.key}
+                src={item.src}
+                alt={`${product.name} ${item.type}`}
+                className="h-full min-w-full object-cover object-center transition duration-300 group-hover:scale-[1.02]"
+                onError={(event) => {
+                  const currentSrc = new URL(event.currentTarget.currentSrc).pathname;
+                  setBrokenSources((current) => ({ ...current, [currentSrc]: true }));
+                }}
+              />
+            ))}
+          </div>
+        ) : (
           <img
             src={fallbackSrc}
             alt={`${product.name} reference`}
             className="h-full w-full object-contain object-center transition duration-300 group-hover:scale-[1.02]"
           />
-        ) : (
-          <div
-            className="flex h-full transition-transform duration-500 ease-out"
-            style={{ transform: `translateX(-${safeIndex * 100}%)` }}
-          >
-            {gallery.map((item) => {
-              const workingSrc = item.generatedPaths.find((candidate) => !brokenGenerated[candidate]) ?? item.generatedPaths[0];
-
-              return (
-                <img
-                  key={item.key}
-                  src={workingSrc}
-                  alt={`${product.name} ${item.type}`}
-                  className="h-full min-w-full object-cover object-center transition duration-300 group-hover:scale-[1.02]"
-                  onError={(event) => {
-                    const currentSrc = new URL(event.currentTarget.currentSrc).pathname;
-                    setBrokenGenerated((current) => ({ ...current, [currentSrc]: true }));
-                  }}
-                />
-              );
-            })}
-          </div>
         )}
 
-        {!fallbackOnly && (
+        {hasRealSlides && resolvedSlides.length > 1 && (
           <>
             <button
               type="button"
@@ -208,7 +211,7 @@ function ProductCard({ product }: { product: Product }) {
             </button>
 
             <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-1.5 rounded-full bg-white/82 px-2 py-1 backdrop-blur-sm">
-              {availableSlides.map((item, dotIndex) => (
+              {resolvedSlides.map((item, dotIndex) => (
                 <span
                   key={item.key}
                   className={`h-1.5 w-1.5 rounded-full ${dotIndex === safeIndex ? "bg-[#51392F]" : "bg-[#51392F]/25"}`}
