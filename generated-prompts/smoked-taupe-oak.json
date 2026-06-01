@@ -1,0 +1,37 @@
+[
+  {
+    "flooring": "Smoked Taupe Oak",
+    "type": "hero living room",
+    "reference": "public/floor-references/smoked-taupe-oak-reference.jpg",
+    "output": "public/generated-flooring/smoked-taupe-oak-hero.jpg",
+    "prompt": "Use public/floor-references/smoked-taupe-oak-reference.jpg as the exact flooring reference for Smoked Taupe Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance as accurately as possible. Create a luxury modern living room with large windows, bright natural daylight, premium furniture, upscale styling, and realistic shadows. Flooring must occupy at least 50% of the visible image area and be the primary focus. Premium flooring manufacturer photography, McMillan Floors style, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+  },
+  {
+    "flooring": "Smoked Taupe Oak",
+    "type": "luxury kitchen",
+    "reference": "public/floor-references/smoked-taupe-oak-reference.jpg",
+    "output": "public/generated-flooring/smoked-taupe-oak-kitchen.jpg",
+    "prompt": "Use public/floor-references/smoked-taupe-oak-reference.jpg as the exact flooring reference for Smoked Taupe Oak. Match flooring color, tone, wood grain, plank width, bevel edges, texture variation, and installed appearance exactly. Create a modern luxury kitchen with a large island, white cabinetry, bright daylight, premium finishes, and clearly visible flooring throughout. Flooring must occupy at least 50% of the visible image area. Premium architectural photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+  },
+  {
+    "flooring": "Smoked Taupe Oak",
+    "type": "alternate living room",
+    "reference": "public/floor-references/smoked-taupe-oak-reference.jpg",
+    "output": "public/generated-flooring/smoked-taupe-oak-living-room-alt.jpg",
+    "prompt": "Use public/floor-references/smoked-taupe-oak-reference.jpg as the exact flooring reference for Smoked Taupe Oak. Match flooring color, tone, grain pattern, plank width, bevel edges, texture variation, and installed appearance exactly. Create a different luxury living room scene with different furniture, different layout, and different lighting angle. Flooring remains the primary focus and occupies at least 50% of the visible image area. Premium flooring manufacturer photography, ultra photorealistic, 8k quality. No people, pets, text, logos, watermarks, labels, or signs."
+  },
+  {
+    "flooring": "Smoked Taupe Oak",
+    "type": "closeup texture 1",
+    "reference": "public/floor-references/smoked-taupe-oak-reference.jpg",
+    "output": "public/generated-flooring/smoked-taupe-oak-closeup-1.jpg",
+    "prompt": "Use public/floor-references/smoked-taupe-oak-reference.jpg as the exact flooring reference for Smoked Taupe Oak. Create a professional flooring manufacturer close-up with visible grain detail, realistic plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium catalog product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+  },
+  {
+    "flooring": "Smoked Taupe Oak",
+    "type": "closeup texture 2",
+    "reference": "public/floor-references/smoked-taupe-oak-reference.jpg",
+    "output": "public/generated-flooring/smoked-taupe-oak-closeup-2.jpg",
+    "prompt": "Use public/floor-references/smoked-taupe-oak-reference.jpg as the exact flooring reference for Smoked Taupe Oak. Create a second professional flooring catalog close-up from a different angle, showing visible grain detail, plank seams, bevel edges, and texture variation. Flooring only, no furniture, no room elements, no walls. Premium manufacturer product photography, ultra photorealistic, 8k quality. No text, logos, watermarks, labels, or signs."
+  }
+]
