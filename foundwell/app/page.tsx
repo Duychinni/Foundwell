@@ -267,13 +267,13 @@ export default function Home() {
       </section>
 
       <section id="about" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-12">
+        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">About FoundWell</p>
         <div className="relative overflow-hidden rounded-[1.9rem] bg-[#51392F]">
-          <div className="absolute inset-0 bg-[url('/landing-slide-three.png')] bg-cover bg-center opacity-40" />
-          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(81,57,47,0.86)_0%,rgba(81,57,47,0.68)_45%,rgba(81,57,47,0.5)_100%)]" />
+          <div className="absolute inset-0 bg-[url('/landing-slide-three.png')] bg-cover bg-center opacity-50" />
+          <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(81,57,47,0.8)_0%,rgba(81,57,47,0.62)_45%,rgba(81,57,47,0.46)_100%)]" />
 
           <div className="relative z-10 max-w-3xl px-6 py-10 text-white sm:px-8 sm:py-12 lg:px-12 lg:py-14">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">About FoundWell</p>
-            <h2 className="mt-3 text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
+            <h2 className="text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
               Luxury-grade SPC flooring, sourced more directly and priced with less friction.
             </h2>
             <p className="mt-5 text-sm leading-8 text-white/82 sm:text-base">
