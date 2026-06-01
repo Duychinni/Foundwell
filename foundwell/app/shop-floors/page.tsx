@@ -8,6 +8,7 @@ type Product = {
   referenceSlug: string;
   description: string;
   generatedFit?: "cover" | "contain";
+  generatedFilterClass?: string;
 };
 
 const products: Product[] = [
@@ -34,6 +35,7 @@ const products: Product[] = [
     slug: "sutton-oak",
     referenceSlug: "coastal-greige-oak",
     description: "Soft taupe oak with quiet sophistication and warmth.",
+    generatedFilterClass: "brightness-[1.08]",
   },
   {
     name: "Washed Oak",
@@ -214,8 +216,8 @@ function ProductCard({ product }: { product: Product }) {
                 item.isFallback
                   ? "object-contain bg-[#F4F0EA] p-3"
                   : product.generatedFit === "contain"
-                    ? "object-contain bg-[#F4F0EA] p-3"
-                    : "object-cover"
+                    ? `object-contain bg-[#F4F0EA] p-3 ${product.generatedFilterClass ?? ""}`
+                    : `object-cover ${product.generatedFilterClass ?? ""}`
               }`}
               onError={(event) => {
                 const currentSrc = new URL(event.currentTarget.currentSrc).pathname;
