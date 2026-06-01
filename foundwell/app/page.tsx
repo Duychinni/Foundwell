@@ -223,21 +223,81 @@ export default function Home() {
 
       <section id="learn" className="border-y border-[#51392F]/8 bg-[#F4EFE6]">
         <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-12">
-          <div className="rounded-[1.5rem] bg-white p-6 text-[#51392F] shadow-sm sm:rounded-[1.75rem] sm:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">Learn Resources</p>
-            <h2 className="mt-3 text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
-              Plainspoken guidance on material selection, performance, pricing context, and delivery planning.
-            </h2>
+          <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+            <div className="rounded-[1.5rem] bg-white p-6 text-[#51392F] shadow-sm sm:rounded-[1.75rem] sm:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">Learn Resources</p>
+              <h2 className="mt-3 text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
+                Clear guidance on SPC selection, specifications, pricing logic, and project planning.
+              </h2>
+              <p className="mt-4 text-sm leading-7 text-[#51392F]/75 sm:text-base">
+                We help clients understand what actually matters when choosing flooring: wear layer, construction quality, installation suitability, lead times, and where value is created in the buying process.
+              </p>
+            </div>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div className="rounded-[1.35rem] border border-[#51392F]/8 bg-white/70 p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Material selection</p>
+                <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
+                  Compare finish, grain, tone, and SPC build quality based on the actual demands of the project — not just showroom appearance.
+                </p>
+              </div>
+              <div className="rounded-[1.35rem] border border-[#51392F]/8 bg-white/70 p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Pricing context</p>
+                <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
+                  Understand how direct sourcing affects cost, where markup usually enters the chain, and how to evaluate flooring value beyond sticker price.
+                </p>
+              </div>
+              <div className="rounded-[1.35rem] border border-[#51392F]/8 bg-white/70 p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Performance</p>
+                <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
+                  Get straightforward insight on waterproof construction, wear performance, installation conditions, and long-term practical use.
+                </p>
+              </div>
+              <div className="rounded-[1.35rem] border border-[#51392F]/8 bg-white/70 p-5">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Delivery planning</p>
+                <p className="mt-3 text-sm leading-7 text-[#51392F]/75">
+                  Plan samples, timelines, quantities, and shipping expectations with fewer unknowns and better visibility from decision to delivery.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section id="about" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-12">
-        <div className="rounded-[1.75rem] bg-[#51392F] px-6 py-8 text-white sm:rounded-[2rem] sm:px-8 sm:py-10 sm:px-12">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#F4EFE6] sm:text-sm">About FoundWell</p>
-          <h2 className="mt-3 text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
-            High-quality flooring at better prices, managed with clarity from sample selection to door delivery.
-          </h2>
+        <div className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-stretch">
+          <div className="rounded-[1.75rem] bg-[#51392F] px-6 py-8 text-white sm:rounded-[2rem] sm:px-8 sm:py-10 lg:px-12">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#F4EFE6] sm:text-sm">About FoundWell</p>
+            <h2 className="mt-3 text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
+              Luxury-grade SPC flooring, sourced more directly and priced with less friction.
+            </h2>
+            <p className="mt-5 max-w-2xl text-sm leading-7 text-white/80 sm:text-base">
+              FoundWell is built around a simple idea: source better flooring closer to the manufacturer, stay selective about quality, and create a clearer path from specification to delivery for clients in the U.S.
+            </p>
+          </div>
+
+          <div className="rounded-[1.75rem] border border-[#51392F]/10 bg-[#F4EFE6] p-6 text-[#51392F] sm:rounded-[2rem] sm:p-8">
+            <div className="space-y-5">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Direct sourcing</p>
+                <p className="mt-2 text-sm leading-7 text-[#51392F]/78">
+                  We focus on sourcing directly from manufacturer relationships rather than layering the product through unnecessary distribution steps.
+                </p>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Quality standard</p>
+                <p className="mt-2 text-sm leading-7 text-[#51392F]/78">
+                  Our emphasis is on luxury-grade SPC flooring with stronger finish consistency, better presentation, and more dependable project suitability.
+                </p>
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Client value</p>
+                <p className="mt-2 text-sm leading-7 text-[#51392F]/78">
+                  The goal is better material at better pricing — with a more transparent process for builders, designers, and homeowners who want clarity, not noise.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
