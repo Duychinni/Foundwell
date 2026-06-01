@@ -194,7 +194,7 @@ function ProductCard({ product }: { product: Product }) {
   return (
     <article className="group">
       <div
-        className="relative aspect-square overflow-hidden rounded-[12px] bg-[#F4F0EA] transition duration-300 group-hover:shadow-[0_22px_50px_rgba(0,0,0,0.08)] touch-pan-y select-none"
+        className="relative aspect-square overflow-hidden rounded-[14px] border border-[#51392F]/8 bg-[#F8F3EA] transition duration-300 group-hover:shadow-[0_22px_50px_rgba(81,57,47,0.12)] touch-pan-y select-none"
         onMouseDown={(event) => handlePointerDown(event.clientX)}
         onMouseMove={(event) => handlePointerMove(event.clientX)}
         onMouseUp={handlePointerUp}
@@ -257,15 +257,15 @@ function ProductCard({ product }: { product: Product }) {
       </div>
 
       <div className="pt-5">
-        <h2 className="text-[1.65rem] font-semibold leading-tight tracking-[-0.02em] text-[#2B2B2B] sm:text-[1.85rem]">
+        <h2 className="text-[1.65rem] font-semibold leading-tight tracking-[-0.02em] text-[#51392F] sm:text-[1.85rem]">
           {product.name}
         </h2>
-        <p className="mt-2 max-w-[34ch] text-[15px] leading-7 text-[#2B2B2B]/72">
+        <p className="mt-2 max-w-[34ch] text-[15px] leading-7 text-[#51392F]/72">
           {product.description}
         </p>
         <a
           href="/request-quote"
-          className="mt-5 inline-flex items-center justify-center rounded-full bg-[#EDE7DF] px-5 py-3 text-sm font-medium text-[#2B2B2B] transition duration-300 hover:bg-[#e4dbcf]"
+          className="mt-5 inline-flex items-center justify-center rounded-full border border-[#8A2F24]/10 bg-[#EDE3D4] px-5 py-3 text-sm font-medium text-[#51392F] transition duration-300 hover:bg-[#e3d5c3]"
         >
           Request Quote
         </a>
@@ -276,7 +276,7 @@ function ProductCard({ product }: { product: Product }) {
 
 export default function ShopFloorsPage() {
   return (
-    <main className="min-h-screen bg-white text-[#2B2B2B]">
+    <main className="min-h-screen bg-[#F4EFE6] text-[#51392F]">
       <header className="border-b border-[#51392F]/8 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-4 py-4 sm:px-6 sm:py-5 lg:px-12">
           <div className="flex w-full items-start justify-between gap-4 lg:items-center">
@@ -300,19 +300,20 @@ export default function ShopFloorsPage() {
       </header>
 
       <section className="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 sm:py-14 lg:px-12 lg:py-16">
+        <div className="mb-10 h-px w-full bg-[#51392F]/10" />
         <div className="max-w-4xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#B58A63] sm:text-sm">
+          <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#8A2F24] sm:text-sm">
             Browse Floors
           </p>
-          <h1 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] text-[#2B2B2B] sm:text-4xl lg:text-[3rem]">
+          <h1 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] text-[#51392F] sm:text-4xl lg:text-[3rem]">
             One SPC construction, available across multiple finishes.
           </h1>
-          <p className="mt-5 max-w-3xl text-[15px] leading-8 text-[#2B2B2B]/72 sm:text-[17px]">
+          <p className="mt-5 max-w-3xl text-[15px] leading-8 text-[#51392F]/72 sm:text-[17px]">
             Every option shown below uses the same premium SPC construction. The finish changes, but the build quality remains consistent.
           </p>
         </div>
 
-        <div className="flex justify-end pb-8 pt-10 text-sm text-[#2B2B2B]">
+        <div className="flex justify-end pb-8 pt-10 text-sm text-[#51392F]">
           <p>Showing 10 of 10</p>
         </div>
 
