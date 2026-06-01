@@ -11,34 +11,10 @@ type Product = {
 
 const products: Product[] = [
   {
-    name: "Toasted Oak",
-    slug: "toasted-oak",
-    referenceSlug: "natural-beige-oak",
-    description: "Warm natural oak tones with authentic wood grain.",
-  },
-  {
-    name: "Washed Oak",
-    slug: "washed-oak",
-    referenceSlug: "warm-sand-oak",
-    description: "Soft greige oak with contemporary character.",
-  },
-  {
-    name: "Sherwood Oak",
-    slug: "sherwood-oak",
-    referenceSlug: "light-ash-oak",
-    description: "Classic oak character with balanced warmth and depth.",
-  },
-  {
-    name: "Modena Oak",
-    slug: "modena-oak",
-    referenceSlug: "smoked-taupe-oak",
-    description: "Light taupe oak designed for calm, elevated interiors.",
-  },
-  {
-    name: "Grey Beach",
-    slug: "grey-beach",
-    referenceSlug: "soft-honey-oak",
-    description: "Cool coastal oak with a soft weathered finish.",
+    name: "Castle Oak",
+    slug: "castle-oak",
+    referenceSlug: "nordic-blonde-oak",
+    description: "Bright blonde oak for airy, refined, premium spaces.",
   },
   {
     name: "Cairo Oak",
@@ -47,16 +23,10 @@ const products: Product[] = [
     description: "Golden midtone oak with grounded, premium texture.",
   },
   {
-    name: "Oxford Oak",
-    slug: "oxford-oak",
-    referenceSlug: "raw-linen-oak",
-    description: "Light neutral oak tailored for modern interior palettes.",
-  },
-  {
-    name: "Nevada Oak",
-    slug: "nevada-oak",
-    referenceSlug: "castle-oak",
-    description: "Cool contemporary oak with understated natural variation.",
+    name: "Royal Oak",
+    slug: "royal-oak",
+    referenceSlug: "smoked-taupe-oak",
+    description: "Rich taupe-brown oak with a classic, elevated character.",
   },
   {
     name: "Sutton Oak",
@@ -65,10 +35,40 @@ const products: Product[] = [
     description: "Soft taupe oak with quiet sophistication and warmth.",
   },
   {
-    name: "Castle Oak",
-    slug: "castle-oak",
-    referenceSlug: "nordic-blonde-oak",
-    description: "Bright blonde oak for airy, refined, premium spaces.",
+    name: "Washed Oak",
+    slug: "washed-oak",
+    referenceSlug: "warm-sand-oak",
+    description: "Soft greige oak with contemporary character.",
+  },
+  {
+    name: "Nevada Oak",
+    slug: "nevada-oak",
+    referenceSlug: "castle-oak",
+    description: "Cool contemporary oak with understated natural variation.",
+  },
+  {
+    name: "Suprem Oak",
+    slug: "suprem-oak",
+    referenceSlug: "soft-honey-oak",
+    description: "Warm honeyed oak with a smooth premium showroom feel.",
+  },
+  {
+    name: "Oxford Oak",
+    slug: "oxford-oak",
+    referenceSlug: "raw-linen-oak",
+    description: "Light neutral oak tailored for modern interior palettes.",
+  },
+  {
+    name: "Stardust Oak",
+    slug: "stardust-oak",
+    referenceSlug: "natural-beige-oak",
+    description: "Balanced beige oak with subtle grain and luminous warmth.",
+  },
+  {
+    name: "Sherwood Oak",
+    slug: "sherwood-oak",
+    referenceSlug: "light-ash-oak",
+    description: "Classic oak character with balanced warmth and depth.",
   },
 ];
 
