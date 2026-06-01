@@ -272,7 +272,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(81,57,47,0.86)_0%,rgba(81,57,47,0.68)_45%,rgba(81,57,47,0.5)_100%)]" />
 
           <div className="relative z-10 max-w-3xl px-6 py-10 text-white sm:px-8 sm:py-12 lg:px-12 lg:py-14">
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#F4EFE6] sm:text-sm">About FoundWell</p>
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">About FoundWell</p>
             <h2 className="mt-3 text-2xl font-semibold leading-tight sm:text-3xl lg:text-4xl">
               Luxury-grade SPC flooring, sourced more directly and priced with less friction.
             </h2>
@@ -282,19 +282,19 @@ export default function Home() {
 
             <div className="mt-8 grid gap-5 sm:grid-cols-3">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Direct sourcing</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9FB7A7]">Direct sourcing</p>
                 <p className="mt-2 text-sm leading-7 text-white/80">
                   We reduce unnecessary layers between the product and the client.
                 </p>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Quality standard</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9FB7A7]">Quality standard</p>
                 <p className="mt-2 text-sm leading-7 text-white/80">
                   Our focus stays on luxury-grade SPC with better finish consistency.
                 </p>
               </div>
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Client value</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9FB7A7]">Client value</p>
                 <p className="mt-2 text-sm leading-7 text-white/80">
                   The result is better material at better pricing with more transparency.
                 </p>
