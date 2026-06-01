@@ -301,16 +301,39 @@ export default function ShopFloorsPage() {
 
       <section className="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 sm:py-14 lg:px-12 lg:py-16">
         <div className="mb-10 h-px w-full bg-[#51392F]/10" />
-        <div className="max-w-4xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.26em] text-[#8A2F24] sm:text-sm">
-            Browse Floors
-          </p>
-          <h1 className="mt-4 text-3xl font-semibold leading-tight tracking-[-0.03em] text-[#51392F] sm:text-4xl lg:text-[3rem]">
-            One SPC construction, available across multiple finishes.
-          </h1>
-          <p className="mt-5 max-w-3xl text-[15px] leading-8 text-[#51392F]/72 sm:text-[17px]">
-            Every option shown below uses the same premium SPC construction. The finish changes, but the build quality remains consistent.
-          </p>
+
+        <div className="overflow-hidden rounded-[1.5rem] border border-[#51392F]/10 bg-[#F8F3EA] px-6 py-7 sm:px-8 sm:py-9 lg:px-10">
+          <div className="grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#8A2F24] sm:text-xs">
+                FoundWell Collection
+              </p>
+              <h1 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.03em] text-[#51392F] sm:text-4xl lg:text-[3.15rem]">
+                V-Line SPC Flooring
+              </h1>
+              <p className="mt-5 max-w-3xl text-[15px] leading-8 text-[#51392F]/72 sm:text-[17px]">
+                One premium SPC construction across ten curated finishes — designed for residential projects, commercial spaces, and design-led installs that need durability without sacrificing presentation.
+              </p>
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2">
+              <div className="rounded-[1rem] border border-[#51392F]/8 bg-white/70 px-4 py-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Performance</p>
+                <p className="mt-2 text-sm leading-6 text-[#51392F]">Waterproof, scratch-resistant, and built for everyday wear.</p>
+              </div>
+              <div className="rounded-[1rem] border border-[#51392F]/8 bg-white/70 px-4 py-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">Installation</p>
+                <p className="mt-2 text-sm leading-6 text-[#51392F]">Fast-fit SPC format with a clean, premium finished look.</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-2.5 text-[11px] font-medium uppercase tracking-[0.14em] text-[#51392F] sm:text-xs">
+            <span className="rounded-full border border-[#51392F]/10 bg-white px-3 py-2">Waterproof</span>
+            <span className="rounded-full border border-[#51392F]/10 bg-white px-3 py-2">Scratch-resistant</span>
+            <span className="rounded-full border border-[#51392F]/10 bg-white px-3 py-2">Easy installation</span>
+            <span className="rounded-full border border-[#51392F]/10 bg-white px-3 py-2">Residential & commercial</span>
+          </div>
         </div>
 
         <div className="flex justify-end pb-8 pt-10 text-sm text-[#51392F]">
