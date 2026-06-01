@@ -303,16 +303,35 @@ export default function ShopFloorsPage() {
         <div className="mb-10 h-px w-full bg-[#51392F]/10" />
 
         <div className="overflow-hidden rounded-[1.5rem] border border-black/8 bg-white px-6 py-7 sm:px-8 sm:py-9 lg:px-10">
-          <div>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#4E6A57] sm:text-xs">
-              V-Line Collection
-            </p>
-            <h1 className="mt-3 text-3xl font-semibold leading-tight tracking-[-0.03em] text-[#111111] sm:text-4xl lg:text-[3.15rem]">
-              V-Line SPC Flooring
-            </h1>
-            <p className="mt-5 max-w-3xl text-[15px] leading-8 text-black/68 sm:text-[17px]">
-              One premium SPC construction across ten curated finishes — built for residential projects, commercial spaces, and design-led installs that demand durability with a cleaner architectural look.
-            </p>
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
+            <div className="rounded-[1.25rem] bg-[#111111] px-5 py-6 text-white sm:px-6 sm:py-7">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.28em] text-white/65 sm:text-[11px]">
+                FoundWell Collection
+              </p>
+              <div className="mt-4 flex items-end gap-3">
+                <div>
+                  <p className="text-[2.2rem] font-semibold leading-none tracking-[0.24em] text-white sm:text-[2.6rem] lg:text-[3rem]">
+                    V LINE
+                  </p>
+                  <p className="mt-3 text-[11px] font-medium uppercase tracking-[0.34em] text-white/72 sm:text-xs">
+                    SPC Flooring
+                  </p>
+                </div>
+                <span className="mb-1 inline-block h-10 w-1.5 rounded-full bg-[#4E6A57] sm:h-12" />
+              </div>
+            </div>
+
+            <div>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#4E6A57] sm:text-xs">
+                Curated SPC System
+              </p>
+              <h1 className="mt-3 text-2xl font-semibold leading-tight tracking-[-0.03em] text-[#111111] sm:text-3xl lg:text-[2.4rem]">
+                One premium construction across ten presentation-led finishes.
+              </h1>
+              <p className="mt-5 max-w-3xl text-[15px] leading-8 text-black/68 sm:text-[17px]">
+                Built for residential projects, commercial spaces, and design-led installs that demand durability, cleaner detailing, and a more architectural finish profile.
+              </p>
+            </div>
           </div>
 
           <div className="mt-8 flex flex-wrap gap-2.5 text-[11px] font-medium uppercase tracking-[0.14em] text-white sm:text-xs">
