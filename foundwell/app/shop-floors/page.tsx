@@ -302,14 +302,14 @@ export default function ShopFloorsPage() {
       <section className="mx-auto max-w-[1400px] px-4 py-12 sm:px-6 sm:py-14 lg:px-12 lg:py-16">
         <div className="mb-10 h-px w-full bg-[#51392F]/10" />
 
-        <div className="overflow-hidden rounded-[1.5rem] border border-black/8 bg-white px-6 py-7 sm:px-8 sm:py-9 lg:px-10">
-          <div className="max-w-5xl">
+        <div className="max-w-4xl overflow-hidden rounded-[1.5rem] border border-black/8 bg-white px-6 py-7 sm:px-8 sm:py-8 lg:px-9">
+          <div className="max-w-3xl">
             <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#4E6A57] sm:text-xs">
               FoundWell Collection
             </p>
             <div className="mt-4 flex items-center gap-4">
               <p className="text-[2rem] font-semibold leading-none tracking-[0.22em] text-[#111111] sm:text-[2.4rem] lg:text-[2.8rem]">
-                V LINE
+                V-LINE
               </p>
               <span className="inline-block h-8 w-px bg-[#4E6A57] sm:h-10" />
               <p className="text-[11px] font-medium uppercase tracking-[0.34em] text-black/58 sm:text-xs">
@@ -321,12 +321,13 @@ export default function ShopFloorsPage() {
             </p>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-2.5 text-[11px] font-medium uppercase tracking-[0.14em] text-white sm:text-xs">
-            <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Waterproof</span>
-            <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Scratch-resistant</span>
-            <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Easy installation</span>
-            <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Residential & commercial</span>
-          </div>
+        </div>
+
+        <div className="mt-6 flex flex-wrap gap-2.5 text-[11px] font-medium uppercase tracking-[0.14em] text-white sm:text-xs">
+          <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Waterproof</span>
+          <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Scratch-resistant</span>
+          <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Easy installation</span>
+          <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Residential & commercial</span>
         </div>
 
         <div className="flex justify-end pb-8 pt-10 text-sm text-[#51392F]">
