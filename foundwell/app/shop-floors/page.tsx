@@ -257,9 +257,14 @@ function ProductCard({ product }: { product: Product }) {
       </div>
 
       <div className="pt-5">
-        <h2 className="font-serif text-[1.78rem] font-medium leading-[1.08] tracking-[-0.015em] text-[#51392F] sm:text-[2rem]">
-          {product.name}
-        </h2>
+        <div className="flex items-start justify-between gap-4">
+          <h2 className="font-serif text-[1.78rem] font-medium leading-[1.08] tracking-[-0.015em] text-[#51392F] sm:text-[2rem]">
+            {product.name}
+          </h2>
+          <p className="pt-1 text-right text-sm font-medium text-[#51392F]/78 whitespace-nowrap">
+            Starting at $4.99 / sq. ft.
+          </p>
+        </div>
         <p className="mt-2 max-w-[34ch] text-[15px] leading-7 text-[#51392F]/72">
           {product.description}
         </p>
@@ -270,9 +275,6 @@ function ProductCard({ product }: { product: Product }) {
           >
             Request Quote
           </a>
-          <p className="text-right text-sm font-medium text-[#51392F]/78">
-            Estimated $4.99 / sq. ft.
-          </p>
         </div>
       </div>
     </article>
