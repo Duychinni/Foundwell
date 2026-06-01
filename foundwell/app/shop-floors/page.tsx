@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 
 type Product = {
   name: string;
@@ -74,6 +74,15 @@ const products: Product[] = [
 
 const imageTypes = ["hero", "kitchen", "living-room-alt", "closeup-1", "closeup-2"] as const;
 
+type ImageType = (typeof imageTypes)[number];
+
+type GalleryImage = {
+  key: string;
+  type: ImageType;
+  generatedPath: string;
+  fallbackPath: string;
+};
+
 function BrandMark() {
   return (
     <a href="/" className="flex items-center gap-2.5 text-[#51392F] sm:gap-3" aria-label="Go to FoundWell home">
@@ -106,31 +115,52 @@ function Arrow({ direction }: { direction: "left" | "right" }) {
   );
 }
 
+function generatedPath(slug: string, type: ImageType) {
+  return `/generated-flooring/${slug}-${type}.jpg`;
+}
+
 function fallbackReferencePath(referenceSlug: string) {
   return `/floor-references/${referenceSlug}-reference.jpg`;
 }
 
 function ProductCard({ product }: { product: Product }) {
   const [index, setIndex] = useState(0);
+  const [brokenGenerated, setBrokenGenerated] = useState<Record<string, boolean>>({});
 
-  const src = fallbackReferencePath(product.referenceSlug);
-  const prev = () => setIndex((current) => (current - 1 + imageTypes.length) % imageTypes.length);
-  const next = () => setIndex((current) => (current + 1) % imageTypes.length);
+  const gallery = useMemo<GalleryImage[]>(() => {
+    const fallback = fallbackReferencePath(product.referenceSlug);
+    return imageTypes.map((type) => ({
+      key: `${product.slug}-${type}`,
+      type,
+      generatedPath: generatedPath(product.slug, type),
+      fallbackPath: fallback,
+    }));
+  }, [product.referenceSlug, product.slug]);
+
+  const active = gallery[index];
+  const activeSrc = brokenGenerated[active.generatedPath] ? active.fallbackPath : active.generatedPath;
+
+  const prev = () => setIndex((current) => (current - 1 + gallery.length) % gallery.length);
+  const next = () => setIndex((current) => (current + 1) % gallery.length);
 
   return (
     <article className="group">
       <div className="relative aspect-square overflow-hidden rounded-[12px] bg-[#F4F0EA] transition duration-300 group-hover:shadow-[0_22px_50px_rgba(0,0,0,0.08)]">
         <img
-          src={src}
-          alt={product.name}
-          className="h-full w-full object-contain object-center transition duration-300 group-hover:scale-[1.02]"
+          key={active.key}
+          src={activeSrc}
+          alt={`${product.name} ${active.type}`}
+          className="h-full w-full object-cover object-center transition duration-300 group-hover:scale-[1.02]"
+          onError={() => {
+            setBrokenGenerated((current) => ({ ...current, [active.generatedPath]: true }));
+          }}
         />
 
         <button
           type="button"
           onClick={prev}
           aria-label={`Previous image for ${product.name}`}
-          className="absolute left-4 top-1/2 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
+          className="absolute left-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
         >
           <Arrow direction="left" />
         </button>
@@ -139,10 +169,19 @@ function ProductCard({ product }: { product: Product }) {
           type="button"
           onClick={next}
           aria-label={`Next image for ${product.name}`}
-          className="absolute right-4 top-1/2 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
+          className="absolute right-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
         >
           <Arrow direction="right" />
         </button>
+
+        <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-1.5 rounded-full bg-white/82 px-2 py-1 backdrop-blur-sm">
+          {gallery.map((item, dotIndex) => (
+            <span
+              key={item.key}
+              className={`h-1.5 w-1.5 rounded-full ${dotIndex === index ? "bg-[#51392F]" : "bg-[#51392F]/25"}`}
+            />
+          ))}
+        </div>
       </div>
 
       <div className="pt-5">
