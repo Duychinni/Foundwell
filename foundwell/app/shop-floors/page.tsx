@@ -34,7 +34,6 @@ const products: Product[] = [
     slug: "sutton-oak",
     referenceSlug: "coastal-greige-oak",
     description: "Soft taupe oak with quiet sophistication and warmth.",
-    generatedFit: "contain",
   },
   {
     name: "Washed Oak",
