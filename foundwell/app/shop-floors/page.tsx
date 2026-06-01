@@ -193,75 +193,87 @@ function ProductCard({ product }: { product: Product }) {
 
   return (
     <article className="group">
-      <div
-        className="relative aspect-square overflow-hidden rounded-[14px] border border-[#51392F]/8 bg-[#F8F3EA] transition duration-300 group-hover:shadow-[0_22px_50px_rgba(81,57,47,0.12)] touch-pan-y select-none"
-        onMouseDown={(event) => handlePointerDown(event.clientX)}
-        onMouseMove={(event) => handlePointerMove(event.clientX)}
-        onMouseUp={handlePointerUp}
-        onMouseLeave={handlePointerUp}
-        onTouchStart={(event) => handlePointerDown(event.touches[0].clientX)}
-        onTouchMove={(event) => handlePointerMove(event.touches[0].clientX)}
-        onTouchEnd={handlePointerUp}
+      <a
+        href={`/shop-floors/${product.slug}`}
+        className="block"
+        aria-label={`View ${product.name} details`}
       >
         <div
-          className="flex h-full transition-transform duration-500 ease-out"
-          style={{ transform: `translateX(-${safeIndex * 100}%)` }}
+          className="relative aspect-square overflow-hidden rounded-[14px] border border-[#51392F]/8 bg-[#F8F3EA] transition duration-300 group-hover:shadow-[0_22px_50px_rgba(81,57,47,0.12)] touch-pan-y select-none"
+          onMouseDown={(event) => handlePointerDown(event.clientX)}
+          onMouseMove={(event) => handlePointerMove(event.clientX)}
+          onMouseUp={handlePointerUp}
+          onMouseLeave={handlePointerUp}
+          onTouchStart={(event) => handlePointerDown(event.touches[0].clientX)}
+          onTouchMove={(event) => handlePointerMove(event.touches[0].clientX)}
+          onTouchEnd={handlePointerUp}
         >
-          {slides.map((item) => (
-            <img
-              key={item.key}
-              src={item.src}
-              alt={`${product.name} ${item.type}`}
-              className={`h-full min-w-full object-center transition duration-300 group-hover:scale-[1.02] ${
-                item.isFallback
-                  ? "object-contain bg-[#F4F0EA] p-3"
-                  : product.generatedFit === "contain"
-                    ? `object-contain bg-[#F4F0EA] p-3 ${product.generatedFilterClass ?? ""}`
-                    : `object-cover ${product.generatedFilterClass ?? ""}`
-              }`}
-              onError={(event) => {
-                const currentSrc = new URL(event.currentTarget.currentSrc).pathname;
-                setBrokenSources((current) => ({ ...current, [currentSrc]: true }));
-              }}
-              draggable={false}
-            />
-          ))}
+          <div
+            className="flex h-full transition-transform duration-500 ease-out"
+            style={{ transform: `translateX(-${safeIndex * 100}%)` }}
+          >
+            {slides.map((item) => (
+              <img
+                key={item.key}
+                src={item.src}
+                alt={`${product.name} ${item.type}`}
+                className={`h-full min-w-full object-center transition duration-300 group-hover:scale-[1.02] ${
+                  item.isFallback
+                    ? "object-contain bg-[#F4F0EA] p-3"
+                    : product.generatedFit === "contain"
+                      ? `object-contain bg-[#F4F0EA] p-3 ${product.generatedFilterClass ?? ""}`
+                      : `object-cover ${product.generatedFilterClass ?? ""}`
+                }`}
+                onError={(event) => {
+                  const currentSrc = new URL(event.currentTarget.currentSrc).pathname;
+                  setBrokenSources((current) => ({ ...current, [currentSrc]: true }));
+                }}
+                draggable={false}
+              />
+            ))}
+          </div>
+
+          <button
+            type="button"
+            onClick={(event) => {
+              event.preventDefault();
+              prev();
+            }}
+            aria-label={`Previous image for ${product.name}`}
+            className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center text-white/90 transition hover:text-white"
+          >
+            <Arrow direction="left" />
+          </button>
+
+          <button
+            type="button"
+            onClick={(event) => {
+              event.preventDefault();
+              next();
+            }}
+            aria-label={`Next image for ${product.name}`}
+            className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center text-white/90 transition hover:text-white"
+          >
+            <Arrow direction="right" />
+          </button>
+
+          <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-1.5 rounded-full bg-white/82 px-2 py-1 backdrop-blur-sm">
+            {slides.map((item, dotIndex) => (
+              <span
+                key={item.key}
+                className={`h-1.5 w-1.5 rounded-full ${dotIndex === safeIndex ? "bg-[#51392F]" : "bg-[#51392F]/25"}`}
+              />
+            ))}
+          </div>
         </div>
-
-        <button
-          type="button"
-          onClick={prev}
-          aria-label={`Previous image for ${product.name}`}
-          className="absolute left-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center text-white/90 transition hover:text-white"
-        >
-          <Arrow direction="left" />
-        </button>
-
-        <button
-          type="button"
-          onClick={next}
-          aria-label={`Next image for ${product.name}`}
-          className="absolute right-2 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center text-white/90 transition hover:text-white"
-        >
-          <Arrow direction="right" />
-        </button>
-
-        <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-1.5 rounded-full bg-white/82 px-2 py-1 backdrop-blur-sm">
-          {slides.map((item, dotIndex) => (
-            <span
-              key={item.key}
-              className={`h-1.5 w-1.5 rounded-full ${dotIndex === safeIndex ? "bg-[#51392F]" : "bg-[#51392F]/25"}`}
-            />
-          ))}
-        </div>
-      </div>
+      </a>
 
       <div className="pt-5">
         <div className="flex items-start justify-between gap-4">
           <h2 className="font-serif text-[1.78rem] font-medium leading-[1.08] tracking-[-0.015em] text-[#51392F] sm:text-[2rem]">
             {product.name}
           </h2>
-          <p className="pt-1 text-right text-sm font-medium text-[#51392F]/78 whitespace-nowrap">
+          <p className="pt-1 text-right text-sm font-medium whitespace-nowrap text-[#51392F]/78">
             Starting at $4.99 / sq. ft.
           </p>
         </div>
@@ -327,7 +339,6 @@ export default function ShopFloorsPage() {
               One premium SPC construction across ten curated finishes — built for residential projects, commercial spaces, and design-led installs.
             </p>
           </div>
-
         </div>
 
         <div className="mt-8 mb-6 grid items-end gap-3 md:grid-cols-[1fr_auto]">
