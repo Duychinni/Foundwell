@@ -85,8 +85,9 @@ function BrandMark() {
   );
 }
 
-export default function ProductDetailPage({ params }: { params: { slug: string } }) {
-  const product = products.find((item) => item.slug === params.slug) ?? products[0];
+export default async function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const product = products.find((item) => item.slug === slug) ?? products[0];
 
   return (
     <main className="min-h-screen bg-[#F4EFE6] text-[#51392F]">
