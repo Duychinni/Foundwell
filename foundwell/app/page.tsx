@@ -111,7 +111,7 @@ export default function Home() {
           />
         ))}
 
-
+        <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.28)_0%,rgba(0,0,0,0.18)_34%,rgba(0,0,0,0.32)_100%)]" />
 
         <div className="relative z-10 flex min-h-screen flex-col">
           <header className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-4 py-5 sm:px-6 sm:py-7 lg:px-12">
