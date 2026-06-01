@@ -139,87 +139,76 @@ function ProductCard({ product }: { product: Product }) {
     }));
   }, [product.slug]);
 
-  const resolvedSlides = gallery
-    .map((item) => {
-      const src = item.sources.find((candidate) => !brokenSources[candidate]);
-      if (!src) return null;
-      return { ...item, src };
-    })
-    .filter(Boolean) as Array<GalleryImage & { src: string }>;
-
   const fallbackSrc = fallbackReferencePath(product.referenceSlug);
-  const hasRealSlides = resolvedSlides.length > 0;
-  const safeIndex = hasRealSlides ? index % resolvedSlides.length : 0;
+
+  const slides = gallery.map((item) => {
+    const generatedSrc = item.sources.find((candidate) => !brokenSources[candidate]);
+    return {
+      ...item,
+      src: generatedSrc ?? fallbackSrc,
+      isFallback: !generatedSrc,
+    };
+  });
+
+  const safeIndex = index % slides.length;
 
   const prev = () => {
-    if (!hasRealSlides) return;
-    setIndex((current) => (current - 1 + resolvedSlides.length) % resolvedSlides.length);
+    setIndex((current) => (current - 1 + slides.length) % slides.length);
   };
 
   const next = () => {
-    if (!hasRealSlides) return;
-    setIndex((current) => (current + 1) % resolvedSlides.length);
+    setIndex((current) => (current + 1) % slides.length);
   };
 
   return (
     <article className="group">
       <div className="relative aspect-square overflow-hidden rounded-[12px] bg-[#F4F0EA] transition duration-300 group-hover:shadow-[0_22px_50px_rgba(0,0,0,0.08)]">
-        {hasRealSlides ? (
-          <div
-            className="flex h-full transition-transform duration-500 ease-out"
-            style={{ transform: `translateX(-${safeIndex * 100}%)` }}
-          >
-            {resolvedSlides.map((item) => (
-              <img
-                key={item.key}
-                src={item.src}
-                alt={`${product.name} ${item.type}`}
-                className="h-full min-w-full object-cover object-center transition duration-300 group-hover:scale-[1.02]"
-                onError={(event) => {
-                  const currentSrc = new URL(event.currentTarget.currentSrc).pathname;
-                  setBrokenSources((current) => ({ ...current, [currentSrc]: true }));
-                }}
-              />
-            ))}
-          </div>
-        ) : (
-          <img
-            src={fallbackSrc}
-            alt={`${product.name} reference`}
-            className="h-full w-full object-contain object-center transition duration-300 group-hover:scale-[1.02]"
-          />
-        )}
+        <div
+          className="flex h-full transition-transform duration-500 ease-out"
+          style={{ transform: `translateX(-${safeIndex * 100}%)` }}
+        >
+          {slides.map((item) => (
+            <img
+              key={item.key}
+              src={item.src}
+              alt={`${product.name} ${item.type}`}
+              className={`h-full min-w-full object-center transition duration-300 group-hover:scale-[1.02] ${
+                item.isFallback ? "object-contain" : "object-cover"
+              }`}
+              onError={(event) => {
+                const currentSrc = new URL(event.currentTarget.currentSrc).pathname;
+                setBrokenSources((current) => ({ ...current, [currentSrc]: true }));
+              }}
+            />
+          ))}
+        </div>
 
-        {hasRealSlides && resolvedSlides.length > 1 && (
-          <>
-            <button
-              type="button"
-              onClick={prev}
-              aria-label={`Previous image for ${product.name}`}
-              className="absolute left-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
-            >
-              <Arrow direction="left" />
-            </button>
+        <button
+          type="button"
+          onClick={prev}
+          aria-label={`Previous image for ${product.name}`}
+          className="absolute left-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
+        >
+          <Arrow direction="left" />
+        </button>
 
-            <button
-              type="button"
-              onClick={next}
-              aria-label={`Next image for ${product.name}`}
-              className="absolute right-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
-            >
-              <Arrow direction="right" />
-            </button>
+        <button
+          type="button"
+          onClick={next}
+          aria-label={`Next image for ${product.name}`}
+          className="absolute right-4 top-1/2 z-10 inline-flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/88 text-[#2B2B2B] shadow-sm backdrop-blur-sm transition hover:bg-white"
+        >
+          <Arrow direction="right" />
+        </button>
 
-            <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-1.5 rounded-full bg-white/82 px-2 py-1 backdrop-blur-sm">
-              {resolvedSlides.map((item, dotIndex) => (
-                <span
-                  key={item.key}
-                  className={`h-1.5 w-1.5 rounded-full ${dotIndex === safeIndex ? "bg-[#51392F]" : "bg-[#51392F]/25"}`}
-                />
-              ))}
-            </div>
-          </>
-        )}
+        <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 gap-1.5 rounded-full bg-white/82 px-2 py-1 backdrop-blur-sm">
+          {slides.map((item, dotIndex) => (
+            <span
+              key={item.key}
+              className={`h-1.5 w-1.5 rounded-full ${dotIndex === safeIndex ? "bg-[#51392F]" : "bg-[#51392F]/25"}`}
+            />
+          ))}
+        </div>
       </div>
 
       <div className="pt-5">
