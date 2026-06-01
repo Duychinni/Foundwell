@@ -257,7 +257,7 @@ function ProductCard({ product }: { product: Product }) {
       </div>
 
       <div className="pt-5">
-        <h2 className="text-[1.65rem] font-semibold leading-tight tracking-[-0.02em] text-[#51392F] sm:text-[1.85rem]">
+        <h2 className="font-serif text-[1.78rem] font-medium leading-[1.08] tracking-[-0.015em] text-[#51392F] sm:text-[2rem]">
           {product.name}
         </h2>
         <p className="mt-2 max-w-[34ch] text-[15px] leading-7 text-[#51392F]/72">
