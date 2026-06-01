@@ -177,7 +177,7 @@ function ProductCard({ product }: { product: Product }) {
               src={item.src}
               alt={`${product.name} ${item.type}`}
               className={`h-full min-w-full object-center transition duration-300 group-hover:scale-[1.02] ${
-                item.isFallback ? "object-contain" : "object-cover"
+                item.isFallback ? "object-contain bg-[#F4F0EA] p-3" : "object-cover"
               }`}
               onError={(event) => {
                 const currentSrc = new URL(event.currentTarget.currentSrc).pathname;
