@@ -43,14 +43,14 @@ const services = [
 
 function BrandMark() {
   return (
-    <a href="/" className="flex items-center gap-2.5 sm:gap-3" aria-label="Go to FoundWell home">
-      <span className="text-base font-medium tracking-[0.12em] text-white sm:text-lg md:tracking-[0.16em] lg:text-xl">
+    <a href="/" className="flex items-center gap-3 sm:gap-3.5 lg:gap-4" aria-label="Go to FoundWell home">
+      <span className="text-lg font-medium tracking-[0.13em] text-white sm:text-xl md:tracking-[0.17em] lg:text-[1.45rem] xl:text-[1.6rem]">
         FOUNDWELL
       </span>
-      <span className="relative block h-7 w-14 sm:h-8 sm:w-16 md:h-9 md:w-18" aria-hidden="true">
-        <span className="absolute left-0 top-0 h-2 w-7 rounded-sm bg-white sm:h-2.5 sm:w-8" />
-        <span className="absolute left-4 top-2.5 h-2 w-8 rounded-sm bg-[#8A2F24] sm:left-5 sm:top-3 sm:h-2.5 sm:w-9" />
-        <span className="absolute left-1.5 top-5 h-2 w-9 rounded-sm bg-[#AD7042] sm:left-2 sm:top-6 sm:h-2.5 sm:w-10" />
+      <span className="relative block h-8 w-16 sm:h-9 sm:w-18 md:h-10 md:w-20 lg:h-11 lg:w-24" aria-hidden="true">
+        <span className="absolute left-0 top-0 h-2.5 w-8 rounded-sm bg-white sm:h-3 sm:w-9 lg:h-3 lg:w-10" />
+        <span className="absolute left-4 top-3 h-2.5 w-9 rounded-sm bg-[#8A2F24] sm:left-5 sm:top-3.5 sm:h-3 sm:w-10 lg:left-6 lg:top-4 lg:h-3 lg:w-11" />
+        <span className="absolute left-1.5 top-6 h-2.5 w-10 rounded-sm bg-[#AD7042] sm:left-2 sm:top-6.5 sm:h-3 sm:w-11 lg:left-2.5 lg:top-8 lg:h-3 lg:w-12" />
       </span>
     </a>
   );
@@ -114,11 +114,11 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.12)_0%,rgba(255,255,255,0.16)_34%,rgba(255,255,255,0.14)_100%)]" />
 
         <div className="relative z-10 flex min-h-screen flex-col">
-          <header className="mx-auto flex w-full max-w-[1400px] items-center justify-between px-4 py-5 sm:px-6 sm:py-7 lg:px-12">
-            <div className="flex w-full items-start justify-between gap-4 lg:items-center">
+          <header className="mx-auto flex w-full max-w-[1480px] items-center justify-between px-4 py-5 sm:px-6 sm:py-7 lg:px-16 lg:pt-8 lg:pb-6 xl:px-20">
+            <div className="flex w-full items-start justify-between gap-5 lg:items-center">
               <BrandMark />
 
-              <nav className="hidden items-center gap-8 text-[15px] font-medium tracking-[0.08em] text-white lg:flex xl:gap-10">
+              <nav className="hidden items-center gap-10 text-[17px] font-medium tracking-[0.09em] text-white lg:flex xl:gap-12 xl:text-[18px]">
                 <a href="/shop-floors" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">Shop Floors</a>
                 <a href="#learn" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">Learn Resources</a>
                 <a href="#about" className="text-[#fffdf9] drop-shadow-[0_0_18px_rgba(255,255,255,0.34)] transition hover:text-white hover:drop-shadow-[0_0_24px_rgba(255,255,255,0.5)]">About Us</a>
