@@ -198,6 +198,80 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="border-b border-[#51392F]/8 bg-[#FBF8F2]">
+        <div className="mx-auto grid max-w-7xl gap-8 px-4 py-14 sm:px-6 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-12 lg:px-12">
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">
+              Why FoundWell
+            </p>
+            <h2 className="mt-3 text-2xl font-semibold leading-tight text-[#51392F] sm:text-3xl lg:text-4xl">
+              Same premium feel. Fewer layers between the product and your project.
+            </h2>
+            <p className="mt-5 text-sm leading-7 text-[#51392F]/75 sm:text-base sm:leading-8">
+              FoundWell is built around a simpler material path. By reducing unnecessary retail layers, we keep the process cleaner,
+              the pricing more direct, and the quality standard where it should be.
+            </p>
+
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:items-center">
+              <a
+                href="/shop-floors"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-[#8A2F24] px-6 text-[12px] font-semibold uppercase tracking-[0.12em] text-white transition hover:bg-[#76261d] sm:px-7"
+              >
+                Browse Floors
+              </a>
+              <a
+                href="/request-quote"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-[#51392F]/16 bg-white px-6 text-[12px] font-semibold uppercase tracking-[0.12em] text-[#51392F] transition hover:border-[#51392F]/28 hover:bg-[#F7F1E7] sm:px-7"
+              >
+                Request Quote
+              </a>
+            </div>
+          </div>
+
+          <div className="grid gap-4">
+            <div className="rounded-[1.75rem] border border-[#51392F]/10 bg-white p-6 shadow-sm sm:p-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#8A2F24]">
+                Traditional retail path
+              </p>
+              <div className="mt-5 flex flex-wrap items-center gap-2 text-[13px] font-medium uppercase tracking-[0.08em] text-[#51392F]/82 sm:text-sm">
+                <span className="rounded-full bg-[#F4EFE6] px-4 py-2">Factory</span>
+                <span className="text-[#8A2F24]/55">→</span>
+                <span className="rounded-full bg-[#F4EFE6] px-4 py-2">Importer</span>
+                <span className="text-[#8A2F24]/55">→</span>
+                <span className="rounded-full bg-[#F4EFE6] px-4 py-2">Distributor</span>
+                <span className="text-[#8A2F24]/55">→</span>
+                <span className="rounded-full bg-[#F4EFE6] px-4 py-2">Retail showroom</span>
+                <span className="text-[#8A2F24]/55">→</span>
+                <span className="rounded-full bg-[#F4EFE6] px-4 py-2">Client</span>
+              </div>
+              <p className="mt-5 text-sm leading-7 text-[#51392F]/72">
+                More layers usually means more markup, less transparency, and a slower path from sourcing to final decision.
+              </p>
+            </div>
+
+            <div className="rounded-[1.75rem] border border-[#51392F]/10 bg-[#51392F] p-6 text-white shadow-sm sm:p-7">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#CDAF92]">
+                FoundWell path
+              </p>
+              <div className="mt-5 flex flex-wrap items-center gap-2 text-[13px] font-medium uppercase tracking-[0.08em] text-white/92 sm:text-sm">
+                <span className="rounded-full bg-white/12 px-4 py-2">Factory</span>
+                <span className="text-[#CDAF92]">→</span>
+                <span className="rounded-full bg-[#8A2F24] px-4 py-2">FoundWell</span>
+                <span className="text-[#CDAF92]">→</span>
+                <span className="rounded-full bg-white/12 px-4 py-2">Client</span>
+              </div>
+              <p className="mt-5 text-sm leading-7 text-white/78">
+                A tighter sourcing chain helps keep the experience more direct while preserving the premium finish, tone, and material quality your project expects.
+              </p>
+            </div>
+
+            <p className="pl-1 text-xs font-semibold uppercase tracking-[0.18em] text-[#4E6A57] sm:text-sm">
+              Direct pricing. Better clarity. Premium materials.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="services" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 sm:py-20 lg:px-12">
         <div className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#8A2F24] sm:text-sm">
