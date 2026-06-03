@@ -253,12 +253,12 @@ export default function Home() {
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[#CDAF92]">
                 FoundWell path
               </p>
-              <div className="mt-5 flex flex-wrap items-center gap-2 text-[13px] font-medium uppercase tracking-[0.08em] text-white/92 sm:text-sm">
-                <span className="rounded-full bg-white/12 px-4 py-2">Factory</span>
-                <span className="text-[#CDAF92]">→</span>
-                <span className="rounded-full bg-[#8A2F24] px-4 py-2">FoundWell</span>
-                <span className="text-[#CDAF92]">→</span>
-                <span className="rounded-full bg-white/12 px-4 py-2">Client</span>
+              <div className="mt-5 grid grid-cols-[auto_1fr_auto] items-center gap-3 text-[13px] font-medium uppercase tracking-[0.08em] text-white/92 sm:gap-4 sm:text-sm">
+                <span className="rounded-full bg-white/12 px-4 py-2 text-center">Factory</span>
+                <div className="relative h-px w-full bg-[#CDAF92]/55">
+                  <span className="absolute right-0 top-1/2 -translate-y-1/2 text-lg text-[#CDAF92]">→</span>
+                </div>
+                <span className="rounded-full bg-white/12 px-4 py-2 text-center">Customer</span>
               </div>
               <p className="mt-5 text-sm leading-7 text-white/78">
                 A tighter sourcing chain helps keep the experience more direct while preserving the premium finish, tone, and material quality your project expects.
