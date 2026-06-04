@@ -30,23 +30,27 @@ const featureCards = [
   },
 ];
 
+const specificationItems = [
+  ["Total Thickness", "6.5mm"],
+  ["SPC Core Thickness", "5.0mm"],
+  ["Attached Underlayment", "1.5mm IXPE"],
+  ["Wear Layer", "20 mil (0.5mm)"],
+  ["Installation", "Click-Lock Floating Floor"],
+  ["Waterproof", "100% Waterproof"],
+  ["Edge Profile", "Micro Bevel"],
+  ["Surface Finish", "Wood Grain Embossed"],
+  ["Application", "Residential & Commercial"],
+  ["Lead Time", "30–35 Days"],
+  ["Project Pricing", "Available Upon Request"],
+] as const;
+
 const accordionItems = [
   {
     title: "Product Overview",
     content: [
       "Luxury-grade SPC flooring built for residential and commercial interiors.",
-      "Durable multi-layer construction designed for cleaner installation and long-term performance.",
-      "Direct-sourced material program with finish-led options across one consistent construction.",
-    ],
-  },
-  {
-    title: "Specifications",
-    content: [
-      "Construction: SPC core flooring",
-      "Estimated wear layer: project-grade resilient surface protection",
-      "Application: residential and commercial use",
-      "Installation: floating click-lock format",
-      "Estimated delivery: 30–35 days",
+      "Durable multi-layer construction with a 5.0mm SPC core and 1.5mm attached IXPE pad.",
+      "Specified for projects that need waterproof performance, realistic wood texture, and cleaner installation.",
     ],
   },
 ];
@@ -178,6 +182,20 @@ export default function ProductDetailClient({ product }: { product: Product }) {
       </section>
 
       <section className="mx-auto max-w-[1400px] px-4 pb-16 sm:px-6 lg:px-12">
+        <div className="mb-4 overflow-hidden rounded-[1.25rem] border border-[#51392F]/10 bg-white">
+          <div className="border-b border-[#51392F]/8 px-5 py-4">
+            <p className="text-base font-medium text-[#51392F]">Specifications</p>
+          </div>
+          <div className="grid gap-4 px-5 py-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {specificationItems.map(([label, value]) => (
+              <div key={label}>
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#8A2F24]">{label}</p>
+                <p className="mt-2 text-sm leading-7 text-[#51392F]/80">{value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="space-y-3">
           {accordionItems.map((item) => {
             const open = openSection === item.title;

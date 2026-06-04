@@ -339,10 +339,9 @@ export default function ShopFloorsPage() {
 
         <div className="mt-8 mb-6 grid items-end gap-3 md:grid-cols-[1fr_auto]">
           <div className="flex flex-wrap gap-2.5 text-[11px] font-medium uppercase tracking-[0.14em] text-white sm:text-xs">
+            <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">20 mil wear layer</span>
+            <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Attached IXPE pad</span>
             <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Waterproof</span>
-            <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Scratch-resistant</span>
-            <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Easy installation</span>
-            <span className="rounded-full border border-[#4E6A57] bg-[#4E6A57] px-3 py-2">Residential & commercial</span>
           </div>
           <div className="text-right text-sm text-[#51392F] md:pb-1">
             <p>Showing 10 of 10</p>
