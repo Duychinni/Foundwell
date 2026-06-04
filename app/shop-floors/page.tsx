@@ -276,6 +276,11 @@ function ProductCard({ product }: { product: Product }) {
         <p className="mt-2 max-w-[34ch] text-[15px] leading-7 text-[#51392F]/72">
           {product.description}
         </p>
+        <div className="mt-4 flex flex-wrap gap-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-[#51392F] sm:text-[11px]">
+          <span className="rounded-full border border-[#51392F]/10 bg-[#F8F3EA] px-3 py-1.5">20 Mil</span>
+          <span className="rounded-full border border-[#51392F]/10 bg-[#F8F3EA] px-3 py-1.5">Waterproof</span>
+          <span className="rounded-full border border-[#51392F]/10 bg-[#F8F3EA] px-3 py-1.5">IXPE Pad</span>
+        </div>
         <div className="mt-5 flex items-end justify-between gap-4">
           <a
             href="/request-quote"
