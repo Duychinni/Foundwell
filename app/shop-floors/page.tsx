@@ -270,7 +270,7 @@ function ProductCard({ product }: { product: Product }) {
             {product.name}
           </h2>
           <p className="pt-1 text-right text-sm font-medium whitespace-nowrap text-[#51392F]/78">
-            Starting at $4.99 / sq. ft.
+            Starting at $3.49 / sq. ft.
           </p>
         </div>
         <p className="mt-2 max-w-[34ch] text-[15px] leading-7 text-[#51392F]/72">
