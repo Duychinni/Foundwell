@@ -46,7 +46,7 @@ const accordionItems = [
       "Estimated wear layer: project-grade resilient surface protection",
       "Application: residential and commercial use",
       "Installation: floating click-lock format",
-      "Estimated delivery: 45–50 days",
+      "Estimated delivery: 30–35 days",
     ],
   },
 ];
@@ -126,7 +126,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
             <h1 className="mt-3 font-serif text-3xl font-medium leading-tight text-[#51392F] sm:text-4xl">
               {product.name}
             </h1>
-            <p className="mt-3 text-base font-medium text-[#51392F]">Starting at $4.99 / sq. ft.</p>
+            <p className="mt-3 text-base font-medium text-[#51392F]">Starting at $3.49 / sq. ft.</p>
             <p className="mt-4 text-sm leading-7 text-[#51392F]/75">
               {product.description}
             </p>
@@ -134,7 +134,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
             <div className="mt-6 space-y-4 border-t border-[#51392F]/10 pt-5">
               <div className="flex items-center justify-between text-sm text-[#51392F]">
                 <span>Estimated delivery</span>
-                <span className="font-medium">45–50 days</span>
+                <span className="font-medium">30–35 days</span>
               </div>
               <div className="flex items-center justify-between text-sm text-[#51392F]">
                 <span>Project pricing</span>
