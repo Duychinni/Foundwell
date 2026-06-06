@@ -1,4 +1,4 @@
-import { Eyebrow, SiteHeader } from "../components/FoundWellBrand";
+import { Eyebrow, FoundWellIcon, SiteHeader } from "../components/FoundWellBrand";
 
 type Product = {
   name: string;
@@ -75,7 +75,10 @@ export default function ShopFloorsPage() {
         </div>
 
         <div className="mt-10 flex items-center justify-between gap-6 text-sm text-[#716C61]">
-          <p className="fw-mono text-[11px] font-bold uppercase tracking-[0.16em] text-[#A68F6B]">Finish library</p>
+          <p className="fw-mono flex items-center gap-3 text-[11px] font-bold uppercase tracking-[0.16em] text-[#A68F6B]">
+            <FoundWellIcon name="finish" className="h-9 w-9 rounded-xl" />
+            Finish library
+          </p>
           <p>Showing 10 of 10</p>
         </div>
 

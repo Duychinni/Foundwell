@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Eyebrow } from "../../components/FoundWellBrand";
+import { Eyebrow, FoundWellIcon } from "../../components/FoundWellBrand";
 
 type Product = {
   name: string;
@@ -17,14 +17,17 @@ type ImageType = (typeof imageTypes)[number];
 
 const featureCards = [
   {
+    icon: "wear" as const,
     title: "20 mil wear layer",
     copy: "Commercial-grade surface protection for daily movement, furniture, and project use.",
   },
   {
+    icon: "core" as const,
     title: "5.0mm SPC core",
     copy: "Rigid waterproof core for dimensional stability and cleaner installation confidence.",
   },
   {
+    icon: "pad" as const,
     title: "1.5mm IXPE pad",
     copy: "Attached underlayment for comfort and sound absorption through everyday use.",
   },
@@ -147,6 +150,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
         <div className="grid gap-4 md:grid-cols-3">
           {featureCards.map((card) => (
             <div key={card.title} className="fw-hover-lift rounded-[1.35rem] border border-[#20201D]/10 bg-white p-6">
+              <FoundWellIcon name={card.icon} className="mb-5" />
               <p className="fw-mono text-[11px] font-bold uppercase tracking-[0.16em] text-[#A68F6B]">{card.title}</p>
               <p className="mt-4 text-[15.5px] leading-[1.72] text-[#716C61]">{card.copy}</p>
             </div>

@@ -1,4 +1,22 @@
-import { Eyebrow, SiteHeader } from "../components/FoundWellBrand";
+import { Eyebrow, FoundWellIcon, SiteHeader } from "../components/FoundWellBrand";
+
+const quoteSteps = [
+  {
+    icon: "flooring" as const,
+    title: "Share product + quantity.",
+    copy: "Tell us which finish you like and the approximate square footage.",
+  },
+  {
+    icon: "quote" as const,
+    title: "Confirm pricing.",
+    copy: "We review quantity, availability, shipping, and project timing.",
+  },
+  {
+    icon: "delivery" as const,
+    title: "Coordinate samples or delivery.",
+    copy: "We follow up with sample options, lead time, and next steps.",
+  },
+];
 
 function Field({ label, placeholder, type = "text", span = false }: { label: string; placeholder: string; type?: string; span?: boolean }) {
   return (
@@ -29,15 +47,14 @@ export default function RequestQuotePage() {
               Share the product, quantity, and project basics. We’ll follow up with pricing, lead time, and sample or delivery next steps.
             </p>
             <div className="mt-8 grid gap-4">
-              <div className="border-t border-[#20201D]/10 pt-4 text-[#716C61]">
-                <b className="text-[#20201D]">1. Share product + quantity.</b><br />Tell us which finish you like and the approximate square footage.
-              </div>
-              <div className="border-t border-[#20201D]/10 pt-4 text-[#716C61]">
-                <b className="text-[#20201D]">2. Confirm pricing.</b><br />We review quantity, availability, shipping, and project timing.
-              </div>
-              <div className="border-t border-[#20201D]/10 pt-4 text-[#716C61]">
-                <b className="text-[#20201D]">3. Coordinate samples or delivery.</b><br />We follow up with sample options, lead time, and next steps.
-              </div>
+              {quoteSteps.map((step, index) => (
+                <div key={step.title} className="flex gap-4 border-t border-[#20201D]/10 pt-4 text-[#716C61]">
+                  <FoundWellIcon name={step.icon} className="h-10 w-10 rounded-xl" />
+                  <p>
+                    <b className="text-[#20201D]">{index + 1}. {step.title}</b><br />{step.copy}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
 

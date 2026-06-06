@@ -1,19 +1,24 @@
-import { BrandMark, Eyebrow, Pill, SiteHeader } from "./components/FoundWellBrand";
+import { FeaturedFinishCarousel } from "./components/FeaturedFinishCarousel";
+import { Eyebrow, FoundWellIcon, SiteHeader } from "./components/FoundWellBrand";
 
 const services = [
   {
+    icon: "flooring" as const,
     title: "Flooring Supply",
     description: "SPC flooring in a focused finish range, with clear specs and project-ready construction.",
   },
   {
+    icon: "quote" as const,
     title: "Project Quotes",
     description: "Pricing based on finish choice, square footage, delivery location, and project timing.",
   },
   {
+    icon: "sample" as const,
     title: "Sample Support",
     description: "Help narrowing colors before ordering, so the floor fits the space and design direction.",
   },
   {
+    icon: "delivery" as const,
     title: "Delivery Planning",
     description: "Lead time, quantities, and shipping details coordinated before the order is placed.",
   },
@@ -47,8 +52,9 @@ export default function Home() {
               ["6.5mm", "Total thickness"],
               ["20 mil", "Wear layer"],
               ["30–35", "Day lead time"],
-            ].map(([value, label]) => (
+            ].map(([value, label], index) => (
               <div key={label} className="border-r border-[#20201D]/12 px-5 py-5 last:border-r-0 sm:px-6">
+                <FoundWellIcon name={index === 0 ? "finish" : index === 3 ? "timeline" : "wear"} className="mb-3 h-9 w-9 rounded-xl" />
                 <b className="fw-mono block text-lg tracking-[-0.04em]">{value}</b>
                 <span className="fw-mono mt-1 block whitespace-nowrap text-[9px] font-bold uppercase tracking-[0.14em] text-[#716C61] sm:text-[10px]">{label}</span>
               </div>
@@ -56,21 +62,7 @@ export default function Home() {
           </div>
         </div>
 
-        <aside className="fw-hover-lift overflow-hidden rounded-[1.75rem] border border-[#20201D]/12 bg-white shadow-[0_22px_60px_rgba(32,32,29,0.07)]">
-          <div className="overflow-hidden">
-            <img src="/generated-flooring/castle-oak-hero.jpg" alt="Castle Oak flooring in a bright commercial-ready interior" className="h-[360px] w-full object-cover transition duration-700 hover:scale-[1.025] sm:h-[520px]" />
-          </div>
-          <div className="border-t border-[#20201D]/12 p-6">
-            <div>
-              <div className="flex flex-wrap items-center gap-3">
-                <p className="fw-mono text-[10px] font-bold uppercase tracking-[0.16em] text-[#A68F6B]">Featured finish</p>
-                <span className="fw-mono rounded-full border border-[#20201D]/14 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.12em] text-[#716C61]">VL-01</span>
-              </div>
-              <h2 className="fw-condensed mt-2 text-[2.1rem] font-semibold uppercase leading-tight tracking-[0.005em]">Castle Oak</h2>
-              <p className="mt-2 leading-[1.62] text-[#716C61]">A bright blonde SPC floor shown as the first finish in the V-Line collection. Use it as a quick preview before browsing all colors.</p>
-            </div>
-          </div>
-        </aside>
+        <FeaturedFinishCarousel />
       </section>
 
       <section id="direct-supply" className="border-t border-[#20201D]/10">
@@ -93,7 +85,8 @@ export default function Home() {
               <div className="mt-6 grid gap-2">
                 {["Factory", "Importer", "Distributor", "Retail showroom", "Client"].map((item, index, path) => (
                   <div key={item}>
-                    <div className="fw-mono rounded-xl border border-[#20201D]/45 bg-white px-5 py-3.5 text-[11px] font-bold uppercase tracking-[0.13em] text-[#20201D]/78 shadow-[0_8px_22px_rgba(32,32,29,0.025)]">
+                    <div className="fw-mono flex items-center gap-3 rounded-xl border border-[#20201D]/45 bg-white px-5 py-3.5 text-[11px] font-bold uppercase tracking-[0.13em] text-[#20201D]/78 shadow-[0_8px_22px_rgba(32,32,29,0.025)]">
+                      <FoundWellIcon name={index === 0 ? "factory" : index === path.length - 1 ? "client" : "quote"} className="h-8 w-8 rounded-lg bg-white" />
                       {item}
                     </div>
                     {index < path.length - 1 ? (
@@ -114,7 +107,8 @@ export default function Home() {
               <div className="p-6 text-center sm:p-7">
                 <p className="fw-mono text-center text-[11px] font-bold uppercase tracking-[0.24em] text-[#D2C1A6]">Direct supply</p>
                 <div className="mt-7 grid items-center gap-4 sm:grid-cols-[1fr_auto_1fr]">
-                  <div className="fw-mono rounded-xl border border-white/70 bg-white/[0.04] px-5 py-6 text-center text-[11px] font-bold uppercase tracking-[0.15em] text-white shadow-[0_14px_30px_rgba(0,0,0,0.1)]">
+                  <div className="fw-mono grid justify-items-center gap-3 rounded-xl border border-white/70 bg-white/[0.04] px-5 py-6 text-center text-[11px] font-bold uppercase tracking-[0.15em] text-white shadow-[0_14px_30px_rgba(0,0,0,0.1)]">
+                    <FoundWellIcon name="factory" inverse />
                     Factory
                   </div>
                   <div className="flex items-center justify-center text-[#D2C1A6]" aria-hidden="true">
@@ -122,7 +116,8 @@ export default function Home() {
                     <span className="fw-mono grid h-10 w-10 rotate-90 place-items-center rounded-full border border-[#D2C1A6]/70 bg-[#D2C1A6] text-xl leading-none text-[#20201D] shadow-[0_0_28px_rgba(210,193,166,0.25)] sm:mx-2 sm:rotate-0">→</span>
                     <span className="hidden h-px w-10 bg-[#D2C1A6]/75 sm:block" />
                   </div>
-                  <div className="fw-mono rounded-xl border border-white bg-white px-5 py-6 text-center text-[11px] font-bold uppercase tracking-[0.15em] text-[#20201D] shadow-[0_14px_30px_rgba(0,0,0,0.14)]">
+                  <div className="fw-mono grid justify-items-center gap-3 rounded-xl border border-white bg-white px-5 py-6 text-center text-[11px] font-bold uppercase tracking-[0.15em] text-[#20201D] shadow-[0_14px_30px_rgba(0,0,0,0.14)]">
+                    <FoundWellIcon name="client" />
                     Client
                   </div>
                 </div>
@@ -144,7 +139,7 @@ export default function Home() {
           <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             {services.map((service) => (
               <div key={service.title} className="fw-hover-lift rounded-[1.35rem] border border-[#20201D]/10 bg-white p-6 shadow-[0_14px_36px_rgba(32,32,29,0.045)]">
-                <div className="mb-5 h-[7px] w-[50px] rounded-[2px] bg-[#A68F6B]" />
+                <FoundWellIcon name={service.icon} className="mb-5" />
                 <h3 className="fw-condensed text-2xl font-semibold uppercase tracking-[0.01em]">{service.title}</h3>
                 <p className="mt-3 text-[15.5px] leading-[1.72] text-[#716C61]">{service.description}</p>
               </div>
@@ -166,6 +161,7 @@ export default function Home() {
             <div className="grid gap-5 sm:grid-cols-3">
               {["Direct sourcing", "Quality standard", "Client value"].map((item) => (
                 <div key={item}>
+                  <FoundWellIcon name={item === "Direct sourcing" ? "factory" : item === "Quality standard" ? "wear" : "client"} inverse className="mb-4" />
                   <p className="fw-mono text-[11px] font-bold uppercase tracking-[0.16em] text-[#D2C1A6]">{item}</p>
                   <p className="mt-3 leading-[1.72] text-white/72">Fewer layers, clearer specs, and a more confident route from selection to delivery.</p>
                 </div>
