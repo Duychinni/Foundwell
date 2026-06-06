@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "FoundWell",
-  description: "FoundWell landing page concept",
+  title: "FoundWell | Architectural Flooring Supply",
+  description:
+    "Direct-sourced SPC flooring for builders, contractors, developers, and commercial project buyers.",
 };
 
 export default function RootLayout({

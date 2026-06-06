@@ -1,20 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans+Condensed:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
-  --foreground: #51392f;
-  --deep-umber: #51392f;
-  --found-red: #8a2f24;
-  --fired-clay: #ad7042;
-  --website-white: #ffffff;
-  --warm-paper: #f4efe6;
+  --foreground: #20201d;
+  --foundwell-ink: #20201d;
+  --foundwell-limestone-oak: #a68f6b;
+  --foundwell-pale-limestone: #d2c1a6;
+  --foundwell-taupe: #716c61;
+  --foundwell-white: #ffffff;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: "Space Grotesk", var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  --font-mono: "IBM Plex Mono", var(--font-geist-mono), Consolas, monospace;
 }
 
 * {
@@ -29,7 +30,8 @@ body {
   margin: 0;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
@@ -40,4 +42,83 @@ input,
 textarea,
 button {
   font: inherit;
+}
+
+.fw-grid-bg {
+  background-image:
+    linear-gradient(90deg, rgba(32, 32, 29, 0.035) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(32, 32, 29, 0.028) 1px, transparent 1px);
+  background-size: 88px 88px;
+  background-position: 0 0;
+}
+
+.fw-display {
+  font-family: "Space Grotesk", Arial, Helvetica, sans-serif;
+}
+
+.fw-condensed {
+  font-family: "IBM Plex Sans Condensed", Arial, Helvetica, sans-serif;
+}
+
+.fw-mono {
+  font-family: "IBM Plex Mono", Consolas, monospace;
+}
+
+@keyframes fw-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fw-line-sheen {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.fw-grid-bg > section {
+  animation: fw-fade-up 620ms ease both;
+}
+
+.fw-grid-bg > section:nth-of-type(2) {
+  animation-delay: 80ms;
+}
+
+.fw-grid-bg > section:nth-of-type(3) {
+  animation-delay: 140ms;
+}
+
+.fw-hover-lift {
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+.fw-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 70px rgba(32, 32, 29, 0.11);
+}
+
+.fw-accent-sheen {
+  background-size: 180% 100%;
+  animation: fw-line-sheen 4.8s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fw-grid-bg > section,
+  .fw-accent-sheen {
+    animation: none;
+  }
+
+  .fw-hover-lift,
+  .fw-hover-lift:hover {
+    transform: none;
+    transition: none;
+  }
 }

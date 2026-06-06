@@ -1,12 +1,15 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import { Eyebrow } from "../../components/FoundWellBrand";
 
 type Product = {
   name: string;
   slug: string;
+  code: string;
   referenceSlug: string;
   description: string;
+  tone: string;
 };
 
 const imageTypes = ["hero", "kitchen", "living-room-alt", "closeup-1", "closeup-2"] as const;
@@ -14,46 +17,29 @@ type ImageType = (typeof imageTypes)[number];
 
 const featureCards = [
   {
-    title: "100% Waterproof",
-    copy: "Built to resist spills and moisture for kitchens, baths, and everyday project use.",
-    image: "/detail-features/waterproof.png",
+    title: "20 mil wear layer",
+    copy: "Commercial-grade surface protection for daily movement, furniture, and project use.",
   },
   {
-    title: "Scratch Resistant",
-    copy: "A durable wear layer helps protect the floor from daily scuffs, movement, and impact.",
-    image: "/detail-features/scratch-resistant.png",
+    title: "5.0mm SPC core",
+    copy: "Rigid waterproof core for dimensional stability and cleaner installation confidence.",
   },
   {
-    title: "Realistic Wood Feel",
-    copy: "Wood-textured surfaces and beveled detailing create a cleaner, more natural presentation.",
-    image: "/detail-features/wood-feel.png",
+    title: "1.5mm IXPE pad",
+    copy: "Attached underlayment for comfort and sound absorption through everyday use.",
   },
 ];
 
 const specificationItems = [
   ["Total Thickness", "6.5mm"],
-  ["SPC Core Thickness", "5.0mm"],
-  ["Attached Underlayment", "1.5mm IXPE"],
-  ["Wear Layer", "20 mil (0.5mm)"],
-  ["Installation", "Click-Lock Floating Floor"],
-  ["Waterproof", "100% Waterproof"],
-  ["Edge Profile", "Micro Bevel"],
-  ["Surface Finish", "Wood Grain Embossed"],
-  ["Application", "Residential & Commercial"],
-  ["Lead Time", "30–35 Days"],
-  ["Project Pricing", "Available Upon Request"],
+  ["SPC Core", "5.0mm"],
+  ["Underlayment", "1.5mm IXPE"],
+  ["Wear Layer", "20 mil"],
+  ["Installation", "Click-lock floating floor"],
+  ["Waterproof", "100% waterproof"],
+  ["Edge Profile", "Micro bevel"],
+  ["Application", "Residential & commercial"],
 ] as const;
-
-const accordionItems = [
-  {
-    title: "Product Overview",
-    content: [
-      "Luxury-grade SPC flooring built for residential and commercial interiors.",
-      "Durable multi-layer construction with a 5.0mm SPC core and 1.5mm attached IXPE pad.",
-      "Specified for projects that need waterproof performance, realistic wood texture, and cleaner installation.",
-    ],
-  },
-];
 
 function generatedCandidates(slug: string, type: ImageType) {
   return [
@@ -71,7 +57,6 @@ function fallbackReferencePath(referenceSlug: string) {
 export default function ProductDetailClient({ product }: { product: Product }) {
   const [activeImage, setActiveImage] = useState(0);
   const [brokenSources, setBrokenSources] = useState<Record<string, boolean>>({});
-  const [openSection, setOpenSection] = useState<string>(accordionItems[0].title);
 
   const gallery = useMemo(() => {
     const referenceFallback = fallbackReferencePath(product.referenceSlug);
@@ -89,14 +74,14 @@ export default function ProductDetailClient({ product }: { product: Product }) {
 
   return (
     <>
-      <section className="mx-auto max-w-[1400px] px-4 py-10 sm:px-6 lg:px-12">
-        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-start">
+      <section className="mx-auto max-w-[1440px] px-4 py-12 sm:px-6 sm:py-16 lg:px-12 lg:py-20">
+        <div className="grid gap-8 lg:grid-cols-[1.12fr_0.88fr] lg:items-start">
           <div>
-            <div className="overflow-hidden rounded-[1.5rem] bg-[#F8F3EA]">
+            <div className="overflow-hidden rounded-[1.65rem] border border-[#20201D]/10 bg-white">
               <img
                 src={mainImage}
                 alt={product.name}
-                className="h-[320px] w-full object-cover sm:h-[480px]"
+                className="h-[340px] w-full object-cover sm:h-[520px]"
                 onError={(event) => {
                   const currentSrc = new URL(event.currentTarget.currentSrc).pathname;
                   setBrokenSources((current) => ({ ...current, [currentSrc]: true }));
@@ -109,7 +94,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                 <button
                   key={`${product.slug}-${image.type}`}
                   onClick={() => setActiveImage(index)}
-                  className={`overflow-hidden rounded-[0.9rem] border ${index === activeImage ? "border-[#51392F]" : "border-[#51392F]/10"}`}
+                  className={`overflow-hidden rounded-[0.9rem] border bg-white ${index === activeImage ? "border-[#20201D]" : "border-[#20201D]/10"}`}
                 >
                   <img
                     src={image.src}
@@ -125,101 +110,63 @@ export default function ProductDetailClient({ product }: { product: Product }) {
             </div>
           </div>
 
-          <div className="rounded-[1.5rem] border border-[#51392F]/10 bg-white p-6 shadow-sm sm:p-7">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">V-LINE SPC Flooring</p>
-            <h1 className="mt-3 font-serif text-3xl font-medium leading-tight text-[#51392F] sm:text-4xl">
+          <div className="rounded-[1.65rem] border border-[#20201D]/10 bg-white p-6 shadow-[0_22px_60px_rgba(32,32,29,0.07)] sm:p-7 lg:p-8">
+            <Eyebrow>V-Line / SPC Collection</Eyebrow>
+            <h1 className="fw-condensed mt-4 text-[3rem] font-semibold uppercase leading-none tracking-[0.01em] text-[#20201D] sm:text-[3.6rem]">
               {product.name}
             </h1>
-            <p className="mt-3 text-base font-medium text-[#51392F]">Starting at $3.49 / sq. ft.</p>
-            <p className="mt-4 text-sm leading-7 text-[#51392F]/75">
+            <p className="mt-5 text-[17px] leading-[1.72] text-[#716C61]">
               {product.description}
             </p>
 
-            <div className="mt-6 space-y-4 border-t border-[#51392F]/10 pt-5">
-              <div className="flex items-center justify-between text-sm text-[#51392F]">
-                <span>Estimated delivery</span>
-                <span className="font-medium">30–35 days</span>
+            <div className="mt-7 space-y-4 border-t border-[#20201D]/10 pt-6 text-sm">
+              <div className="flex items-center justify-between gap-4 text-[#716C61]">
+                <span>Starting price</span>
+                <span className="font-semibold text-[#20201D]">$3.49 / sq. ft.</span>
               </div>
-              <div className="flex items-center justify-between text-sm text-[#51392F]">
-                <span>Project pricing</span>
-                <span className="font-medium">Available on request</span>
+              <div className="flex items-center justify-between gap-4 text-[#716C61]">
+                <span>Estimated delivery</span>
+                <span className="font-semibold text-[#20201D]">30–35 days</span>
+              </div>
+              <div className="flex items-center justify-between gap-4 text-[#716C61]">
+                <span>Samples</span>
+                <span className="font-semibold text-[#20201D]">Available on request</span>
               </div>
             </div>
 
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              <a
-                href="/request-quote"
-                className="inline-flex items-center justify-center rounded-full bg-[#51392F] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#422f27]"
-              >
+            <div className="mt-7 grid gap-3">
+              <a href="/request-quote" className="fw-mono inline-flex items-center justify-center rounded-full bg-[#20201D] px-5 py-4 text-[11px] font-bold uppercase tracking-[0.13em] text-white transition hover:bg-black">
                 Request Quote
-              </a>
-              <a
-                href="/shop-floors"
-                className="inline-flex items-center justify-center rounded-full border border-[#51392F]/10 bg-[#EDE3D4] px-5 py-3 text-sm font-medium text-[#51392F] transition hover:bg-[#e3d5c3]"
-              >
-                Back to Collection
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1400px] px-4 pb-10 sm:px-6 lg:px-12">
+      <section className="mx-auto max-w-[1440px] px-4 pb-10 sm:px-6 lg:px-12">
         <div className="grid gap-4 md:grid-cols-3">
           {featureCards.map((card) => (
-            <div key={card.title} className="overflow-hidden rounded-[1.35rem] border border-[#51392F]/8 bg-white">
-              <div
-                className="h-52 bg-cover bg-center"
-                style={{ backgroundImage: `url('${card.image}')` }}
-              />
-              <div className="p-5">
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8A2F24]">{card.title}</p>
-                <p className="mt-3 text-sm leading-7 text-[#51392F]/75">{card.copy}</p>
-              </div>
+            <div key={card.title} className="fw-hover-lift rounded-[1.35rem] border border-[#20201D]/10 bg-white p-6">
+              <p className="fw-mono text-[11px] font-bold uppercase tracking-[0.16em] text-[#A68F6B]">{card.title}</p>
+              <p className="mt-4 text-[15.5px] leading-[1.72] text-[#716C61]">{card.copy}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1400px] px-4 pb-16 sm:px-6 lg:px-12">
-        <div className="mb-4 overflow-hidden rounded-[1.25rem] border border-[#51392F]/10 bg-white">
-          <div className="border-b border-[#51392F]/8 px-5 py-4">
-            <p className="text-base font-medium text-[#51392F]">Specifications</p>
+      <section className="mx-auto max-w-[1440px] px-4 pb-16 sm:px-6 lg:px-12">
+        <div className="overflow-hidden rounded-[1.5rem] border border-[#20201D]/10 bg-white">
+          <div className="border-b border-[#20201D]/8 px-5 py-4">
+            <p className="text-base font-semibold text-[#20201D]">Specifications</p>
           </div>
-          <div className="grid gap-4 px-5 py-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          <div className="grid gap-6 px-5 py-6 sm:grid-cols-2 lg:grid-cols-4">
             {specificationItems.map(([label, value]) => (
               <div key={label}>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#8A2F24]">{label}</p>
-                <p className="mt-2 text-sm leading-7 text-[#51392F]/80">{value}</p>
+                <p className="fw-mono text-[10px] font-bold uppercase tracking-[0.16em] text-[#A68F6B]">{label}</p>
+                <p className="mt-2 text-sm leading-7 text-[#716C61]">{value}</p>
               </div>
             ))}
           </div>
-        </div>
-
-        <div className="space-y-3">
-          {accordionItems.map((item) => {
-            const open = openSection === item.title;
-            return (
-              <div key={item.title} className="overflow-hidden rounded-[1.25rem] border border-[#51392F]/10 bg-white">
-                <button
-                  onClick={() => setOpenSection(open ? "" : item.title)}
-                  className="flex w-full items-center justify-between px-5 py-4 text-left"
-                >
-                  <span className="text-base font-medium text-[#51392F]">{item.title}</span>
-                  <span className="text-xl text-[#51392F]">{open ? "−" : "+"}</span>
-                </button>
-                {open ? (
-                  <div className="grid gap-4 border-t border-[#51392F]/8 px-5 py-5 sm:grid-cols-2 lg:grid-cols-3">
-                    {item.content.map((line) => (
-                      <p key={line} className="text-sm leading-7 text-[#51392F]/75">
-                        {line}
-                      </p>
-                    ))}
-                  </div>
-                ) : null}
-              </div>
-            );
-          })}
         </div>
       </section>
     </>
